@@ -1,0 +1,8 @@
+{
+  "name": "pettingApp",
+  "app_id": "84fc51b4",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
