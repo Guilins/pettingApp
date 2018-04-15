@@ -6,6 +6,7 @@ import { EditUserPage } from '../edit-user/edit-user';
 import { LoginPage } from '../login/login';
 import { MyPostsPage } from '../my-posts/my-posts';
 import { TabsPage } from '../tabs/tabs';
+import { UserPage } from '../user/user';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -40,7 +41,8 @@ export class ProfilePage {
   }
 
   goToLogin() {
-    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.setRoot(LoginPage)
+    this.navCtrl.popToRoot()
   }
 
 

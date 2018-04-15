@@ -17,44 +17,60 @@
   <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
   </ion-searchbar>
 
-  <ion-card>
-    <img src="assets/imgs/turniphead.png" />
-    <div class="card-title">Cachorro</div>
-    <div class="card-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque eros vel nibh pellentesque posuere. Aenean
-      semper congue felis. Ut nec mi ac justo malesuada semper. </div>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>
+        <ion-card>
+          <ion-card-header>
+            <img src="assets/imgs/turniphead.png" />
+          </ion-card-header>
+          <ion-card-content>
+            <div class="card-title">Cachorro</div>
+            <div class="card-subtitle"> </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
 
-  <ion-card>
-    <img src="assets/imgs/turniphead.png" />
-    <div class="card-title">Gato</div>
-    <div class="card-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque eros vel nibh pellentesque posuere. Aenean
-      semper congue felis. Ut nec mi ac justo malesuada semper. </div>
-  </ion-card>
+      <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>
+        <ion-card>
+          <img src="assets/imgs/turniphead.png" />
+          <div class="card-title">Gato</div>
+          <div class="card-subtitle"> </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-  <ion-card>
-    <img src="assets/imgs/turniphead.png" />
-    <div class="card-title">Roedores</div>
-    <div class="card-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque eros vel nibh pellentesque posuere. Aenean
-      semper congue felis. Ut nec mi ac justo malesuada semper. </div>
-  </ion-card>
+    <ion-row>
+      <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>
+        <ion-card>
+          <img src="assets/imgs/turniphead.png" />
+          <div class="card-title">Roedores</div>
+          <div class="card-subtitle"> </div>
+        </ion-card>
+      </ion-col>
 
-  <ion-card>
-    <img src="assets/imgs/turniphead.png" />
-    <div class="card-title">Pássaros</div>
-    <div class="card-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque eros vel nibh pellentesque posuere. Aenean
-      semper congue felis. Ut nec mi ac justo malesuada semper. </div>
-  </ion-card>
+      <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>
+        <ion-card>
+          <img src="assets/imgs/turniphead.png" />
+          <div class="card-title">Pássaros</div>
+          <div class="card-subtitle"> </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-  <ion-card>
-    <img src="assets/imgs/turniphead.png" />
-    <div class="card-title">Outros</div>
-    <div class="card-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque eros vel nibh pellentesque posuere. Aenean
-      semper congue felis. Ut nec mi ac justo malesuada semper. </div>
-  </ion-card>
-
+    <ion-row>
+      <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>
+        <ion-card>
+          <img src="assets/imgs/turniphead.png" />
+          <div class="card-title">Outros</div>
+          <div class="card-subtitle"> </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <ion-fab bottom right>
     <button ion-fab mini (click)="goToPostAnimal()" color=danger>
       +
     </button>
   </ion-fab>
-  </ion-content>
+</ion-content>
