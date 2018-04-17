@@ -5,10 +5,10 @@ webpackJsonp([8],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreatePostItemPageModule", function() { return CreatePostItemPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditUserPageModule", function() { return EditUserPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_post_item__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_user__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CreatePostItemPageModule = /** @class */ (function () {
-    function CreatePostItemPageModule() {
+var EditUserPageModule = /** @class */ (function () {
+    function EditUserPageModule() {
     }
-    CreatePostItemPageModule = __decorate([
+    EditUserPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__create_post_item__["a" /* CreatePostItemPage */],
+                __WEBPACK_IMPORTED_MODULE_2__edit_user__["a" /* EditUserPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__create_post_item__["a" /* CreatePostItemPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_user__["a" /* EditUserPage */]),
             ],
         })
-    ], CreatePostItemPageModule);
-    return CreatePostItemPageModule;
+    ], EditUserPageModule);
+    return EditUserPageModule;
 }());
 
-//# sourceMappingURL=create-post-item.module.js.map
+//# sourceMappingURL=edit-user.module.js.map
 
 /***/ })
 

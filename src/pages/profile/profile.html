@@ -14,26 +14,32 @@
 
 
 <ion-content padding>
+  <ion-row>
+    <div class="col-lg-10 col-xs-10 col-sm-10 col-xl-10">
 
-  <button (click)="goToEdit()" ion-button  block outline item-end icon-right >
-    
-    Editar Perfil
-  </button>
 
-  <button (click)="goToContribuition()" ion-button block outline item-end icon-right>
-    
-    Contribuições
-  </button>
-  
-  <button (click)="goToMyPosts()" ion-button block outline item-end icon-right >
-    
-    Minhas publicações
-  </button>
+      <button (click)="goToEdit()" ion-button block outline item-end icon-right>
 
-  <button (click)="goToLogin()" ion-button block outline item-end icon-right >
-    
-      Sair
-    </button>
+        Editar Perfil
+      </button>
 
-  <button ion-button color="principal" clear (click)="goToAbout()">Sobre o app</button>
+      <button (click)="goToContribuition()" ion-button block outline item-end icon-right>
+
+        Contribuições
+      </button>
+
+      <button (click)="goToMyPosts()" ion-button block outline item-end icon-right>
+
+        Minhas publicações
+      </button>
+
+      <button (click)="goToLogin()" ion-button block outline item-end icon-right>
+
+        Sair
+      </button>
+
+      <button ion-button color="principal" clear (click)="goToAbout()">Sobre o app</button>
+
+    </div>
+  </ion-row>
 </ion-content>
