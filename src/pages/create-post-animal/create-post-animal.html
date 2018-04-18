@@ -20,7 +20,8 @@
       <ion-label floating>Título</ion-label>
       <ion-input type="text"></ion-input>
     </ion-item>
-  
+    <br>
+
     <ion-item>
       <ion-label>Espécie</ion-label>
       <ion-select [(ngModel)]="species">
@@ -36,8 +37,10 @@
       <ion-label floating>Descrição</ion-label>
       <ion-textarea></ion-textarea>
     </ion-item>
-  
-    <button clear (click)="goToTabs()">Publicar</button>
+
+    <ion-item>
+      <button ion-button outline (click)="goToDetails()">Publicar</button>
+    </ion-item>
 
   </ion-list>
 </ion-content>

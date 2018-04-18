@@ -21,6 +21,7 @@ import { CreatePostItemPage } from '../pages/create-post-item/create-post-item';
 import { ListAdoptionPage } from '../pages/list-adoption/list-adoption';
 import { MyPostsPage } from '../pages/my-posts/my-posts';
 import { EditUserPage } from '../pages/edit-user/edit-user';
+import { DetailedPostAnimalPage} from '../pages/detailed-post-animal/detailed-post-animal'
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EditUserPage } from '../pages/edit-user/edit-user';
      ListAdoptionPage,
      MyPostsPage,   
      EditUserPage,  
-    TabsPage
+    TabsPage,
+    DetailedPostAnimalPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ import { EditUserPage } from '../pages/edit-user/edit-user';
      ListAdoptionPage,
      MyPostsPage,
      EditUserPage,
-    TabsPage
+    TabsPage,
+    DetailedPostAnimalPage
   ],
   providers: [
     StatusBar,

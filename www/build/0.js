@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 286:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailedPostPageModule", function() { return DetailedPostPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdoptionRodentPageModule", function() { return AdoptionRodentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detailed_post__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__adoption_rodent__ = __webpack_require__(305);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DetailedPostPageModule = /** @class */ (function () {
-    function DetailedPostPageModule() {
+var AdoptionRodentPageModule = /** @class */ (function () {
+    function AdoptionRodentPageModule() {
     }
-    DetailedPostPageModule = __decorate([
+    AdoptionRodentPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__detailed_post__["a" /* DetailedPostPage */],
+                __WEBPACK_IMPORTED_MODULE_2__adoption_rodent__["a" /* AdoptionRodentPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__detailed_post__["a" /* DetailedPostPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__adoption_rodent__["a" /* AdoptionRodentPage */]),
             ],
         })
-    ], DetailedPostPageModule);
-    return DetailedPostPageModule;
+    ], AdoptionRodentPageModule);
+    return AdoptionRodentPageModule;
 }());
 
-//# sourceMappingURL=detailed-post.module.js.map
+//# sourceMappingURL=adoption-rodent.module.js.map
 
 /***/ }),
 
-/***/ 295:
+/***/ 305:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdoptionRodentPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the DetailedPostPage page.
+ * Generated class for the AdoptionRodentPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var DetailedPostPage = /** @class */ (function () {
-    function DetailedPostPage(navCtrl, navParams) {
+var AdoptionRodentPage = /** @class */ (function () {
+    function AdoptionRodentPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    DetailedPostPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DetailedPostPage');
+    AdoptionRodentPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AdoptionRodentPage');
     };
-    DetailedPostPage = __decorate([
+    AdoptionRodentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-detailed-post',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\pettingApp\src\pages\detailed-post\detailed-post.html"*/'<!--\n\n  Generated template for the DetailedPostPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>detailedPost</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\pettingApp\src\pages\detailed-post\detailed-post.html"*/,
+            selector: 'page-adoption-rodent',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\pettingApp\src\pages\adoption-rodent\adoption-rodent.html"*/'<!--\n\n  Generated template for the AdoptionRodentPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>AdoptionRodent</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\pettingApp\src\pages\adoption-rodent\adoption-rodent.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
-    ], DetailedPostPage);
-    return DetailedPostPage;
+    ], AdoptionRodentPage);
+    return AdoptionRodentPage;
 }());
 
-//# sourceMappingURL=detailed-post.js.map
+//# sourceMappingURL=adoption-rodent.js.map
 
 /***/ })
 
