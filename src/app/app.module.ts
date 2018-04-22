@@ -21,7 +21,8 @@ import { CreatePostItemPage } from '../pages/create-post-item/create-post-item';
 import { ListAdoptionPage } from '../pages/list-adoption/list-adoption';
 import { MyPostsPage } from '../pages/my-posts/my-posts';
 import { EditUserPage } from '../pages/edit-user/edit-user';
-import { DetailedPostAnimalPage} from '../pages/detailed-post-animal/detailed-post-animal'
+import { DetailedPostAnimalPage } from '../pages/detailed-post-animal/detailed-post-animal'
+import { AdoptionListPage } from '../pages/adoption-list/adoption-list'
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { DetailedPostAnimalPage} from '../pages/detailed-post-animal/detailed-po
     LoginPage,
     ProfilePage,
      AdoptionPage,
+     AdoptionListPage,
      UserPage,
      ContribuitionPage,
      CreatePostAnimalPage,
@@ -55,6 +57,7 @@ import { DetailedPostAnimalPage} from '../pages/detailed-post-animal/detailed-po
     LoginPage,
     ProfilePage,
      AdoptionPage,
+     AdoptionListPage,
      UserPage,
      ContribuitionPage,
      CreatePostAnimalPage,

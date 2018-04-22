@@ -15,52 +15,48 @@
 
 <ion-content padding>
 
-    <ion-searchbar
-    [(ngModel)]="myInput"
-    [showCancelButton]="shouldShowCancel"
-    (ionInput)="onInput($event)"
-    (ionCancel)="onCancel($event)">
+  <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
   </ion-searchbar>
-  
+
   <ion-list>
 
     <ion-item>
-      
+
       <ion-thumbnail item-start>
         <img src="assets/imgs/remedio.png">
       </ion-thumbnail>
-        <h2>Remédio 1</h2>
+      <h2>Remédio 1</h2>
       <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
       <button ion-button clear item-end>View</button>
     </ion-item>
-  
+
     <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/imgs/remedio2.jpg">
-        </ion-thumbnail>
-          <h2>Remédio 1</h2>
-        <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-  
-      <ion-item>
-          <ion-thumbnail item-start>
-            <img src="assets/imgs/turniphead.png">
-          </ion-thumbnail>
-            <h2>Remédio 1</h2>
-          <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-          <button ion-button clear item-end>View</button>
-        </ion-item>
-  
-  
-        <ion-item>
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/turniphead.png">
-            </ion-thumbnail>
-              <h2>Remédio 1</h2>
-            <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-            <button ion-button clear item-end>View</button>
-          </ion-item>
-  
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/remedio2.jpg">
+      </ion-thumbnail>
+      <h2>Remédio 1</h2>
+      <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/turniphead.png">
+      </ion-thumbnail>
+      <h2>Remédio 1</h2>
+      <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/turniphead.png">
+      </ion-thumbnail>
+      <h2>Remédio 1</h2>
+      <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+
   </ion-list>
 </ion-content>

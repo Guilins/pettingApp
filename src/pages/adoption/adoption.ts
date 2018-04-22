@@ -26,5 +26,4 @@ export class AdoptionPage {
     this.navCtrl.push(CreatePostAnimalPage);
     
   }
-
 }

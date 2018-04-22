@@ -1,14 +1,14 @@
 webpackJsonp([13],{
 
-/***/ 292:
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailedPostAnimalPageModule", function() { return DetailedPostAnimalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdoptionListPageModule", function() { return AdoptionListPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detailed_post_animal__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__adoption_list__ = __webpack_require__(206);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DetailedPostAnimalPageModule = /** @class */ (function () {
-    function DetailedPostAnimalPageModule() {
+var AdoptionListPageModule = /** @class */ (function () {
+    function AdoptionListPageModule() {
     }
-    DetailedPostAnimalPageModule = __decorate([
+    AdoptionListPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__detailed_post_animal__["a" /* DetailedPostAnimalPage */],
+                __WEBPACK_IMPORTED_MODULE_2__adoption_list__["a" /* AdoptionListPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__detailed_post_animal__["a" /* DetailedPostAnimalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__adoption_list__["a" /* AdoptionListPage */]),
             ],
         })
-    ], DetailedPostAnimalPageModule);
-    return DetailedPostAnimalPageModule;
+    ], AdoptionListPageModule);
+    return AdoptionListPageModule;
 }());
 
-//# sourceMappingURL=detailed-post-animal.module.js.map
+//# sourceMappingURL=adoption-list.module.js.map
 
 /***/ })
 
