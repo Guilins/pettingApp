@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core'
+import { IonicPage, NavController, NavParams } from 'ionic-angular'
+import { CreatePostAnimalPage } from '../create-post-animal/create-post-animal'
+import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-animal';
 
 /**
  * Generated class for the AdoptionListPage page.
@@ -19,7 +21,15 @@ export class AdoptionListPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AdoptionListPage');
+    console.log('ionViewDidLoad AdoptionListPage')
+  }
+
+  goToPostAnimal(){
+    this.navCtrl.push(CreatePostAnimalPage)
+  }
+
+  goToDetailedPost(){
+    this.navCtrl.push(DetailedPostAnimalPage)
   }
 
 }
