@@ -20,7 +20,7 @@ export class CreatePostAnimalPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CreatePostAnimalPage');
+    console.log('ionViewDidLoad CreatePostAnimalPage')
   }
 
   goToDetails(){

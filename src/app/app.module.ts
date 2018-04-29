@@ -23,6 +23,7 @@ import { MyPostsPage } from '../pages/my-posts/my-posts';
 import { EditUserPage } from '../pages/edit-user/edit-user';
 import { DetailedPostAnimalPage } from '../pages/detailed-post-animal/detailed-post-animal'
 import { AdoptionListPage } from '../pages/adoption-list/adoption-list'
+import { ContactPage } from '../pages/contact/contact'
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AdoptionListPage } from '../pages/adoption-list/adoption-list'
      MyPostsPage,   
      EditUserPage,  
     TabsPage,
-    DetailedPostAnimalPage
+    DetailedPostAnimalPage,
+    ContactPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,8 @@ import { AdoptionListPage } from '../pages/adoption-list/adoption-list'
      MyPostsPage,
      EditUserPage,
     TabsPage,
-    DetailedPostAnimalPage
+    DetailedPostAnimalPage,
+    ContactPage
   ],
   providers: [
     StatusBar,

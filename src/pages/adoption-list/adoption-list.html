@@ -26,7 +26,7 @@
           </ion-thumbnail>
           <h2>Animal 1</h2>
           <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-          <button ion-button clear item-end>View</button>
+          <button ion-button clear (click)="goToDetailedPost()" item-end >View</button>
         </ion-item>
     
         <ion-item>
@@ -35,7 +35,7 @@
           </ion-thumbnail>
           <h2>Animal 2</h2>
           <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-          <button ion-button clear item-end>View</button>
+          <button ion-button clear item-end (click)="goToDetailedPost()">View</button>
         </ion-item>
     
         <ion-item>
@@ -44,7 +44,7 @@
           </ion-thumbnail>
           <h2>Animal 3</h2>
           <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-          <button ion-button clear item-end>View</button>
+          <button ion-button clear item-end (click)="goToDetailedPost()">View</button>
         </ion-item>
     
     
@@ -54,8 +54,13 @@
           </ion-thumbnail>
           <h2>Animal 4</h2>
           <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-          <button ion-button clear item-end>View</button>
+          <button ion-button clear item-end (click)="goToDetailedPost()">View</button>
         </ion-item>
     
       </ion-list>
+      <ion-fab bottom right>
+        <button ion-fab mini (click)="goToPostAnimal()" color=danger>
+          +
+        </button>
+      </ion-fab>
 </ion-content>
