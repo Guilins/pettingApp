@@ -12,6 +12,11 @@ import { AdoptionPage } from '../pages/adoption/adoption';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
+import { AuthInterceptor } from "../auth.interceptor";
+import { Utils } from "../Utils";
+import { IonicStorageModule } from "@ionic/storage";
+import { Camera } from "@ionic-native/camera";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,6 +29,7 @@ import { EditUserPage } from '../pages/edit-user/edit-user';
 import { DetailedPostAnimalPage } from '../pages/detailed-post-animal/detailed-post-animal'
 import { AdoptionListPage } from '../pages/adoption-list/adoption-list'
 import { ContactPage } from '../pages/contact/contact'
+import { UserProvider } from '../providers/user/user-provider';
 
 @NgModule({
   declarations: [
@@ -48,6 +54,8 @@ import { ContactPage } from '../pages/contact/contact'
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -72,9 +80,13 @@ import { ContactPage } from '../pages/contact/contact'
     ContactPage
   ],
   providers: [
+    Utils,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    Camera,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    UserProvider
   ]
 })
 export class AppModule {}

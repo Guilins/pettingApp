@@ -14,71 +14,84 @@
 
 
 <ion-content padding>
+
+    <form [formGroup]="meuForm" (ngSubmit)="signUp()" >
+
     <ion-list>
 
       <ion-item>
         <ion-label floating>Nome</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input formControlName="nameUsur" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Logradouro</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input formControlName="addressUsur" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>Número</ion-label>
-        <ion-input type="text"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label floating>Bairro</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating>CPF</ion-label>
+        <ion-input formControlName="cpfUsur" type="text"></ion-input>
       </ion-item>
 
       <br>
       <ion-item>
         <ion-label>Estado</ion-label>
-        <ion-select [(ngModel)]="estado">
-          <ion-option value="nes">NES</ion-option>
-          <ion-option value="n64">Nintendo64</ion-option>
-          <ion-option value="ps">PlayStation</ion-option>
-          <ion-option value="genesis">Sega Genesis</ion-option>
-          <ion-option value="saturn">Sega Saturn</ion-option>
-          <ion-option value="snes">SNES</ion-option>
+        <ion-select formControlName="stateUsur" [(ngModel)]="estado">
+          <ion-option value="AC">AC</ion-option>
+          <ion-option value="AL">AL</ion-option>
+          <ion-option value="AP">AP</ion-option>
+          <ion-option value="AM">AM</ion-option>
+          <ion-option value="BA">BA</ion-option>
+          <ion-option value="CE">CE</ion-option>
+          <ion-option value="DF">DF</ion-option>
+          <ion-option value="ES">ES</ion-option>
+          <ion-option value="GO">GO</ion-option>
+          <ion-option value="MA">MA</ion-option>
+          <ion-option value="MT">MT</ion-option>
+          <ion-option value="MS">MS</ion-option>
+          <ion-option value="MG">MG</ion-option>
+          <ion-option value="PA">PA</ion-option>
+          <ion-option value="PB">PB</ion-option>
+          <ion-option value="PR">PR</ion-option>
+          <ion-option value="PE">PE</ion-option>
+          <ion-option value="PI">PI</ion-option>
+          <ion-option value="RJ">RJ</ion-option>
+          <ion-option value="RN">RN</ion-option>
+          <ion-option value="RS">RS</ion-option>
+          <ion-option value="RO">RO</ion-option>
+          <ion-option value="RR">RR</ion-option>
+          <ion-option value="SC">SC</ion-option>
+          <ion-option value="SP">SP</ion-option>
+          <ion-option value="SE">SE</ion-option>
+          <ion-option value="TO">TO</ion-option>
+
         </ion-select>
       </ion-item>
 
       <ion-item>
-        <ion-label>Cidade</ion-label>
-        <ion-select [(ngModel)]="cidade">
-          <ion-option value="nes">NES</ion-option>
-          <ion-option value="n64">Nintendo64</ion-option>
-          <ion-option value="ps">PlayStation</ion-option>
-          <ion-option value="genesis">Sega Genesis</ion-option>
-          <ion-option value="saturn">Sega Saturn</ion-option>
-          <ion-option value="snes">SNES</ion-option>
-        </ion-select>
+        <ion-label floating>Cidade</ion-label>
+        <ion-input formControlName="cityUsur" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Telefone</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input formControlName="phoneUsur" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Celular</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input formControlName="cellphoneUsur" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>Username</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating>Email</ion-label>
+        <ion-input formControlName="emailUsur" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-label floating>Senha</ion-label>
+        <ion-input formControlName="passwordUsur" type="password"></ion-input>
       </ion-item>
 
       <br>
@@ -86,4 +99,6 @@
         <button ion-button color="default" block (click)="goToTabs()">Cadastrar</button>
       </div>
     </ion-list>
+
+  </form>
 </ion-content>
