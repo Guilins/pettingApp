@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DetailedPostProductPage } from '../detailed-post-product/detailed-post-product';
+import { CreatePostItemPage } from '../create-post-item/create-post-item';
 
 /**
  * Generated class for the ProductPage page.
@@ -20,6 +22,14 @@ export class ProductPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProductPage');
+  }
+
+  goToPostProduct(){
+    this.navCtrl.push(DetailedPostProductPage)
+  }
+
+  createPost(){
+    this.navCtrl.push(CreatePostItemPage)
   }
 
 }

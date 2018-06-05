@@ -27,6 +27,9 @@ import { ListAdoptionPage } from '../pages/list-adoption/list-adoption';
 import { MyPostsPage } from '../pages/my-posts/my-posts';
 import { EditUserPage } from '../pages/edit-user/edit-user';
 import { DetailedPostAnimalPage } from '../pages/detailed-post-animal/detailed-post-animal'
+import { DetailedPostProductPage } from '../pages/detailed-post-product/detailed-post-product'
+import { DetailedPostMedicinePage } from '../pages/detailed-post-medicine/detailed-post-medicine'
+
 import { AdoptionListPage } from '../pages/adoption-list/adoption-list'
 import { ContactPage } from '../pages/contact/contact'
 import { UserProvider } from '../providers/user/user-provider';
@@ -35,21 +38,23 @@ import { UserProvider } from '../providers/user/user-provider';
   declarations: [
     MyApp,
     AboutPage,
-     MedicinePage,
+    MedicinePage,
     ProductPage,
     LoginPage,
     ProfilePage,
-     AdoptionPage,
-     AdoptionListPage,
-     UserPage,
-     ContribuitionPage,
-     CreatePostAnimalPage,
-     CreatePostItemPage,
-     ListAdoptionPage,
-     MyPostsPage,   
-     EditUserPage,  
+    AdoptionPage,
+    AdoptionListPage,
+    UserPage,
+    ContribuitionPage,
+    CreatePostAnimalPage,
+    CreatePostItemPage,
+    ListAdoptionPage,
+    MyPostsPage,   
+    EditUserPage,  
     TabsPage,
     DetailedPostAnimalPage,
+    DetailedPostMedicinePage,
+    DetailedPostProductPage,
     ContactPage
   ],
   imports: [
@@ -62,21 +67,23 @@ import { UserProvider } from '../providers/user/user-provider';
   entryComponents: [
     MyApp,
     AboutPage,
-     MedicinePage,
+    MedicinePage,
     ProductPage,
     LoginPage,
     ProfilePage,
-     AdoptionPage,
-     AdoptionListPage,
-     UserPage,
-     ContribuitionPage,
-     CreatePostAnimalPage,
-     CreatePostItemPage,
-     ListAdoptionPage,
-     MyPostsPage,
-     EditUserPage,
+    AdoptionPage,
+    AdoptionListPage,
+    UserPage,
+    ContribuitionPage,
+    CreatePostAnimalPage,
+    CreatePostItemPage,
+    ListAdoptionPage,
+    MyPostsPage,
+    EditUserPage,
     TabsPage,
     DetailedPostAnimalPage,
+    DetailedPostMedicinePage,
+    DetailedPostProductPage,
     ContactPage
   ],
   providers: [

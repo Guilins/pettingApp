@@ -1,13 +1,13 @@
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {FormGroup} from "@angular/forms";
-import {Utils} from "../../Utils";
-import {LoadingController} from "ionic-angular";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { FormGroup } from "@angular/forms";
+import { Utils } from "../../Utils";
+import { LoadingController } from "ionic-angular";
 
 @Injectable()
 export class UserProvider {
     
-    public API = 'http://192.168.0.18:8080'
+    public API = 'localhost:8080'
     public user_API = '/usur'
     
     meuForm: FormGroup;
@@ -28,7 +28,7 @@ export class UserProvider {
             this.utils.getToast('Usuário criado com sucesso')
           }, err => {
               console.log(err)
-              loading.dismiss();
+              loading.dismiss()
           })
         })
         
