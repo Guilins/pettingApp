@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-animal';
 
 /**
  * Generated class for the CreatePostItemPage page.
@@ -20,6 +21,10 @@ export class CreatePostItemPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreatePostItemPage');
+  }
+
+  goToDetails(){
+    this.navCtrl.push(DetailedPostAnimalPage)
   }
 
 }
