@@ -7,6 +7,7 @@ import { LoginPage } from '../login/login';
 import { MyPostsPage } from '../my-posts/my-posts';
 import { TabsPage } from '../tabs/tabs';
 import { UserPage } from '../user/user';
+import { Utils } from '../../Utils';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -21,7 +22,7 @@ import { UserPage } from '../user/user';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private utils: Utils) {
   }
 
   ionViewDidLoad() {
@@ -41,8 +42,7 @@ export class ProfilePage {
   }
 
   goToLogin() {
-    this.navCtrl.setRoot(LoginPage)
-    this.navCtrl.popToRoot()
+    this.utils.invalidTokens().then(() => this.navCtrl.push(LoginPage));
   }
 
 

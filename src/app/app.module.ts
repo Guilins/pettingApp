@@ -33,6 +33,7 @@ import { DetailedPostMedicinePage } from '../pages/detailed-post-medicine/detail
 import { AdoptionListPage } from '../pages/adoption-list/adoption-list'
 import { ContactPage } from '../pages/contact/contact'
 import { UserProvider } from '../providers/user/user-provider';
+import { ItemProvider } from '../providers/item/item';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { UserProvider } from '../providers/user/user-provider';
     Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
-    UserProvider
+    UserProvider,
+    ItemProvider
   ]
 })
 export class AppModule {}

@@ -14,24 +14,29 @@
 
 
 <ion-content padding>
-  <ion-list>
-      
-    <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  
-    <br>
-    <button ion-button color="principal" block (click)="goToTabs()">Login</button>
-    <br>
-      
-        <hr class="hr-text" data-content="ou">
-      
-    <button ion-button color="principal" clear block (click)="goToUser()">Cadastrar</button>
-  </ion-list>
+
+  <form [formGroup]="meuForm" (ngSubmit)="login(meuForm)">
+    <ion-list>
+        
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input formControlName="username" type="text"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+
+      <br>
+      <button ion-button color="principal" block type="submit" [disabled]="meuForm.invalid">Login</button>
+      <br>
+
+      <hr class="hr-text" data-content="ou">
+
+      <button ion-button color="principal" clear block (click)="goToUser()">Cadastrar</button>
+
+    </ion-list>
+  </form>
+
 </ion-content>

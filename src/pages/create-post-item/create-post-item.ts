@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-animal';
 
 /**
@@ -15,6 +16,8 @@ import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-an
   templateUrl: 'create-post-item.html',
 })
 export class CreatePostItemPage {
+
+  private meuForm: FormGroup;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

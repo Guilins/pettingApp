@@ -23,7 +23,7 @@ export class UserPage implements OnInit {
 
   meuForm : FormGroup;
 
-  constructor(private navCtrl: NavController, private userProvider: UserProvider, private utils: Utils ) {
+  constructor(private navCtrl: NavController, private navParams: NavParams, private userProvider: UserProvider, private utils: Utils ) {
   }
 
   ionViewDidLoad() {
@@ -53,6 +53,6 @@ export class UserPage implements OnInit {
   
   goToTabs(){
     this.signUp()
-    //this.navCtrl.push(TabsPage)
+    this.navCtrl.push(TabsPage)
   }
 }

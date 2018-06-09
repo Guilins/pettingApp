@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import { TabsPage } from '../tabs/tabs';
 import { UserPage } from '../user/user';
+import { UserProvider } from '../../providers/user/user-provider';
+import { isTrueProperty } from 'ionic-angular/util/util';
 /**
  * Generated class for the LoginPage page.
  *
@@ -16,7 +19,23 @@ import { UserPage } from '../user/user';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private meuForm: FormGroup
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private userProvider: UserProvider) {
+    this.initFormGroup()
+  }
+
+  private initFormGroup() {
+    this.meuForm = new FormGroup({
+      username: new FormControl('', [
+        Validators.required,
+        Validators.pattern('[^ @]*@[^ @]*')
+      ]),
+      password: new FormControl('', [
+        Validators.minLength(6),
+        Validators.required
+      ]),
+    });
   }
 
   ionViewDidLoad() {
@@ -29,6 +48,11 @@ export class LoginPage {
   
   goToUser(){
     this.navCtrl.push(UserPage);
+  }
+
+  login() {
+    this.userProvider.login(this.meuForm)
+      .then(() => this.navCtrl.push(TabsPage, true));
   }
 
 }
