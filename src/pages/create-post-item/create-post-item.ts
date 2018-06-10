@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-animal';
+import { Component } from '@angular/core'
+import { IonicPage, NavController, NavParams } from 'ionic-angular'
+import { FormControl, FormGroup, Validators } from "@angular/forms"
+import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-animal'
+import { ItemProvider } from '../../providers/item/item'
+import { DetailedPostPage } from '../detailed-post/detailed-post'
 
 /**
  * Generated class for the CreatePostItemPage page.
@@ -17,17 +19,31 @@ import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-an
 })
 export class CreatePostItemPage {
 
-  private meuForm: FormGroup;
+  private meuForm: FormGroup
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public itemProvider: ItemProvider) {
   }
 
+  private ngOnInit(): void {
+    this.meuForm = new FormGroup({
+      titlePostItem : new FormControl('', Validators.required),
+      typePostItem : new FormControl('', Validators.required),
+      descriptionPostItem : new FormControl('', Validators.required)
+    });
+  }
+  
+
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CreatePostItemPage');
+    console.log('ionViewDidLoad CreatePostItemPage')
   }
 
   goToDetails(){
     this.navCtrl.push(DetailedPostAnimalPage)
+  }
+
+  postItem() {
+    this.itemProvider.postItem(this.meuForm)
+      .then(() => this.navCtrl.push(DetailedPostPage))
   }
 
 }

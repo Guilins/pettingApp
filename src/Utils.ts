@@ -49,12 +49,8 @@ export class Utils {
     return "data:image/jpeg;base64," + photo;
   }
 
-  public setTokens(accessToken: string, refreshToken: string) {
-    if (refreshToken != null) {
-      console.log("SETANDO NOVOS TOKENS");
-      this.storage.set('accessToken', accessToken);
-      this.storage.set('refreshToken', refreshToken)
-    }
+  public setTokens(accessToken: string) {
+      this.storage.set('Authorization', accessToken)
   }
 
   public async getValidToken() {

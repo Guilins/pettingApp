@@ -1,5 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { FormGroup } from "@angular/forms";
+import { Utils } from '../../Utils';
 
 /*
   Generated class for the ItemProvider provider.
@@ -10,8 +12,21 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ItemProvider {
 
-  constructor(public http: HttpClient) {
+  headers: HttpHeaders = new HttpHeaders()
+  private item_post = "/secured/post-item"
+
+  constructor(public http: HttpClient, public utils: Utils) {
     console.log('Hello ItemProvider Provider');
+  }
+
+  postItem(meuForm: FormGroup){
+    return new Promise(resolve => {
+      this.http.post(this.item_post, meuForm.value, {headers: this.headers})
+        .subscribe(success => {
+          resolve(success)
+          this.utils.getToast('Postagem criada com sucesso!')
+        }, err => console.log(err));
+    });
   }
 
 }

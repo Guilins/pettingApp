@@ -1,15 +1,15 @@
 import {
   HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest,
   HttpResponse
-} from "@angular/common/http";
-import {Observable} from "rxjs/Observable";
-import 'rxjs/add/observable/throw';
-import 'rxjs/add/observable/fromPromise';
-import {Injectable} from "@angular/core";
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/mergeMap';
-import 'rxjs/add/operator/catch';
-import {Utils} from "./Utils";
+} from "@angular/common/http"
+import {Observable} from "rxjs/Observable"
+import 'rxjs/add/observable/throw'
+import 'rxjs/add/observable/fromPromise'
+import {Injectable} from "@angular/core"
+import 'rxjs/add/operator/do'
+import 'rxjs/add/operator/mergeMap'
+import 'rxjs/add/operator/catch'
+import {Utils} from "./Utils"
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -18,29 +18,38 @@ export class AuthInterceptor implements HttpInterceptor {
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const completeReq = req.clone({url: `${Utils.serverUrl()}${req.url}`});
-    console.log("URL: " + completeReq.url);
+    const completeReq = req.clone({url: `${Utils.serverUrl()}${req.url}`})
+    console.log("URL: " + completeReq.url)
     if (completeReq.headers.has("Skip-Prefix")) {
       return next.handle(completeReq).do((success: HttpResponse<any>) => this.onSuccess(success),
-        (error: HttpErrorResponse) => this.onError(error));
+        (error: HttpErrorResponse) => this.onError(error))
     }
     return this.getValidToken().mergeMap((token: string) => {
-      return next.handle(completeReq.clone({setHeaders: {'Authorization': token}}))
-        .do((success: HttpResponse<any>) => this.onSuccess(success))
-        .catch((error: HttpErrorResponse) => {
+      return next.handle(completeReq.clone({
+        setHeaders: {
+          'Authorization': token
+        }
+      }
+    )).do((success: HttpResponse<any>) => this.onSuccess(success)).catch((error: HttpErrorResponse) => {
           if (error.status == 301) {
             this.setTokens(error);
-            return next.handle(completeReq.clone({setHeaders: {'Authorization': error.headers.get("Access-Token")}}));
+            return next.handle(completeReq.clone({
+              setHeaders: {
+                'Authorization': error.headers.get("Authorization")
+              }
+            }));
           }
           if (error.status == 400) {
-            this.utils.getErrorsOnToast(error);
+            this.utils.getErrorsOnToast(error)
           }
         });
     });
   }
 
   async onSuccess(response: HttpResponse<any>) {
-    if (response.status == 202) {
+    if (response.status == 200) {
+      console.log("success: " + response)
+      console.log("Headers: " + response.headers.get("Authorization"))
       return await this.setTokens(response);
     }
   }
@@ -54,11 +63,13 @@ export class AuthInterceptor implements HttpInterceptor {
     }
   }
 
-  setTokens(response) {
-    this.utils.setTokens(response.headers.get("Access-Token"), response.headers.get("Refresh-Token"));
+  setTokens(response: HttpResponse<any>) {
+    let header = response.headers.keys()
+    console.log(header)
+    //this.utils.setTokens(header)
   }
 
   getValidToken() {
-    return Observable.fromPromise(this.utils.getValidToken());
+    return Observable.fromPromise(this.utils.getValidToken())
   }
 }

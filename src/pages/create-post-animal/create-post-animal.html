@@ -16,31 +16,33 @@
 <ion-content padding>
   <ion-list>
 
-    <ion-item>
-      <ion-label floating>Título</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-    <br>
+    <form [formGroup]="meuForm" (ngSubmit)="postAnimal(meuForm)">
+      <ion-item>
+        <ion-label floating>Título</ion-label>
+        <ion-input formControlName="titlePostAnimal" type="text"></ion-input>
+      </ion-item>
+      <br>
 
-    <ion-item>
-      <ion-label>Espécie</ion-label>
-      <ion-select [(ngModel)]="species">
-        <ion-option value="c">Cachorro</ion-option>
-        <ion-option value="g">Gato</ion-option>
-        <ion-option value="r">Roedores</ion-option>
-        <ion-option value="p">Pássaros</ion-option>
-        <ion-option value="o">Outros</ion-option>
-      </ion-select>
-    </ion-item>
+      <ion-item>
+        <ion-label>Espécie</ion-label>
+        <ion-select formControlName="speciePostAnimal" [(ngModel)]="species">
+          <ion-option value="CACHORRO">Cachorro</ion-option>
+          <ion-option value="GATO">Gato</ion-option>
+          <ion-option value="ROEDOR">Roedor</ion-option>
+          <ion-option value="PÁSSARO">Pássaro</ion-option>
+          <ion-option value="OUTROS">Outros</ion-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Descrição</ion-label>
-      <ion-textarea></ion-textarea>
-    </ion-item>
+      <ion-item>
+        <ion-label floating>Descrição</ion-label>
+        <ion-input formControlName="descriptionPostAnimal" type="text"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <button ion-button outline (click)="goToDetails()">Publicar</button>
-    </ion-item>
+      <br>
+      <button ion-button round color="primary" type="submit">Publicar</button>
+
+    </form>
 
   </ion-list>
 </ion-content>

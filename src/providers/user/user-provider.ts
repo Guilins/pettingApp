@@ -39,13 +39,20 @@ export class UserProvider {
       }
 
       login(credentials: FormGroup) {
+
+        let loading = this.utils.getLoader('Autenticando')
+        loading.present();
+
         return new Promise(resolve => {
-          this.http.post(this.login_API, credentials.value, {headers: this.headers})
-            .subscribe(success => {
+          this.http.post(this.login_API, JSON.stringify(credentials.value), {headers: this.headers}).subscribe(success => {
               resolve(success)
+              loading.dismiss()
+
+              this.utils.getToast('Login realizado com sucesso')
             }, err => {
               this.utils.getToast("Usuário ou senha incorreta")
               console.log(err)
+              loading.dismiss()
             });
         });
       }

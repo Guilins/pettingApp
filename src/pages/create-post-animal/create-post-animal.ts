@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-animal';
+import { Component } from '@angular/core'
+import { IonicPage, NavController, NavParams } from 'ionic-angular'
+import { FormControl, FormGroup, Validators } from "@angular/forms"
+import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-animal'
+import { AnimalProvider } from '../../providers/animal/animal'
 
 /**
  * Generated class for the CreatePostAnimalPage page.
@@ -16,7 +18,17 @@ import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-an
 })
 export class CreatePostAnimalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private meuForm: FormGroup
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public animalProvider: AnimalProvider) {
+  }
+
+  private ngOnInit(){
+    this.meuForm = new FormGroup({
+      titlePostAnimal: new FormControl('', Validators.required),
+      speciePostAnimal: new FormControl('', Validators.required),
+      descriptionPostAnimal: new FormControl('', Validators.required)
+    })
   }
 
   ionViewDidLoad() {
@@ -25,6 +37,10 @@ export class CreatePostAnimalPage {
 
   goToDetails(){
     this.navCtrl.push(DetailedPostAnimalPage)
+  }
+
+  postAnimal(){
+    this.animalProvider.postAnimal(this.meuForm).then(() => this.navCtrl.push(DetailedPostAnimalPage))
   }
 
 }

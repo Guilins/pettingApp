@@ -14,28 +14,30 @@
 
 
 <ion-content padding>
-  <ion-list>
+  <form [formGroup]="meuForm" (ngSubmit)="postItem(meuForm)">
+    <ion-list>
 
-    <ion-item>
-      <ion-label floating>Título</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label>Tipo</ion-label>
-      <ion-select [(ngModel)]="type">
-        <ion-option value="p">Produto</ion-option>
-        <ion-option value="r">Remédio</ion-option>
-      </ion-select>
-    </ion-item>
+      <ion-item>
+        <ion-label floating>Título</ion-label>
+        <ion-input formControlName="titlePostItem" type="text"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Tipo</ion-label>
+        <ion-select formControlName="typePostItem" [(ngModel)]="tipo">
+          <ion-option value="PRODUTO">Produto</ion-option>
+          <ion-option value="REMEDIO">Remédio</ion-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Descrição</ion-label>
-      <ion-textarea></ion-textarea>
-    </ion-item>
-  
-    <br>
-    <button ion-button round color="primary" (click)="goToDetails()">Publicar</button>
+      <ion-item>
+        <ion-label floating>Descrição</ion-label>
+        <ion-input formControlName="descriptionPostItem" type="text"></ion-input>
+      </ion-item>
+    
+      <br>
+      <button ion-button round color="primary" type="submit">Publicar</button>
 
-  </ion-list>
+    </ion-list>
+  </form>
 </ion-content>
