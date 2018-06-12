@@ -49,24 +49,26 @@ export class AuthInterceptor implements HttpInterceptor {
   async onSuccess(response: HttpResponse<any>) {
     if (response.status == 200) {
       console.log("success: " + response)
-      console.log("Headers: " + response.headers.get("Authorization"))
-      return await this.setTokens(response);
+      console.log("Token: " + response.body)
+      var body = response.body
+
+      var token = body.data
+      return await this.setTokens(token)
     }
   }
 
   onError(error: HttpErrorResponse) {
     if (error.status == 400) {
-      this.utils.getErrorsOnToast(error);
+      this.utils.getErrorsOnToast(error)
     }
     if(error.status == 500){
       this.utils.getToast('Um errro inesperado aconteceu. Por favor contate o administrador do sistema')
     }
   }
 
-  setTokens(response: HttpResponse<any>) {
-    let header = response.headers.keys()
-    console.log(header)
-    //this.utils.setTokens(header)
+  setTokens(response) {
+    console.log(response)
+    this.utils.setTokens(response)
   }
 
   getValidToken() {

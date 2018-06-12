@@ -50,16 +50,17 @@ export class Utils {
   }
 
   public setTokens(accessToken: string) {
-      this.storage.set('Authorization', accessToken)
+    console.log(accessToken)
+    this.storage.set('Authorization', accessToken)
   }
 
   public async getValidToken() {
-    const accessToken: string = await this.storage.get('accessToken');
-    if (accessToken != null && this.tokenIsValid(accessToken)) {
+    const accessToken: string = await this.storage.get('Authorization');
+    if (accessToken != null) {
       console.log("USANDO ACCESS-TOKEN");
       return accessToken;
     } else {
-      this.storage.remove('accessToken');
+      this.storage.remove('Authorization');
     }
     const refreshToken: string = await this.storage.get('refreshToken');
     if (refreshToken != null && this.tokenIsValid(refreshToken)) {
