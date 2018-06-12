@@ -13,15 +13,15 @@ import { Utils } from '../../Utils';
 export class ItemProvider {
 
   headers: HttpHeaders = new HttpHeaders()
-  private item_post = "/secured/post-item"
+  private item_post = "/secured/post-item/usur"
 
   constructor(public http: HttpClient, public utils: Utils) {
-    console.log('Hello ItemProvider Provider');
+    console.log('Hello ItemProvider Provider')
   }
 
   postItem(meuForm: FormGroup){
     return new Promise(resolve => {
-      this.http.post(this.item_post, meuForm.value, {headers: this.headers})
+      this.http.post(this.item_post, JSON.stringify(meuForm.value), {headers: this.headers})
         .subscribe(success => {
           resolve(success)
           this.utils.getToast('Postagem criada com sucesso!')

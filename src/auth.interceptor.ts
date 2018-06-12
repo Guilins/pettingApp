@@ -27,7 +27,7 @@ export class AuthInterceptor implements HttpInterceptor {
     return this.getValidToken().mergeMap((token: string) => {
       return next.handle(completeReq.clone({
         setHeaders: {
-          'Authorization': token
+          'Authorization': "Bearer " + token
         }
       }
     )).do((success: HttpResponse<any>) => this.onSuccess(success)).catch((error: HttpErrorResponse) => {
@@ -52,7 +52,7 @@ export class AuthInterceptor implements HttpInterceptor {
       console.log("Token: " + response.body)
       var body = response.body
 
-      var token = body.data
+      var token = body
       return await this.setTokens(token)
     }
   }
@@ -67,8 +67,8 @@ export class AuthInterceptor implements HttpInterceptor {
   }
 
   setTokens(response) {
-    console.log(response)
-    this.utils.setTokens(response)
+    console.log(response.Authorization)
+    this.utils.setTokens(response.Authorization)
   }
 
   getValidToken() {
