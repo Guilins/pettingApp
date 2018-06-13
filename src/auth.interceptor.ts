@@ -32,10 +32,10 @@ export class AuthInterceptor implements HttpInterceptor {
       }
     )).do((success: HttpResponse<any>) => this.onSuccess(success)).catch((error: HttpErrorResponse) => {
           if (error.status == 301) {
-            this.setTokens(error);
+            //this.setTokens(error);
             return next.handle(completeReq.clone({
               setHeaders: {
-                'Authorization': error.headers.get("Authorization")
+                'Error': error.headers.get("Authorization")
               }
             }));
           }
@@ -50,8 +50,8 @@ export class AuthInterceptor implements HttpInterceptor {
     if (response.status == 200) {
       console.log("success: " + response)
       console.log("Token: " + response.body)
-      var body = response.body
 
+      var body = response.body
       var token = body
       return await this.setTokens(token)
     }
@@ -67,8 +67,10 @@ export class AuthInterceptor implements HttpInterceptor {
   }
 
   setTokens(response) {
-    console.log(response.Authorization)
-    this.utils.setTokens(response.Authorization)
+    if(response.Authorization != undefined){
+      console.log(response.Authorization)
+      this.utils.setTokens(response.Authorization)
+    }
   }
 
   getValidToken() {

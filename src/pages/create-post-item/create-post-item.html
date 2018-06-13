@@ -21,12 +21,27 @@
         <ion-label floating>Título</ion-label>
         <ion-input formControlName="titlePostItem" type="text"></ion-input>
       </ion-item>
+
+      <br>
     
       <ion-item>
-        <ion-label>Tipo</ion-label>
+        <ion-label>Item é um produto ou remédio</ion-label>
         <ion-select formControlName="typePostItem" [(ngModel)]="tipo">
           <ion-option value="PRODUTO">Produto</ion-option>
           <ion-option value="REMEDIO">Remédio</ion-option>
+        </ion-select>
+      </ion-item>
+      
+      <br>
+
+      <ion-item>
+        <ion-label>Qual espécie pode utilizar</ion-label>
+        <ion-select formControlName="speciesPostItem" [(ngModel)]="especie">
+          <ion-option value="CACHORRO">Cachorro</ion-option>
+          <ion-option value="GATO">Gato</ion-option>
+          <ion-option value="PASSARO">Pássaro</ion-option>
+          <ion-option value="ROEDOR">Roedor</ion-option>
+          <ion-option value="OUTROS">Outros</ion-option>
         </ion-select>
       </ion-item>
 

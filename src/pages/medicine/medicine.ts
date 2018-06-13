@@ -21,7 +21,7 @@ export class MedicinePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MedicinePage');
+    console.log('ionViewDidLoad MedicinePage')
   }
 
   goToPostMedicine(){

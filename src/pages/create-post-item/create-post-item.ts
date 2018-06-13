@@ -28,6 +28,7 @@ export class CreatePostItemPage {
     this.meuForm = new FormGroup({
       titlePostItem : new FormControl('', Validators.required),
       typePostItem : new FormControl('', Validators.required),
+      speciesPostItem : new FormControl('', Validators.required),
       descriptionPostItem : new FormControl('', Validators.required)
     });
   }
