@@ -33,6 +33,16 @@
           <ion-option value="OUTROS">Outros</ion-option>
         </ion-select>
       </ion-item>
+      <br>
+
+      <ion-item>
+          <ion-label>Tamanho do animal</ion-label>
+          <ion-select formControlName="sizePostAnimal" [(ngModel)]="size">
+            <ion-option value="PEQUENO">Pequeno</ion-option>
+            <ion-option value="MEDIO">Médio</ion-option>
+            <ion-option value="GRANDE">Grande</ion-option>
+          </ion-select>
+        </ion-item>
 
       <ion-item>
         <ion-label floating>Descrição</ion-label>
