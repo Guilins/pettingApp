@@ -14,50 +14,24 @@
 
 
 <ion-content padding>
-
-  <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
-  </ion-searchbar>
+  <ion-searchbar>
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
 
   <ion-list>
-
-    <ion-item>
-
-      <ion-thumbnail item-start>
-        <img src="assets/imgs/remedio.png">
-      </ion-thumbnail>
-      <h2>Remédio 1</h2>
-      <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-      <button ion-button clear item-end (click)="goToPostMedicine()">View</button>
-    </ion-item>
-
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="assets/imgs/remedio2.jpg">
-      </ion-thumbnail>
-      <h2>Remédio 1</h2>
-      <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-      <button ion-button clear item-end (click)="goToPostMedicine()">View</button>
-    </ion-item>
-
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="assets/imgs/turniphead.png">
-      </ion-thumbnail>
-      <h2>Remédio 1</h2>
-      <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-      <button ion-button clear item-end (click)="goToPostMedicine()">View</button>
-    </ion-item>
-
-
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="assets/imgs/turniphead.png">
-      </ion-thumbnail>
-      <h2>Remédio 1</h2>
-      <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-      <button ion-button clear item-end (click)="goToPostMedicine()">View</button>
-    </ion-item>
-
+    <ion-row *ngFor="let category of categories">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/food.jpg">
+        </ion-thumbnail>
+          <h2>{{item.titlePostItem}}</h2>
+        <p>{{item.descriptionPostItem}} </p>
+        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->
+      </ion-item>
+    </ion-row>
   </ion-list>
   <ion-fab bottom right>
     <button ion-fab mini (click)="createPost()" color=danger>

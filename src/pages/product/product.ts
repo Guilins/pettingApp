@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular'
 import { DetailedPostProductPage } from '../detailed-post-product/detailed-post-product'
 import { CreatePostItemPage } from '../create-post-item/create-post-item'
 import { ItemProvider } from "../../providers/item/item"
-import { Product } from "../../model/Product";
+import { Item } from "../../model/Product";
 
 /**
  * Generated class for the ProductPage page.
@@ -19,7 +19,7 @@ import { Product } from "../../model/Product";
 })
 export class ProductPage {
 
-  products: Product[] = []
+  products: Item[] = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public itemProvider: ItemProvider) {
   }
@@ -39,7 +39,7 @@ export class ProductPage {
 
   getAll(){
     this.itemProvider.getAllProducts()
-      .then((products : Product[]) => {
+      .then((products : Item[]) => {
         this.products = products
       })
   }

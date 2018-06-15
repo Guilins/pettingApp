@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DetailedPostMedicinePage } from '../detailed-post-medicine/detailed-post-medicine';
-import { CreatePostItemPage } from '../create-post-item/create-post-item';
+import { Component } from '@angular/core'
+import { IonicPage, NavController, NavParams } from 'ionic-angular'
+import { DetailedPostMedicinePage } from '../detailed-post-medicine/detailed-post-medicine'
+import { CreatePostItemPage } from '../create-post-item/create-post-item'
+import { ItemProvider } from "../../providers/item/item"
+import { Item } from "../../model/Product";
 
 /**
  * Generated class for the MedicinePage page.
@@ -16,12 +18,15 @@ import { CreatePostItemPage } from '../create-post-item/create-post-item';
   templateUrl: 'medicine.html',
 })
 export class MedicinePage {
+  
+  medicines: Item[] = []
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public itemProvider: ItemProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MedicinePage')
+    this.getAll()
   }
 
   goToPostMedicine(){
@@ -30,6 +35,13 @@ export class MedicinePage {
 
   createPost(){
     this.navCtrl.push(CreatePostItemPage)
+  }
+
+  getAll(){
+    this.itemProvider.getAllMedicines()
+      .then((medicines : Item[]) => {
+        this.medicines = medicines
+      })
   }
 
 }

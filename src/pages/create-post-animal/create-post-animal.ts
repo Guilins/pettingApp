@@ -22,11 +22,12 @@ export class CreatePostAnimalPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public animalProvider: AnimalProvider) {
   }
-
+z 
   private ngOnInit(){
     this.meuForm = new FormGroup({
       titlePostAnimal: new FormControl('', Validators.required),
       speciePostAnimal: new FormControl('', Validators.required),
+      sizePostAnimal: new FormControl('', Validators.required),
       descriptionPostAnimal: new FormControl('', Validators.required)
     })
   }

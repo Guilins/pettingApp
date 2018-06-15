@@ -1,5 +1,6 @@
-export class Product {
+export class Item {
 
+    public idUsur: string 
     public titlePostItem: string
     public descriptionPostItem: string
     public speciesPostItem: string
@@ -7,6 +8,7 @@ export class Product {
   
     constructor() {
   
+      this.idUsur = ''
       this.titlePostItem = ''
       this.descriptionPostItem = ''
       this.speciesPostItem = ''
