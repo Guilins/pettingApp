@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core'
+import { IonicPage, NavController, NavParams } from 'ionic-angular'
+import { DetailedPostProvider } from '../../providers/detailed-post/detailed-post';
+import { DetailedPostItem } from '../../model/DetailedPostItem';
 
 /**
  * Generated class for the DetailedPostPage page.
@@ -15,11 +17,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetailedPostPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  item: DetailedPostItem[] = []
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public detailedPostProvider: DetailedPostProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DetailedPostPage');
+    console.log('ionViewDidLoad DetailedPostPage')
   }
 
+  getDetailedPost(){
+    this.detailedPostProvider.getPostItem()
+      .then((post : DetailedPostItem[]) => {
+        this.item = post
+      })
+  }
 }

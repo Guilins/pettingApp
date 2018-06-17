@@ -39,6 +39,8 @@ import { Utils } from "../Utils"
 import { AnimalProvider } from '../providers/animal/animal'
 import { ItemProvider } from '../providers/item/item'
 import { UserProvider } from '../providers/user/user-provider'
+import { ProfileProvider } from '../providers/profile/profile';
+import { DetailedPostProvider } from '../providers/detailed-post/detailed-post';
 
 @NgModule({
   declarations: [
@@ -112,7 +114,9 @@ import { UserProvider } from '../providers/user/user-provider'
     UserProvider,
     ItemProvider,
     AnimalProvider,
-    AnimalProvider
+    AnimalProvider,
+    ProfileProvider,
+    DetailedPostProvider
   ]
 })
 export class AppModule {}

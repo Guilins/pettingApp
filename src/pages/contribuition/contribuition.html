@@ -15,36 +15,22 @@
 
 <ion-content padding>
   <ion-searchbar>
-    [(ngModel)]="myInput"
-    [showCancelButton]="shouldShowCancel"
-    (ionInput)="onInput($event)"
-    (ionCancel)="onCancel($event)">
-  </ion-searchbar>
-  
-    <ion-item>
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+
+  <ion-list>
+    <ion-row *ngFor="let contribution of contributions.content">
+      <ion-item>
         <ion-thumbnail item-start>
           <img src="assets/imgs/food.jpg">
         </ion-thumbnail>
-          <h2>Produto 1</h2>
-        <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-        <button ion-button clear item-end>View</button>
+          <h2>{{contribution.titlePostItem}}</h2>
+        <p>{{contribution.descriptionPostItem}} </p>
+        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->
       </ion-item>
-  
-      <ion-item>
-          <ion-thumbnail item-start>
-            <img src="assets/imgs/doghouse.jpg">
-          </ion-thumbnail>
-            <h2>Produto 1</h2>
-          <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-          <button ion-button clear item-end>View</button>
-        </ion-item>
-  
-        <ion-item>
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/catscratch.png">
-            </ion-thumbnail>
-              <h2>Produto 1</h2>
-            <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>
-            <button ion-button clear item-end>View</button>
-          </ion-item>
+    </ion-row>
+  </ion-list>
 </ion-content>

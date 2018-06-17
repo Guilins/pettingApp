@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core'
+import { IonicPage, NavController, NavParams, Item } from 'ionic-angular'
+import { Profile } from '../../model/Profile'
+import { ProfileProvider } from '../../providers/profile/profile'
+import { Animal } from '../../model/Animal';
 
 /**
  * Generated class for the MyPostsPage page.
@@ -15,11 +18,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MyPostsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  posts: Animal[] = []
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public profileProvider: ProfileProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MyPostsPage');
+    console.log('ionViewDidLoad MyPostsPage')
+    this.getAll()
+  }
+
+  getAll(){
+    this.profileProvider.getAllPostsAnimal()
+      .then((posts : Animal[]) => {
+        this.posts = posts
+      })
   }
 
 }

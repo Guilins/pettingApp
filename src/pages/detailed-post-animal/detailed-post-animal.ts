@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ContactPage } from '../contact/contact';
+import { Component } from '@angular/core'
+import { IonicPage, NavController, NavParams } from 'ionic-angular'
+import { ContactPage } from '../contact/contact'
+import { DetailedPostAnimal } from '../../model/DetailedPostAnimal'
+import { DetailedPostProvider } from '../../providers/detailed-post/detailed-post'
 
 /**
  * Generated class for the DetailedPostAnimalPage page.
@@ -16,15 +18,24 @@ import { ContactPage } from '../contact/contact';
 })
 export class DetailedPostAnimalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  animal: DetailedPostAnimal[] = []
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public detailedPostProvider: DetailedPostProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DetailedPostAnimalPage');
+    console.log('ionViewDidLoad DetailedPostAnimalPage')
   }
 
   goToContact(){
     this.navCtrl.push(ContactPage)
+  }
+
+  getDetailedPost(){
+    this.detailedPostProvider.getPostItem()
+      .then((post : DetailedPostAnimal[]) => {
+        this.animal = post
+      })
   }
 
 }

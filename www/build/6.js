@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 339:
+/***/ 341:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MedicinePageModule", function() { return MedicinePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyPostsPageModule", function() { return MyPostsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__medicine__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_posts__ = __webpack_require__(128);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MedicinePageModule = /** @class */ (function () {
-    function MedicinePageModule() {
+var MyPostsPageModule = /** @class */ (function () {
+    function MyPostsPageModule() {
     }
-    MedicinePageModule = __decorate([
+    MyPostsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__medicine__["a" /* MedicinePage */],
+                __WEBPACK_IMPORTED_MODULE_2__my_posts__["a" /* MyPostsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__medicine__["a" /* MedicinePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__my_posts__["a" /* MyPostsPage */]),
             ],
         })
-    ], MedicinePageModule);
-    return MedicinePageModule;
+    ], MyPostsPageModule);
+    return MyPostsPageModule;
 }());
 
-//# sourceMappingURL=medicine.module.js.map
+//# sourceMappingURL=my-posts.module.js.map
 
 /***/ })
 

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core'
+import { IonicPage, NavController, NavParams } from 'ionic-angular'
+import { Profile } from '../../model/Profile'
+import { ProfileProvider } from '../../providers/profile/profile'
 
 /**
  * Generated class for the ContribuitionPage page.
@@ -15,11 +17,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ContribuitionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  contributions: Profile[] = []
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public profileProvider: ProfileProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ContribuitionPage');
+    console.log('ionViewDidLoad ContribuitionPage')
+    this.getAll()
+  }
+
+  getAll(){
+    this.profileProvider.getAllContributions()
+      .then((contribution : Profile[]) => {
+        this.contributions = contribution
+      })
   }
 
 }
