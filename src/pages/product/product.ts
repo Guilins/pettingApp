@@ -43,5 +43,4 @@ export class ProductPage {
         this.products = products
       })
   }
-
 }

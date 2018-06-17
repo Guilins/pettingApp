@@ -15,8 +15,8 @@ export class ItemProvider {
 
   headers: HttpHeaders = new HttpHeaders()
   private item_post = "/secured/post-item/usur"
-  private item_getProduct = "/secured/post-item/all-product"
-  private item_getMedicine = "/secured/post-item/all-medicine"
+  private item_getProduct = "/secured/post-item/all-product-custom"
+  private item_getMedicine = "/secured/post-item/all-medicine-custom"
 
   constructor(public http: HttpClient, public utils: Utils) {
     console.log('Hello ItemProvider Provider')

@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 327:
+/***/ 336:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailedPostProductPageModule", function() { return DetailedPostProductPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DogPageModule", function() { return DogPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detailed_post_product__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dog__ = __webpack_require__(119);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DetailedPostProductPageModule = /** @class */ (function () {
-    function DetailedPostProductPageModule() {
+var DogPageModule = /** @class */ (function () {
+    function DogPageModule() {
     }
-    DetailedPostProductPageModule = __decorate([
+    DogPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__detailed_post_product__["a" /* DetailedPostProductPage */],
+                __WEBPACK_IMPORTED_MODULE_2__dog__["a" /* DogPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__detailed_post_product__["a" /* DetailedPostProductPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__dog__["a" /* DogPage */]),
             ],
         })
-    ], DetailedPostProductPageModule);
-    return DetailedPostProductPageModule;
+    ], DogPageModule);
+    return DogPageModule;
 }());
 
-//# sourceMappingURL=detailed-post-product.module.js.map
+//# sourceMappingURL=dog.module.js.map
 
 /***/ })
 

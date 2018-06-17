@@ -22,13 +22,13 @@
 </ion-searchbar>
 
   <ion-list>
-    <ion-row *ngFor="let category of categories">
+    <ion-row *ngFor="let medicine of medicines.content">
       <ion-item>
         <ion-thumbnail item-start>
           <img src="assets/imgs/food.jpg">
         </ion-thumbnail>
-          <h2>{{item.titlePostItem}}</h2>
-        <p>{{item.descriptionPostItem}} </p>
+          <h2>{{medicine.titlePostItem}}</h2>
+        <p>{{medicine.descriptionPostItem}} </p>
         <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->
       </ion-item>
     </ion-row>

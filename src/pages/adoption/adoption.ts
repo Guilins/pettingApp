@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { AdoptionListPage } from '../adoption-list/adoption-list';
+import { BirdsPage } from '../birds/birds';
+import { RodentPage } from '../rodent/rodent';
+import { OthersPage } from '../others/others';
+import { CatPage } from '../cat/cat';
+import { DogPage } from '../dog/dog';
 
 /**
  * Generated class for the AdoptionPage page.
@@ -23,8 +28,24 @@ export class AdoptionPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AdoptionPage')
   }
+
+  goToCat(){
+    this.navCtrl.push(CatPage)
+  }
+
+  goToDog(){
+    this.navCtrl.push(DogPage)
+  }
   
-  goToAdoptionList(){
-    this.navCtrl.push(AdoptionListPage)
+  goToBirds(){
+    this.navCtrl.push(BirdsPage)
+  }
+
+  goToRodent(){
+    this.navCtrl.push(RodentPage)
+  }
+
+  goToOthers(){
+    this.navCtrl.push(OthersPage)
   }
 }

@@ -39,8 +39,8 @@ export class MedicinePage {
 
   getAll(){
     this.itemProvider.getAllMedicines()
-      .then((medicines : Item[]) => {
-        this.medicines = medicines
+      .then((medicine: Item[]) => {
+        this.medicines = medicine
       })
   }
 

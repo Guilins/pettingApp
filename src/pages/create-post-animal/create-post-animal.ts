@@ -26,7 +26,7 @@ z
   private ngOnInit(){
     this.meuForm = new FormGroup({
       titlePostAnimal: new FormControl('', Validators.required),
-      speciePostAnimal: new FormControl('', Validators.required),
+      speciesPostAnimal: new FormControl('', Validators.required),
       sizePostAnimal: new FormControl('', Validators.required),
       descriptionPostAnimal: new FormControl('', Validators.required)
     })
