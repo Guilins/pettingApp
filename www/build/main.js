@@ -926,10 +926,10 @@ var DetailedPostAnimalPage = /** @class */ (function () {
         console.log('ionViewDidLoad DetailedPostAnimalPage');
         this.getDetailedPost(this.id);
     };
-    DetailedPostAnimalPage.prototype.goToContacts = function (idUsur, idPostItem) {
+    DetailedPostAnimalPage.prototype.goToContacts = function (idUsur, idPostAnimal) {
         var _this = this;
         var meuForm = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormGroup */]({
-            idPostItem: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormControl */](idUsur)
+            idPostAnimal: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormControl */](idPostAnimal)
         });
         this.detailedPostProvider.postContributionItem(meuForm)
             .then(function () { return _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */], idUsur); });
@@ -945,9 +945,10 @@ var DetailedPostAnimalPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-detailed-post-animal',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post-animal\detailed-post-animal.html"*/'<!--\n\n  Generated template for the DetailedPostAnimalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>detailedPostAnimal</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <ion-list>\n\n      \n\n    <ion-item>\n\n      <ion-label><strong>{{animal.nameUsur}}</strong></ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <h1>Título</h1>\n\n      <ion-label>{{animal.titlePostAnimal}}</ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card>\n\n        <ion-card-header>\n\n          <img src="assets/imgs/turniphead.png" />\n\n        </ion-card-header>\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label fixed>Descrição</ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card text-wrap>\n\n        <strong>Tamanho do animal: </strong>{{animal.sizePostAnimal}}\n\n        <br>\n\n        <br>\n\n        {{animal.descriptionPostAnimal}}\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button primary (click)= "goToContacts(animal.idUsur, animal.idPostAnimal)">Entrar em contato</button>\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post-animal\detailed-post-animal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */]) === "function" && _c || Object])
     ], DetailedPostAnimalPage);
     return DetailedPostAnimalPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=detailed-post-animal.js.map
@@ -2151,7 +2152,7 @@ var DetailedPostPage = /** @class */ (function () {
     DetailedPostPage.prototype.goToContacts = function (idUsur, idPostItem) {
         var _this = this;
         var meuForm = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormGroup */]({
-            idPostItem: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormControl */](idUsur)
+            idPostItem: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormControl */](idPostItem)
         });
         this.detailedPostProvider.postContributionItem(meuForm)
             .then(function () { return _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__contact_contact__["a" /* ContactPage */], idUsur); });
@@ -2567,7 +2568,7 @@ var DetailedPostProvider = /** @class */ (function () {
     DetailedPostProvider.prototype.postContributionItem = function (meuForm) {
         var _this = this;
         return new Promise(function (resolve) {
-            _this.http.post(_this.item_postContribution, meuForm, { headers: _this.headers })
+            _this.http.post(_this.item_postContribution, JSON.stringify(meuForm), { headers: _this.headers })
                 .subscribe(function (success) {
                 resolve(success);
                 _this.utils.getToast('Postagem criada com sucesso!');
@@ -2576,9 +2577,10 @@ var DetailedPostProvider = /** @class */ (function () {
     };
     DetailedPostProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__Utils__["a" /* Utils */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__Utils__["a" /* Utils */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__Utils__["a" /* Utils */]) === "function" && _b || Object])
     ], DetailedPostProvider);
     return DetailedPostProvider;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=detailed-post.js.map

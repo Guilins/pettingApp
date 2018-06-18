@@ -39,9 +39,8 @@ export class DetailedPostProvider {
   }
 
   postContributionItem(meuForm: FormGroup){
-
     return new Promise(resolve => {
-      this.http.post(this.item_postContribution, meuForm, {headers: this.headers})
+      this.http.post(this.item_postContribution, JSON.stringify(meuForm), {headers: this.headers})
         .subscribe(success => {
           resolve(success)
           this.utils.getToast('Postagem criada com sucesso!')

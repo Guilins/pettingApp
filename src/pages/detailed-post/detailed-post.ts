@@ -40,7 +40,7 @@ export class DetailedPostPage {
 
   goToContacts(idUsur: String, idPostItem: String){
     let meuForm = new FormGroup({
-      idPostItem: new FormControl(idUsur)
+      idPostItem: new FormControl(idPostItem)
     })
     this.detailedPostProvider.postContributionItem(meuForm)
     .then(() => this.navCtrl.push(ContactPage, idUsur))

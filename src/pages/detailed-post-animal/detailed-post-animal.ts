@@ -31,9 +31,9 @@ export class DetailedPostAnimalPage {
     this.getDetailedPost(this.id)
   }
 
-  goToContacts(idUsur: String, idPostItem: String){
+  goToContacts(idUsur: String, idPostAnimal: String){
     let meuForm = new FormGroup({
-      idPostItem: new FormControl(idUsur)
+      idPostAnimal: new FormControl(idPostAnimal)
     })
     this.detailedPostProvider.postContributionItem(meuForm)
     .then(() => this.navCtrl.push(ContactPage, idUsur))
