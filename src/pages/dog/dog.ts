@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular'
 import { AnimalProvider } from "../../providers/animal/animal"
 import { Animal } from '../../model/Animal'
 import { CreatePostAnimalPage } from '../create-post-animal/create-post-animal'
+import { DetailedPostAnimal } from '../../model/DetailedPostAnimal';
+import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-animal';
 
 /**
  * Generated class for the DogPage page.
@@ -37,6 +39,10 @@ export class DogPage {
 
   createPost(){
     this.navCtrl.push(CreatePostAnimalPage)
+  }
+
+  goToDetailedPost(id: String){
+    this.navCtrl.push(DetailedPostAnimalPage, id)
   }
 
 }

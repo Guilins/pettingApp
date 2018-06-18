@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular'
 import { ContactPage } from '../contact/contact'
 import { DetailedPostAnimal } from '../../model/DetailedPostAnimal'
 import { DetailedPostProvider } from '../../providers/detailed-post/detailed-post'
+import { FormGroup, FormControl } from '@angular/forms'
 
 /**
  * Generated class for the DetailedPostAnimalPage page.
@@ -18,22 +19,29 @@ import { DetailedPostProvider } from '../../providers/detailed-post/detailed-pos
 })
 export class DetailedPostAnimalPage {
 
-  animal: DetailedPostAnimal[] = []
+  id: String = ""
+  animal: DetailedPostAnimal
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public detailedPostProvider: DetailedPostProvider) {
+    this.id = navParams.data
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailedPostAnimalPage')
+    this.getDetailedPost(this.id)
   }
 
-  goToContact(){
-    this.navCtrl.push(ContactPage)
+  goToContacts(idUsur: String, idPostItem: String){
+    let meuForm = new FormGroup({
+      idPostItem: new FormControl(idUsur)
+    })
+    this.detailedPostProvider.postContributionItem(meuForm)
+    .then(() => this.navCtrl.push(ContactPage, idUsur))
   }
 
-  getDetailedPost(){
-    this.detailedPostProvider.getPostItem()
-      .then((post : DetailedPostAnimal[]) => {
+  getDetailedPost(id: String){
+    this.detailedPostProvider.getPostAnimal(id)
+      .then((post : DetailedPostAnimal) => {
         this.animal = post
       })
   }

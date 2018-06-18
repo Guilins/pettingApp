@@ -1,9 +1,9 @@
 import { Component } from '@angular/core'
 import { IonicPage, NavController, NavParams } from 'ionic-angular'
-import { DetailedPostMedicinePage } from '../detailed-post-medicine/detailed-post-medicine'
 import { CreatePostItemPage } from '../create-post-item/create-post-item'
 import { ItemProvider } from "../../providers/item/item"
 import { Item } from "../../model/Product";
+import { DetailedPostPage } from '../detailed-post/detailed-post';
 
 /**
  * Generated class for the MedicinePage page.
@@ -29,10 +29,6 @@ export class MedicinePage {
     this.getAll()
   }
 
-  goToPostMedicine(){
-    this.navCtrl.push(DetailedPostMedicinePage)
-  }
-
   createPost(){
     this.navCtrl.push(CreatePostItemPage)
   }
@@ -42,6 +38,10 @@ export class MedicinePage {
       .then((medicine: Item[]) => {
         this.medicines = medicine
       })
+  }
+
+  goToDetailedPost(id: String){
+    this.navCtrl.push(DetailedPostPage, id)
   }
 
 }

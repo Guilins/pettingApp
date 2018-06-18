@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AboutPage } from '../about/about';
-import { ContribuitionPage } from '../contribuition/contribuition';
-import { EditUserPage } from '../edit-user/edit-user';
-import { LoginPage } from '../login/login';
-import { MyPostsPage } from '../my-posts/my-posts';
-import { TabsPage } from '../tabs/tabs';
-import { UserPage } from '../user/user';
-import { Utils } from '../../Utils';
+import { Component } from '@angular/core'
+import { IonicPage, NavController, NavParams } from 'ionic-angular'
+import { AboutPage } from '../about/about'
+import { ContribuitionPage } from '../contribuition/contribuition'
+import { EditUserPage } from '../edit-user/edit-user'
+import { LoginPage } from '../login/login'
+import { MyPostsPage } from '../my-posts/my-posts'
+import { TabsPage } from '../tabs/tabs'
+import { UserPage } from '../user/user'
+import { Utils } from '../../Utils'
+import { MyPostsAnimalPage } from '../my-posts-animal/my-posts-animal'
 /**
  * Generated class for the ProfilePage page.
  *
@@ -26,28 +27,32 @@ export class ProfilePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
+    console.log('ionViewDidLoad ProfilePage')
   }
 
   goToAbout() {
-    this.navCtrl.push(AboutPage);
+    this.navCtrl.push(AboutPage)
   }
 
   goToContribuition() {
-    this.navCtrl.push(ContribuitionPage);
+    this.navCtrl.push(ContribuitionPage)
   }
 
   goToMyPosts() {
-    this.navCtrl.push(MyPostsPage);
+    this.navCtrl.push(MyPostsPage)
+  }
+
+  goToMyPostsAnimal() {
+    this.navCtrl.push(MyPostsAnimalPage)
   }
 
   goToLogin() {
-    this.utils.invalidTokens().then(() => this.navCtrl.push(LoginPage));
+    this.utils.invalidTokens().then(() => this.navCtrl.push(LoginPage))
   }
 
 
   goToEdit() {
-    this.navCtrl.push(EditUserPage);
+    this.navCtrl.push(EditUserPage)
   }
 
 }

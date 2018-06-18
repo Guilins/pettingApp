@@ -37,6 +37,7 @@ export class CreatePostItemPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreatePostItemPage')
   }
+  
 
   goToDetails(){
     this.navCtrl.push(DetailedPostAnimalPage)
@@ -44,7 +45,7 @@ export class CreatePostItemPage {
 
   postItem() {
     this.itemProvider.postItem(this.meuForm)
-      .then(() => this.navCtrl.push(DetailedPostPage))
+      .then(() => this.navCtrl.pop())
   }
 
 }

@@ -2,15 +2,20 @@ export class DetailedPostItem {
 
     public idPostItem: string 
     public idUsur: string
-    public titlePostItem: string
-    public descriptionPostItem: string
-    public speciesPostItem: string
+    public nameUsur: string
+    public titlePostAnimal: string
+    public descriptionPostAnimal: string
+    public speciesPostAnimal: string
+    public typePostAnimal: string
     
   
     constructor() {
       this.idPostItem = ''
-      this.titlePostItem = ''
-      this.descriptionPostItem = ''
-      this.speciesPostItem = ''
+      this.idUsur = ''
+      this.nameUsur = ''
+      this.titlePostAnimal = ''
+      this.descriptionPostAnimal = ''
+      this.speciesPostAnimal = ''
+      this.typePostAnimal = ''
     }
   }

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core'
+import { IonicPage, NavController, NavParams } from 'ionic-angular'
+import { User } from '../../model/User';
+import { ContactProvider } from '../../providers/contact/contact';
 
 /**
  * Generated class for the ContactPage page.
@@ -15,11 +17,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  id: String = ""
+  user: User = new User()
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public contactProvider: ContactProvider) {
+    this.id = navParams.data
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ContactPage');
+    console.log('ionViewDidLoad ContactPage')
+    this.getUser(this.id)
   }
 
+  getUser(id: String){
+    this.contactProvider.getUser(id)
+      .then((post : User) => {
+        this.user = post
+      })
+  }
 }

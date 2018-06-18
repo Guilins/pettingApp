@@ -5,10 +5,10 @@ webpackJsonp([13],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailedPostMedicinePageModule", function() { return DetailedPostMedicinePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreatePostItemPageModule", function() { return CreatePostItemPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detailed_post_medicine__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_post_item__ = __webpack_require__(61);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DetailedPostMedicinePageModule = /** @class */ (function () {
-    function DetailedPostMedicinePageModule() {
+var CreatePostItemPageModule = /** @class */ (function () {
+    function CreatePostItemPageModule() {
     }
-    DetailedPostMedicinePageModule = __decorate([
+    CreatePostItemPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__detailed_post_medicine__["a" /* DetailedPostMedicinePage */],
+                __WEBPACK_IMPORTED_MODULE_2__create_post_item__["a" /* CreatePostItemPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__detailed_post_medicine__["a" /* DetailedPostMedicinePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__create_post_item__["a" /* CreatePostItemPage */]),
             ],
         })
-    ], DetailedPostMedicinePageModule);
-    return DetailedPostMedicinePageModule;
+    ], CreatePostItemPageModule);
+    return CreatePostItemPageModule;
 }());
 
-//# sourceMappingURL=detailed-post-medicine.module.js.map
+//# sourceMappingURL=create-post-item.module.js.map
 
 /***/ })
 

@@ -1,14 +1,14 @@
 webpackJsonp([15],{
 
-/***/ 332:
+/***/ 331:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreatePostItemPageModule", function() { return CreatePostItemPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContribuitionPageModule", function() { return ContribuitionPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_post_item__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contribuition__ = __webpack_require__(123);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CreatePostItemPageModule = /** @class */ (function () {
-    function CreatePostItemPageModule() {
+var ContribuitionPageModule = /** @class */ (function () {
+    function ContribuitionPageModule() {
     }
-    CreatePostItemPageModule = __decorate([
+    ContribuitionPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__create_post_item__["a" /* CreatePostItemPage */],
+                __WEBPACK_IMPORTED_MODULE_2__contribuition__["a" /* ContribuitionPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__create_post_item__["a" /* CreatePostItemPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__contribuition__["a" /* ContribuitionPage */]),
             ],
         })
-    ], CreatePostItemPageModule);
-    return CreatePostItemPageModule;
+    ], ContribuitionPageModule);
+    return ContribuitionPageModule;
 }());
 
-//# sourceMappingURL=create-post-item.module.js.map
+//# sourceMappingURL=contribuition.module.js.map
 
 /***/ })
 

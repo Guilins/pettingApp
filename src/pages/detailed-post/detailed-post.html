@@ -18,8 +18,12 @@
     <ion-list>
   
       <ion-item>
+          <ion-label>{{item.nameUsur}}</ion-label>
+        </ion-item>
+
+      <ion-item>
         <h1>Título</h1>
-        <ion-label>{{item.title}}</ion-label>
+        <ion-label>{{item.titlePostAnimal}}</ion-label>
       </ion-item>
   
       <ion-item>
@@ -36,14 +40,15 @@
   
       <ion-item>
         <ion-card text-wrap>
-          Espécie : {{item.species}}
+          <strong>Espécie </strong>: {{item.speciesPostAnimal}}
             <br>
-          {{item.description}}
+            <br>
+          {{item.descriptionPostAnimal}}
         </ion-card>
       </ion-item>
   
       <ion-item>
-        <button ion-button primary (click)= "goToContact()">Entrar em contato</button>
+        <button ion-button primary (click)= "goToContacts(item.idUsur, item.idPostItem)">Entrar em contato</button>
       </ion-item>
   
     </ion-list>

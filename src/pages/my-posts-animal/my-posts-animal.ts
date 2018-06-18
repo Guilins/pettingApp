@@ -2,7 +2,8 @@ import { Component } from '@angular/core'
 import { IonicPage, NavController, NavParams } from 'ionic-angular'
 import { Profile } from '../../model/Profile'
 import { ProfileProvider } from '../../providers/profile/profile'
-import { Animal } from '../../model/Animal';
+import { Animal } from '../../model/Animal'
+import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-animal'
 
 /**
  * Generated class for the MyPostsAnimalPage page.
@@ -24,7 +25,7 @@ export class MyPostsAnimalPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MyPostsPage')
+    console.log('ionViewDidLoad MyPostsAnimalPage')
     this.getAll()
   }
 
@@ -33,6 +34,10 @@ export class MyPostsAnimalPage {
       .then((posts : Animal[]) => {
         this.posts = posts
       })
+  }
+
+  goToDetailedPost(id: String){
+    this.navCtrl.push(DetailedPostAnimalPage, id)
   }
 
 }

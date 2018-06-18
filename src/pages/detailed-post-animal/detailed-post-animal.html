@@ -12,13 +12,17 @@
 
 </ion-header>
 
-
 <ion-content padding>
 
   <ion-list>
+      
+    <ion-item>
+      <ion-label><strong>{{animal.nameUsur}}</strong></ion-label>
+    </ion-item>
 
     <ion-item>
       <h1>Título</h1>
+      <ion-label>{{animal.titlePostAnimal}}</ion-label>
     </ion-item>
 
     <ion-item>
@@ -35,19 +39,15 @@
 
     <ion-item>
       <ion-card text-wrap>
-        
+        <strong>Tamanho do animal: </strong>{{animal.sizePostAnimal}}
+        <br>
+        <br>
+        {{animal.descriptionPostAnimal}}
       </ion-card>
     </ion-item>
 
     <ion-item>
-      <ion-card text-wrap>
-        Tamanho do animal: {{animal.size}}
-        {{animal.description}}
-      </ion-card>
-    </ion-item>
-
-    <ion-item>
-      <button ion-button primary (click)= "goToContact()">Entrar em contato</button>
+      <button ion-button primary (click)= "goToContacts(animal.idUsur, animal.idPostAnimal)">Entrar em contato</button>
     </ion-item>
 
   </ion-list>

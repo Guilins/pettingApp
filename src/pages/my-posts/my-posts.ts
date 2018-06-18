@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams, Item } from 'ionic-angular'
 import { Profile } from '../../model/Profile'
 import { ProfileProvider } from '../../providers/profile/profile'
 import { Animal } from '../../model/Animal';
+import { DetailedPostItem } from '../../model/DetailedPostItem';
+import { DetailedPostAnimalPage } from '../detailed-post-animal/detailed-post-animal';
+import { DetailedPostPage } from '../detailed-post/detailed-post';
 
 /**
  * Generated class for the MyPostsPage page.
@@ -18,7 +21,7 @@ import { Animal } from '../../model/Animal';
 })
 export class MyPostsPage {
 
-  posts: Animal[] = []
+  posts: Item[] = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public profileProvider: ProfileProvider) {
   }
@@ -29,10 +32,14 @@ export class MyPostsPage {
   }
 
   getAll(){
-    this.profileProvider.getAllPostsAnimal()
-      .then((posts : Animal[]) => {
+    this.profileProvider.getAllPostsItem()
+      .then((posts : Item[]) => {
         this.posts = posts
       })
+  }
+
+  goToDetailedPost(id: String){
+    this.navCtrl.push(DetailedPostPage, id)
   }
 
 }

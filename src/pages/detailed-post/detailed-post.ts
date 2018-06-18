@@ -1,7 +1,9 @@
 import { Component } from '@angular/core'
 import { IonicPage, NavController, NavParams } from 'ionic-angular'
-import { DetailedPostProvider } from '../../providers/detailed-post/detailed-post';
-import { DetailedPostItem } from '../../model/DetailedPostItem';
+import { DetailedPostProvider } from '../../providers/detailed-post/detailed-post'
+import { DetailedPostItem } from '../../model/DetailedPostItem'
+import { FormGroup, FormControl } from '@angular/forms'
+import { ContactPage } from '../contact/contact';
 
 /**
  * Generated class for the DetailedPostPage page.
@@ -17,19 +19,30 @@ import { DetailedPostItem } from '../../model/DetailedPostItem';
 })
 export class DetailedPostPage {
 
-  item: DetailedPostItem[] = []
+  id: String = ""
+  item: DetailedPostItem = new DetailedPostItem()
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public detailedPostProvider: DetailedPostProvider) {
+    this.id = this.navParams.data
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailedPostPage')
+    this.getDetailedPost(this.id)
   }
 
-  getDetailedPost(){
-    this.detailedPostProvider.getPostItem()
-      .then((post : DetailedPostItem[]) => {
+  getDetailedPost(id: String){
+    this.detailedPostProvider.getPostItem(id)
+      .then((post : DetailedPostItem) => {
         this.item = post
       })
+  }
+
+  goToContacts(idUsur: String, idPostItem: String){
+    let meuForm = new FormGroup({
+      idPostItem: new FormControl(idUsur)
+    })
+    this.detailedPostProvider.postContributionItem(meuForm)
+    .then(() => this.navCtrl.push(ContactPage, idUsur))
   }
 }

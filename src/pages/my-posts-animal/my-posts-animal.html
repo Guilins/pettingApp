@@ -12,25 +12,24 @@
 
 </ion-header>
 
-
 <ion-content padding>
-  <ion-searchbar>
-  [(ngModel)]="myInput"
-  [showCancelButton]="shouldShowCancel"
-  (ionInput)="onInput($event)"
-  (ionCancel)="onCancel($event)">
-</ion-searchbar>
-
-  <ion-list>
-    <ion-row *ngFor="let post of post.content">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/imgs/food.jpg">
-        </ion-thumbnail>
-          <h2>{{post.titlePostItem}}</h2>
-        <p>{{post.descriptionPostItem}} </p>
-        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->
-      </ion-item>
-    </ion-row>
-  </ion-list>
-</ion-content>
+    <ion-searchbar>
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+  
+    <ion-list>
+      <ion-row *ngFor="let post of posts.content">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/food.jpg">
+          </ion-thumbnail>
+            <h2>{{post.titlePostAnimal}}</h2>
+          <p>{{post.descriptionPostAnimal}} </p>
+          <button ion-button clear item-end (click)="goToDetailedPost(post.idPostAnimal)">View</button>
+        </ion-item>
+      </ion-row>
+    </ion-list>
+  </ion-content>

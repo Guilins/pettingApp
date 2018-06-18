@@ -29,7 +29,7 @@ export class ItemProvider {
           resolve(success)
           this.utils.getToast('Postagem criada com sucesso!')
         }, err => console.log(err))
-    });
+    })
   }
 
   getAllProducts(){

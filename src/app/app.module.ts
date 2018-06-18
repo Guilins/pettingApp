@@ -14,8 +14,6 @@ import { ContribuitionPage } from '../pages/contribuition/contribuition'
 import { CreatePostAnimalPage } from '../pages/create-post-animal/create-post-animal'
 import { CreatePostItemPage } from '../pages/create-post-item/create-post-item'
 import { DetailedPostAnimalPage } from '../pages/detailed-post-animal/detailed-post-animal'
-import { DetailedPostProductPage } from '../pages/detailed-post-product/detailed-post-product'
-import { DetailedPostMedicinePage } from '../pages/detailed-post-medicine/detailed-post-medicine'
 import { DetailedPostPage } from '../pages/detailed-post/detailed-post'
 import { DogPage } from '../pages/dog/dog'
 import { EditUserPage } from '../pages/edit-user/edit-user'
@@ -41,6 +39,7 @@ import { ItemProvider } from '../providers/item/item'
 import { UserProvider } from '../providers/user/user-provider'
 import { ProfileProvider } from '../providers/profile/profile';
 import { DetailedPostProvider } from '../providers/detailed-post/detailed-post';
+import { ContactProvider } from '../providers/contact/contact';
 
 @NgModule({
   declarations: [
@@ -60,8 +59,6 @@ import { DetailedPostProvider } from '../providers/detailed-post/detailed-post';
     EditUserPage,  
     TabsPage,
     DetailedPostAnimalPage,
-    DetailedPostMedicinePage,
-    DetailedPostProductPage,
     ContactPage,
     DetailedPostPage,
     BirdsPage,
@@ -94,8 +91,6 @@ import { DetailedPostProvider } from '../providers/detailed-post/detailed-post';
     EditUserPage,
     TabsPage,
     DetailedPostAnimalPage,
-    DetailedPostMedicinePage,
-    DetailedPostProductPage,
     ContactPage,
     DetailedPostPage,
     BirdsPage,
@@ -116,7 +111,8 @@ import { DetailedPostProvider } from '../providers/detailed-post/detailed-post';
     AnimalProvider,
     AnimalProvider,
     ProfileProvider,
-    DetailedPostProvider
+    DetailedPostProvider,
+    ContactProvider
   ]
 })
 export class AppModule {}

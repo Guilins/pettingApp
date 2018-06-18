@@ -1,17 +1,84 @@
-webpackJsonp([23],{
+webpackJsonp([21],{
 
-/***/ 115:
+/***/ 117:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BirdsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the BirdsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var BirdsPage = /** @class */ (function () {
+    function BirdsPage(navCtrl, navParams, animalProvider) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.animalProvider = animalProvider;
+        this.animals = [];
+    }
+    BirdsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad BirdsPage');
+        this.getAll();
+    };
+    BirdsPage.prototype.getAll = function () {
+        var _this = this;
+        this.animalProvider.getAllBirds()
+            .then(function (animal) {
+            _this.animals = animal;
+        });
+    };
+    BirdsPage.prototype.createPost = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__["a" /* CreatePostAnimalPage */]);
+    };
+    BirdsPage.prototype.goToDetailedPost = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */], id);
+    };
+    BirdsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-birds',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\birds\birds.html"*/'<!--\n  Generated template for the BirdsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>birds</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\birds\birds.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
+    ], BirdsPage);
+    return BirdsPage;
+}());
+
+//# sourceMappingURL=birds.js.map
+
+/***/ }),
+
+/***/ 118:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdoptionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__birds_birds__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__rodent_rodent__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__others_others__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cat_cat__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__dog_dog__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__birds_birds__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__rodent_rodent__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__others_others__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cat_cat__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__dog_dog__ = __webpack_require__(122);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -70,77 +137,17 @@ var AdoptionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 116:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BirdsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__ = __webpack_require__(27);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the BirdsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var BirdsPage = /** @class */ (function () {
-    function BirdsPage(navCtrl, navParams, animalProvider) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.animalProvider = animalProvider;
-        this.animals = [];
-    }
-    BirdsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad BirdsPage');
-        this.getAll();
-    };
-    BirdsPage.prototype.getAll = function () {
-        var _this = this;
-        this.animalProvider.getAllBirds()
-            .then(function (animal) {
-            _this.animals = animal;
-        });
-    };
-    BirdsPage.prototype.createPost = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__["a" /* CreatePostAnimalPage */]);
-    };
-    BirdsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-birds',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\birds\birds.html"*/'<!--\n  Generated template for the BirdsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>birds</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\birds\birds.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
-    ], BirdsPage);
-    return BirdsPage;
-}());
-
-//# sourceMappingURL=birds.js.map
-
-/***/ }),
-
-/***/ 117:
+/***/ 119:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RodentPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__detailed_post_detailed_post__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -150,6 +157,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -181,9 +190,15 @@ var RodentPage = /** @class */ (function () {
     RodentPage.prototype.createPost = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__["a" /* CreatePostAnimalPage */]);
     };
+    RodentPage.prototype.goToDetailedProduct = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__detailed_post_detailed_post__["a" /* DetailedPostPage */], id);
+    };
+    RodentPage.prototype.goToDetailedPost = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */], id);
+    };
     RodentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-rodent',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\rodent\rodent.html"*/'<!--\n  Generated template for the RodentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>rodent</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\rodent\rodent.html"*/,
+            selector: 'page-rodent',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\rodent\rodent.html"*/'<!--\n  Generated template for the RodentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>rodent</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\rodent\rodent.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
     ], RodentPage);
@@ -194,15 +209,16 @@ var RodentPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 118:
+/***/ 120:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OthersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -212,6 +228,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -243,9 +260,12 @@ var OthersPage = /** @class */ (function () {
     OthersPage.prototype.createPost = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__["a" /* CreatePostAnimalPage */]);
     };
+    OthersPage.prototype.goToDetailedPost = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */], id);
+    };
     OthersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-others',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\others\others.html"*/'<!--\n  Generated template for the OthersPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>others</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\others\others.html"*/,
+            selector: 'page-others',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\others\others.html"*/'<!--\n  Generated template for the OthersPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>others</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\others\others.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
     ], OthersPage);
@@ -256,15 +276,16 @@ var OthersPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 119:
+/***/ 121:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CatPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -274,6 +295,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -305,9 +327,12 @@ var CatPage = /** @class */ (function () {
     CatPage.prototype.createPost = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__["a" /* CreatePostAnimalPage */]);
     };
+    CatPage.prototype.goToDetailedPost = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */], id);
+    };
     CatPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-cat',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\cat\cat.html"*/'<!--\n  Generated template for the CatPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>cat</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\cat\cat.html"*/,
+            selector: 'page-cat',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\cat\cat.html"*/'<!--\n  Generated template for the CatPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>cat</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\cat\cat.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
     ], CatPage);
@@ -318,15 +343,16 @@ var CatPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 120:
+/***/ 122:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DogPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -336,6 +362,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -367,9 +394,12 @@ var DogPage = /** @class */ (function () {
     DogPage.prototype.createPost = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__create_post_animal_create_post_animal__["a" /* CreatePostAnimalPage */]);
     };
+    DogPage.prototype.goToDetailedPost = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */], id);
+    };
     DogPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-dog',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\dog\dog.html"*/'<!--\n  Generated template for the DogPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>dog</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\dog\dog.html"*/,
+            selector: 'page-dog',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\dog\dog.html"*/'<!--\n  Generated template for the DogPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>dog</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\dog\dog.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
     ], DogPage);
@@ -380,14 +410,14 @@ var DogPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 121:
+/***/ 123:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContribuitionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__ = __webpack_require__(54);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -424,6 +454,8 @@ var ContribuitionPage = /** @class */ (function () {
             _this.contributions = contribution;
         });
     };
+    ContribuitionPage.prototype.goToDetailedPost = function () {
+    };
     ContribuitionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-contribuition',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\contribuition\contribuition.html"*/'<!--\n\n  Generated template for the ContribuitionPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>contribuition</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let contribution of contributions.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/food.jpg">\n\n        </ion-thumbnail>\n\n          <h2>{{contribution.titlePostItem}}</h2>\n\n        <p>{{contribution.descriptionPostItem}} </p>\n\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\contribuition\contribuition.html"*/,
@@ -437,109 +469,16 @@ var ContribuitionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 122:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the DetailedPostPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var DetailedPostPage = /** @class */ (function () {
-    function DetailedPostPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    DetailedPostPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DetailedPostPage');
-    };
-    DetailedPostPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-detailed-post',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post\detailed-post.html"*/'<!--\n  Generated template for the DetailedPostMedicinePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar>\n      <ion-title>detailedPost</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  \n  <ion-content padding>\n  \n    <ion-list>\n  \n      <ion-item>\n        <h1>Título</h1>\n      </ion-item>\n  \n      <ion-item>\n        <ion-card>\n          <ion-card-header>\n            <img src="assets/imgs/turniphead.png" />\n          </ion-card-header>\n        </ion-card>\n      </ion-item>\n  \n      <ion-item>\n        <ion-label fixed>Descrição</ion-label>\n      </ion-item>\n  \n      <ion-item>\n        <ion-card text-wrap>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis scelerisque ornare. In auctor congue porta. Duis nisi\n          dolor, condimentum vitae nibh commodo, feugiat maximus justo. Fusce aliquam, quam feugiat tristique vestibulum, nulla\n          nisi porta tortor, vel interdum lectus nisi ac enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n          Nulla sodales rutrum diam id vulputate. Vestibulum elementum mi eget tortor consectetur, vel sagittis est accumsan.\n          Donec viverra purus commodo, consequat tortor venenatis, consectetur leo. Maecenas augue justo, placerat nec vulputate\n          a, aliquet eget leo. Suspendisse potenti. Nullam rutrum est at iaculis ultrices. Fusce aliquet purus non libero laoreet\n          elementum. Sed accumsan vestibulum lorem sit amet bibendum. Fusce pellentesque, nisl a tristique auctor, erat tortor\n          auctor diam, egestas tempus turpis nulla in nibh. Cras vestibulum suscipit aliquam. Aenean eget congue libero, non\n          ultricies lorem. Vestibulum egestas finibus lacinia. Maecenas non magna ut metus bibendum sodales. Duis nec ultrices\n          metus. Maecenas vel mauris nisl. Proin quis facilisis sem. Aenean vitae mi sed nulla volutpat tristique. Morbi eget\n          felis eget elit suscipit bibendum. Mauris sit amet facilisis nibh. Pellentesque justo erat, pellentesque id bibendum\n          eget, tempor eu velit. Curabitur rutrum lorem nec ipsum vestibulum dignissim. Mauris venenatis est sagittis elit\n          malesuada, vel posuere enim lobortis. Vivamus sit amet blandit nunc. Fusce pellentesque augue vehicula tincidunt\n          rhoncus. Praesent ullamcorper molestie nulla ut porta. Nullam finibus metus diam, vitae malesuada turpis eleifend\n          vitae.\n        </ion-card>\n      </ion-item>\n  \n      <ion-item>\n        <button ion-button primary (click)= "goToContact()">Entrar em contato</button>\n      </ion-item>\n  \n    </ion-list>\n  </ion-content>\n  '/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post\detailed-post.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], DetailedPostPage);
-    return DetailedPostPage;
-}());
-
-//# sourceMappingURL=detailed-post.js.map
-
-/***/ }),
-
-/***/ 123:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostMedicinePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(48);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the DetailedPostMedicinePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var DetailedPostMedicinePage = /** @class */ (function () {
-    function DetailedPostMedicinePage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    DetailedPostMedicinePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DetailedPostMedicinePage');
-    };
-    DetailedPostMedicinePage.prototype.goToContact = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */]);
-    };
-    DetailedPostMedicinePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-detailed-post-medicine',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post-medicine\detailed-post-medicine.html"*/'<!--\n\n  Generated template for the DetailedPostMedicinePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>detailedPostMedicine</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-list>\n\n\n\n    <ion-item>\n\n      <h1>Título</h1>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card>\n\n        <ion-card-header>\n\n          <img src="assets/imgs/turniphead.png" />\n\n        </ion-card-header>\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label fixed>Descrição</ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card text-wrap>\n\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis scelerisque ornare. In auctor congue porta. Duis nisi\n\n        dolor, condimentum vitae nibh commodo, feugiat maximus justo. Fusce aliquam, quam feugiat tristique vestibulum, nulla\n\n        nisi porta tortor, vel interdum lectus nisi ac enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n\n        Nulla sodales rutrum diam id vulputate. Vestibulum elementum mi eget tortor consectetur, vel sagittis est accumsan.\n\n        Donec viverra purus commodo, consequat tortor venenatis, consectetur leo. Maecenas augue justo, placerat nec vulputate\n\n        a, aliquet eget leo. Suspendisse potenti. Nullam rutrum est at iaculis ultrices. Fusce aliquet purus non libero laoreet\n\n        elementum. Sed accumsan vestibulum lorem sit amet bibendum. Fusce pellentesque, nisl a tristique auctor, erat tortor\n\n        auctor diam, egestas tempus turpis nulla in nibh. Cras vestibulum suscipit aliquam. Aenean eget congue libero, non\n\n        ultricies lorem. Vestibulum egestas finibus lacinia. Maecenas non magna ut metus bibendum sodales. Duis nec ultrices\n\n        metus. Maecenas vel mauris nisl. Proin quis facilisis sem. Aenean vitae mi sed nulla volutpat tristique. Morbi eget\n\n        felis eget elit suscipit bibendum. Mauris sit amet facilisis nibh. Pellentesque justo erat, pellentesque id bibendum\n\n        eget, tempor eu velit. Curabitur rutrum lorem nec ipsum vestibulum dignissim. Mauris venenatis est sagittis elit\n\n        malesuada, vel posuere enim lobortis. Vivamus sit amet blandit nunc. Fusce pellentesque augue vehicula tincidunt\n\n        rhoncus. Praesent ullamcorper molestie nulla ut porta. Nullam finibus metus diam, vitae malesuada turpis eleifend\n\n        vitae.\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button primary (click)= "goToContact()">Entrar em contato</button>\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post-medicine\detailed-post-medicine.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], DetailedPostMedicinePage);
-    return DetailedPostMedicinePage;
-}());
-
-//# sourceMappingURL=detailed-post-medicine.js.map
-
-/***/ }),
-
 /***/ 124:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostProductPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MedicinePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_post_item_create_post_item__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_item_item__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__detailed_post_detailed_post__ = __webpack_require__(38);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -552,33 +491,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
- * Generated class for the DetailedPostProductPage page.
+ * Generated class for the MedicinePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var DetailedPostProductPage = /** @class */ (function () {
-    function DetailedPostProductPage(navCtrl, navParams) {
+var MedicinePage = /** @class */ (function () {
+    function MedicinePage(navCtrl, navParams, itemProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.itemProvider = itemProvider;
+        this.medicines = [];
     }
-    DetailedPostProductPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DetailedPostProductPage');
+    MedicinePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MedicinePage');
+        this.getAll();
     };
-    DetailedPostProductPage.prototype.goToContact = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */]);
+    MedicinePage.prototype.createPost = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__create_post_item_create_post_item__["a" /* CreatePostItemPage */]);
     };
-    DetailedPostProductPage = __decorate([
+    MedicinePage.prototype.getAll = function () {
+        var _this = this;
+        this.itemProvider.getAllMedicines()
+            .then(function (medicine) {
+            _this.medicines = medicine;
+        });
+    };
+    MedicinePage.prototype.goToDetailedPost = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__detailed_post_detailed_post__["a" /* DetailedPostPage */], id);
+    };
+    MedicinePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-detailed-post-product',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post-product\detailed-post-product.html"*/'<!--\n\n  Generated template for the DetailedPostProductPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>detailedPostProduct</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-list>\n\n\n\n    <ion-item>\n\n      <h1>Título</h1>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card>\n\n        <ion-card-header>\n\n          <img src="assets/imgs/turniphead.png" />\n\n        </ion-card-header>\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label fixed>Descrição</ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card text-wrap>\n\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis scelerisque ornare. In auctor congue porta. Duis nisi\n\n        dolor, condimentum vitae nibh commodo, feugiat maximus justo. Fusce aliquam, quam feugiat tristique vestibulum, nulla\n\n        nisi porta tortor, vel interdum lectus nisi ac enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n\n        Nulla sodales rutrum diam id vulputate. Vestibulum elementum mi eget tortor consectetur, vel sagittis est accumsan.\n\n        Donec viverra purus commodo, consequat tortor venenatis, consectetur leo. Maecenas augue justo, placerat nec vulputate\n\n        a, aliquet eget leo. Suspendisse potenti. Nullam rutrum est at iaculis ultrices. Fusce aliquet purus non libero laoreet\n\n        elementum. Sed accumsan vestibulum lorem sit amet bibendum. Fusce pellentesque, nisl a tristique auctor, erat tortor\n\n        auctor diam, egestas tempus turpis nulla in nibh. Cras vestibulum suscipit aliquam. Aenean eget congue libero, non\n\n        ultricies lorem. Vestibulum egestas finibus lacinia. Maecenas non magna ut metus bibendum sodales. Duis nec ultrices\n\n        metus. Maecenas vel mauris nisl. Proin quis facilisis sem. Aenean vitae mi sed nulla volutpat tristique. Morbi eget\n\n        felis eget elit suscipit bibendum. Mauris sit amet facilisis nibh. Pellentesque justo erat, pellentesque id bibendum\n\n        eget, tempor eu velit. Curabitur rutrum lorem nec ipsum vestibulum dignissim. Mauris venenatis est sagittis elit\n\n        malesuada, vel posuere enim lobortis. Vivamus sit amet blandit nunc. Fusce pellentesque augue vehicula tincidunt\n\n        rhoncus. Praesent ullamcorper molestie nulla ut porta. Nullam finibus metus diam, vitae malesuada turpis eleifend\n\n        vitae.\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button primary (click)= "goToContact()">Entrar em contato</button>\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post-product\detailed-post-product.html"*/,
+            selector: 'page-medicine',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\medicine\medicine.html"*/'<!--\n\n  Generated template for the MedicinePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>medicine</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let medicine of medicines.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/food.jpg">\n\n        </ion-thumbnail>\n\n          <h2>{{medicine.titlePostItem}}</h2>\n\n        <p>{{medicine.descriptionPostItem}} </p>\n\n        <button ion-button clear item-end (click)="goToDetailedPost(medicine.idPostItem)">View</button>\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\medicine\medicine.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], DetailedPostProductPage);
-    return DetailedPostProductPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_item_item__["a" /* ItemProvider */]])
+    ], MedicinePage);
+    return MedicinePage;
 }());
 
-//# sourceMappingURL=detailed-post-product.js.map
+//# sourceMappingURL=medicine.js.map
 
 /***/ }),
 
@@ -586,9 +540,88 @@ var DetailedPostProductPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contribuition_contribuition__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__edit_user_edit_user__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__my_posts_my_posts__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Utils__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__my_posts_animal_my_posts_animal__ = __webpack_require__(232);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+/**
+ * Generated class for the ProfilePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ProfilePage = /** @class */ (function () {
+    function ProfilePage(navCtrl, navParams, utils) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.utils = utils;
+    }
+    ProfilePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ProfilePage');
+    };
+    ProfilePage.prototype.goToAbout = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__about_about__["a" /* AboutPage */]);
+    };
+    ProfilePage.prototype.goToContribuition = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__contribuition_contribuition__["a" /* ContribuitionPage */]);
+    };
+    ProfilePage.prototype.goToMyPosts = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__my_posts_my_posts__["a" /* MyPostsPage */]);
+    };
+    ProfilePage.prototype.goToMyPostsAnimal = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__my_posts_animal_my_posts_animal__["a" /* MyPostsAnimalPage */]);
+    };
+    ProfilePage.prototype.goToLogin = function () {
+        var _this = this;
+        this.utils.invalidTokens().then(function () { return _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]); });
+    };
+    ProfilePage.prototype.goToEdit = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__edit_user_edit_user__["a" /* EditUserPage */]);
+    };
+    ProfilePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-profile',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\profile\profile.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div class="col-lg-10 col-xs-10 col-sm-10 col-xl-10">\n\n\n\n      <!--<button (click)="goToEdit()" ion-button block outline item-end icon-right>\n\n\n\n        Editar Perfil\n\n      </button>-->\n\n\n\n      <button (click)="goToContribuition()" ion-button block outline item-end icon-right>\n\n        Contribuições\n\n      </button>\n\n\n\n      <button (click)="goToMyPosts()" ion-button block outline item-end icon-right>\n\n        Meus animais para adoção\n\n      </button>\n\n\n\n      <button (click)="goToMyPosts()" ion-button block outline item-end icon-right>\n\n        Meus ítens postados  \n\n      </button>\n\n\n\n      <button (click)="goToLogin()" ion-button block outline item-end icon-right>\n\n        Sair\n\n      </button>\n\n\n\n      <button ion-button color="principal" clear (click)="goToAbout()">Sobre o app</button>\n\n\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\profile\profile.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_7__Utils__["a" /* Utils */]])
+    ], ProfilePage);
+    return ProfilePage;
+}());
+
+//# sourceMappingURL=profile.js.map
+
+/***/ }),
+
+/***/ 126:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditUserPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -627,155 +660,15 @@ var EditUserPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 126:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MedicinePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detailed_post_medicine_detailed_post_medicine__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_item_create_post_item__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_item_item__ = __webpack_require__(54);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the MedicinePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var MedicinePage = /** @class */ (function () {
-    function MedicinePage(navCtrl, navParams, itemProvider) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.itemProvider = itemProvider;
-        this.medicines = [];
-    }
-    MedicinePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MedicinePage');
-        this.getAll();
-    };
-    MedicinePage.prototype.goToPostMedicine = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__detailed_post_medicine_detailed_post_medicine__["a" /* DetailedPostMedicinePage */]);
-    };
-    MedicinePage.prototype.createPost = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__create_post_item_create_post_item__["a" /* CreatePostItemPage */]);
-    };
-    MedicinePage.prototype.getAll = function () {
-        var _this = this;
-        this.itemProvider.getAllMedicines()
-            .then(function (medicine) {
-            _this.medicines = medicine;
-        });
-    };
-    MedicinePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-medicine',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\medicine\medicine.html"*/'<!--\n\n  Generated template for the MedicinePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>medicine</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let medicine of medicines.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/food.jpg">\n\n        </ion-thumbnail>\n\n          <h2>{{medicine.titlePostItem}}</h2>\n\n        <p>{{medicine.descriptionPostItem}} </p>\n\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\medicine\medicine.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_item_item__["a" /* ItemProvider */]])
-    ], MedicinePage);
-    return MedicinePage;
-}());
-
-//# sourceMappingURL=medicine.js.map
-
-/***/ }),
-
 /***/ 127:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contribuition_contribuition__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__edit_user_edit_user__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__my_posts_my_posts__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Utils__ = __webpack_require__(32);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-/**
- * Generated class for the ProfilePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ProfilePage = /** @class */ (function () {
-    function ProfilePage(navCtrl, navParams, utils) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.utils = utils;
-    }
-    ProfilePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ProfilePage');
-    };
-    ProfilePage.prototype.goToAbout = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__about_about__["a" /* AboutPage */]);
-    };
-    ProfilePage.prototype.goToContribuition = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__contribuition_contribuition__["a" /* ContribuitionPage */]);
-    };
-    ProfilePage.prototype.goToMyPosts = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__my_posts_my_posts__["a" /* MyPostsPage */]);
-    };
-    ProfilePage.prototype.goToLogin = function () {
-        var _this = this;
-        this.utils.invalidTokens().then(function () { return _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]); });
-    };
-    ProfilePage.prototype.goToEdit = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__edit_user_edit_user__["a" /* EditUserPage */]);
-    };
-    ProfilePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-profile',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\profile\profile.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div class="col-lg-10 col-xs-10 col-sm-10 col-xl-10">\n\n\n\n      <button (click)="goToEdit()" ion-button block outline item-end icon-right>\n\n\n\n        Editar Perfil\n\n      </button>\n\n\n\n      <button (click)="goToContribuition()" ion-button block outline item-end icon-right>\n\n\n\n        Contribuições\n\n      </button>\n\n\n\n      <button (click)="goToMyPosts()" ion-button block outline item-end icon-right>\n\n\n\n        Minhas publicações\n\n      </button>\n\n\n\n      <button (click)="goToLogin()" ion-button block outline item-end icon-right>\n\n\n\n        Sair\n\n      </button>\n\n\n\n      <button ion-button color="principal" clear (click)="goToAbout()">Sobre o app</button>\n\n\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\profile\profile.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_7__Utils__["a" /* Utils */]])
-    ], ProfilePage);
-    return ProfilePage;
-}());
-
-//# sourceMappingURL=profile.js.map
-
-/***/ }),
-
-/***/ 128:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyPostsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detailed_post_detailed_post__ = __webpack_require__(38);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -785,6 +678,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -807,14 +701,17 @@ var MyPostsPage = /** @class */ (function () {
     };
     MyPostsPage.prototype.getAll = function () {
         var _this = this;
-        this.profileProvider.getAllPostsAnimal()
+        this.profileProvider.getAllPostsItem()
             .then(function (posts) {
             _this.posts = posts;
         });
     };
+    MyPostsPage.prototype.goToDetailedPost = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__detailed_post_detailed_post__["a" /* DetailedPostPage */], id);
+    };
     MyPostsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-my-posts',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\my-posts\my-posts.html"*/'<!--\n\n  Generated template for the MyPostsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>myPosts</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let post of posts.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/food.jpg">\n\n        </ion-thumbnail>\n\n          <h2>{{post.titlePostAnimal}}</h2>\n\n        <p>{{post.descriptionPostAnimal}} </p>\n\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\my-posts\my-posts.html"*/,
+            selector: 'page-my-posts',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\my-posts\my-posts.html"*/'<!--\n\n  Generated template for the MyPostsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>myPosts</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <ion-searchbar>\n\n    [(ngModel)]="myInput"\n\n    [showCancelButton]="shouldShowCancel"\n\n    (ionInput)="onInput($event)"\n\n    (ionCancel)="onCancel($event)">\n\n  </ion-searchbar>\n\n  \n\n    <ion-list>\n\n      <ion-row *ngFor="let post of posts.content">\n\n        <ion-item>\n\n          <ion-thumbnail item-start>\n\n            <img src="assets/imgs/food.jpg">\n\n          </ion-thumbnail>\n\n            <h2>{{post.titlePostItem}}</h2>\n\n          <p>{{post.descriptionPostItem}} </p>\n\n          <button ion-button clear item-end (click)="goToDetailedPost(post.idPostItem)">View</button>\n\n        </ion-item>\n\n      </ion-row>\n\n    </ion-list>\n\n  </ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\my-posts\my-posts.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__["a" /* ProfileProvider */]])
     ], MyPostsPage);
@@ -825,16 +722,16 @@ var MyPostsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 129:
+/***/ 128:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detailed_post_product_detailed_post_product__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_post_item_create_post_item__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_item_item__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_post_item_create_post_item__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_item_item__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__detailed_post_detailed_post__ = __webpack_require__(38);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -862,15 +759,18 @@ var ProductPage = /** @class */ (function () {
         this.itemProvider = itemProvider;
         this.products = [];
     }
+    ProductPage.prototype.ionViewWillEnter = function () {
+        this.getAll();
+    };
     ProductPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ProductPage');
         this.getAll();
     };
-    ProductPage.prototype.goToPostProduct = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__detailed_post_product_detailed_post_product__["a" /* DetailedPostProductPage */]);
+    ProductPage.prototype.goToDetailedPost = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__detailed_post_detailed_post__["a" /* DetailedPostPage */], id);
     };
     ProductPage.prototype.createPost = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__create_post_item_create_post_item__["a" /* CreatePostItemPage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__create_post_item_create_post_item__["a" /* CreatePostItemPage */]);
     };
     ProductPage.prototype.getAll = function () {
         var _this = this;
@@ -881,9 +781,9 @@ var ProductPage = /** @class */ (function () {
     };
     ProductPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-product',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\product\product.html"*/'<!--\n\n  Generated template for the ProductPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>product</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let product of products.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/food.jpg">\n\n        </ion-thumbnail>\n\n          <h2>{{product.titlePostItem}}</h2>\n\n        <p>{{product.descriptionPostItem}} </p>\n\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\product\product.html"*/,
+            selector: 'page-product',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\product\product.html"*/'<!--\n\n  Generated template for the ProductPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>product</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let product of products.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/food.jpg">\n\n        </ion-thumbnail>\n\n          <h2>{{product.titlePostItem}}</h2>\n\n        <p>{{product.descriptionPostItem}} </p>\n\n        <button ion-button clear item-end (click)="goToDetailedPost(product.idPostItem)">View</button>\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\product\product.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_item_item__["a" /* ItemProvider */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_item_item__["a" /* ItemProvider */]])
     ], ProductPage);
     return ProductPage;
 }());
@@ -892,17 +792,17 @@ var ProductPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 130:
+/***/ 129:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Utils__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_user_user_provider__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Utils__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_user_user_provider__ = __webpack_require__(95);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -967,7 +867,7 @@ var UserPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 140:
+/***/ 139:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -980,105 +880,167 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 140;
+webpackEmptyAsyncContext.id = 139;
 
 /***/ }),
 
-/***/ 183:
+/***/ 17:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostAnimalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_detailed_post_detailed_post__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the DetailedPostAnimalPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DetailedPostAnimalPage = /** @class */ (function () {
+    function DetailedPostAnimalPage(navCtrl, navParams, detailedPostProvider) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.detailedPostProvider = detailedPostProvider;
+        this.id = "";
+        this.id = navParams.data;
+    }
+    DetailedPostAnimalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DetailedPostAnimalPage');
+        this.getDetailedPost(this.id);
+    };
+    DetailedPostAnimalPage.prototype.goToContacts = function (idUsur, idPostItem) {
+        var _this = this;
+        var meuForm = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormGroup */]({
+            idPostItem: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormControl */](idUsur)
+        });
+        this.detailedPostProvider.postContributionItem(meuForm)
+            .then(function () { return _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */], idUsur); });
+    };
+    DetailedPostAnimalPage.prototype.getDetailedPost = function (id) {
+        var _this = this;
+        this.detailedPostProvider.getPostAnimal(id)
+            .then(function (post) {
+            _this.animal = post;
+        });
+    };
+    DetailedPostAnimalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-detailed-post-animal',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post-animal\detailed-post-animal.html"*/'<!--\n\n  Generated template for the DetailedPostAnimalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>detailedPostAnimal</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <ion-list>\n\n      \n\n    <ion-item>\n\n      <ion-label><strong>{{animal.nameUsur}}</strong></ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <h1>Título</h1>\n\n      <ion-label>{{animal.titlePostAnimal}}</ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card>\n\n        <ion-card-header>\n\n          <img src="assets/imgs/turniphead.png" />\n\n        </ion-card-header>\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label fixed>Descrição</ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card text-wrap>\n\n        <strong>Tamanho do animal: </strong>{{animal.sizePostAnimal}}\n\n        <br>\n\n        <br>\n\n        {{animal.descriptionPostAnimal}}\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button primary (click)= "goToContacts(animal.idUsur, animal.idPostAnimal)">Entrar em contato</button>\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post-animal\detailed-post-animal.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */]])
+    ], DetailedPostAnimalPage);
+    return DetailedPostAnimalPage;
+}());
+
+//# sourceMappingURL=detailed-post-animal.js.map
+
+/***/ }),
+
+/***/ 182:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/adoption-list/adoption-list.module": [
-		325,
-		22
-	],
-	"../pages/adoption/adoption.module": [
-		324,
-		21
-	],
-	"../pages/birds/birds.module": [
-		326,
+		327,
 		20
 	],
-	"../pages/cat/cat.module": [
-		327,
+	"../pages/adoption/adoption.module": [
+		329,
 		19
 	],
-	"../pages/contact/contact.module": [
+	"../pages/birds/birds.module": [
 		328,
 		18
 	],
-	"../pages/contribuition/contribuition.module": [
-		329,
+	"../pages/cat/cat.module": [
+		332,
 		17
 	],
-	"../pages/create-post-animal/create-post-animal.module": [
+	"../pages/contact/contact.module": [
 		330,
 		16
 	],
-	"../pages/create-post-item/create-post-item.module": [
-		332,
+	"../pages/contribuition/contribuition.module": [
+		331,
 		15
 	],
-	"../pages/detailed-post-animal/detailed-post-animal.module": [
-		331,
+	"../pages/create-post-animal/create-post-animal.module": [
+		334,
 		14
 	],
-	"../pages/detailed-post-medicine/detailed-post-medicine.module": [
+	"../pages/create-post-item/create-post-item.module": [
 		333,
 		13
 	],
-	"../pages/detailed-post-product/detailed-post-product.module": [
-		334,
+	"../pages/detailed-post-animal/detailed-post-animal.module": [
+		335,
 		12
 	],
 	"../pages/detailed-post/detailed-post.module": [
-		335,
+		336,
 		11
 	],
 	"../pages/dog/dog.module": [
-		336,
+		340,
 		10
 	],
 	"../pages/edit-user/edit-user.module": [
-		337,
+		338,
 		9
 	],
 	"../pages/login/login.module": [
-		338,
+		337,
 		8
 	],
 	"../pages/medicine/medicine.module": [
-		339,
+		341,
 		7
 	],
 	"../pages/my-posts-animal/my-posts-animal.module": [
-		340,
-		0
-	],
-	"../pages/my-posts/my-posts.module": [
-		341,
+		339,
 		6
 	],
-	"../pages/others/others.module": [
+	"../pages/my-posts/my-posts.module": [
 		342,
 		5
 	],
-	"../pages/product/product.module": [
+	"../pages/others/others.module": [
 		343,
 		4
 	],
-	"../pages/profile/profile.module": [
+	"../pages/product/product.module": [
 		344,
 		3
 	],
-	"../pages/rodent/rodent.module": [
-		345,
+	"../pages/profile/profile.module": [
+		346,
 		2
 	],
-	"../pages/user/user.module": [
-		346,
+	"../pages/rodent/rodent.module": [
+		347,
 		1
+	],
+	"../pages/user/user.module": [
+		345,
+		0
 	]
 };
 function webpackAsyncContext(req) {
@@ -1092,8 +1054,57 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 183;
+webpackAsyncContext.id = 182;
 module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 183:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the ContactProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var ContactProvider = /** @class */ (function () {
+    function ContactProvider(http) {
+        this.http = http;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpHeaders */]();
+        this.contact_getContact = "/secured/usur-custom/";
+        console.log('Hello ContactProvider Provider');
+    }
+    ContactProvider.prototype.getUser = function (id) {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.contact_getContact + id, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    ContactProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["b" /* HttpClient */]])
+    ], ContactProvider);
+    return ContactProvider;
+}());
+
+//# sourceMappingURL=contact.js.map
 
 /***/ }),
 
@@ -1103,7 +1114,7 @@ module.exports = webpackAsyncContext;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1138,9 +1149,9 @@ var AboutPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdoptionListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_post_animal_create_post_animal__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__create_post_animal_create_post_animal__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1191,9 +1202,71 @@ var AdoptionListPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyPostsAnimalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the MyPostsAnimalPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var MyPostsAnimalPage = /** @class */ (function () {
+    function MyPostsAnimalPage(navCtrl, navParams, profileProvider) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.profileProvider = profileProvider;
+        this.posts = [];
+    }
+    MyPostsAnimalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MyPostsAnimalPage');
+        this.getAll();
+    };
+    MyPostsAnimalPage.prototype.getAll = function () {
+        var _this = this;
+        this.profileProvider.getAllPostsAnimal()
+            .then(function (posts) {
+            _this.posts = posts;
+        });
+    };
+    MyPostsAnimalPage.prototype.goToDetailedPost = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */], id);
+    };
+    MyPostsAnimalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-my-posts-animal',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\my-posts-animal\my-posts-animal.html"*/'<!--\n  Generated template for the MyPostsAnimalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>my-posts-animal</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n    <ion-searchbar>\n    [(ngModel)]="myInput"\n    [showCancelButton]="shouldShowCancel"\n    (ionInput)="onInput($event)"\n    (ionCancel)="onCancel($event)">\n  </ion-searchbar>\n  \n    <ion-list>\n      <ion-row *ngFor="let post of posts.content">\n        <ion-item>\n          <ion-thumbnail item-start>\n            <img src="assets/imgs/food.jpg">\n          </ion-thumbnail>\n            <h2>{{post.titlePostAnimal}}</h2>\n          <p>{{post.descriptionPostAnimal}} </p>\n          <button ion-button clear item-end (click)="goToDetailedPost(post.idPostAnimal)">View</button>\n        </ion-item>\n      </ion-row>\n    </ion-list>\n  </ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\my-posts-animal\my-posts-animal.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__["a" /* ProfileProvider */]])
+    ], MyPostsAnimalPage);
+    return MyPostsAnimalPage;
+}());
+
+//# sourceMappingURL=my-posts-animal.js.map
+
+/***/ }),
+
+/***/ 233:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(254);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1201,50 +1274,50 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 253:
+/***/ 254:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(318);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_about_about__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_adoption_list_adoption_list__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_adoption_adoption__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_birds_birds__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_cat_cat__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_contact_contact__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_contribuition_contribuition__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_create_post_animal_create_post_animal__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_create_post_item_create_post_item__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_detailed_post_animal_detailed_post_animal__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_detailed_post_product_detailed_post_product__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_detailed_post_medicine_detailed_post_medicine__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_detailed_post_detailed_post__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_dog_dog__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_edit_user_edit_user__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_login_login__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_medicine_medicine__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_my_posts_my_posts__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_others_others__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_product_product__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_profile_profile__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_rodent_rodent__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_tabs_tabs__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_user_user__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__auth_interceptor__ = __webpack_require__(316);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_native_camera__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ionic_storage__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_splash_screen__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_status_bar__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__Utils__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__providers_animal_animal__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__providers_item_item__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__providers_user_user_provider__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__providers_profile_profile__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_adoption_adoption__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_birds_birds__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_cat_cat__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_contact_contact__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_contribuition_contribuition__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_create_post_animal_create_post_animal__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_create_post_item_create_post_item__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_detailed_post_detailed_post__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_dog_dog__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_edit_user_edit_user__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_login_login__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_medicine_medicine__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_my_posts_my_posts__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_others_others__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_product_product__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_profile_profile__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_rodent_rodent__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_tabs_tabs__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_user_user__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__auth_interceptor__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__ionic_native_camera__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_storage__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_native_splash_screen__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ionic_native_status_bar__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__Utils__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__providers_animal_animal__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__providers_item_item__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__providers_user_user_provider__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__providers_profile_profile__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__providers_detailed_post_detailed_post__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__providers_contact_contact__ = __webpack_require__(183);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1298,59 +1371,55 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_medicine_medicine__["a" /* MedicinePage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_product_product__["a" /* ProductPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_medicine_medicine__["a" /* MedicinePage */],
+                __WEBPACK_IMPORTED_MODULE_22__pages_product_product__["a" /* ProductPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_profile_profile__["a" /* ProfilePage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_adoption_adoption__["a" /* AdoptionPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_adoption_list_adoption_list__["a" /* AdoptionListPage */],
-                __WEBPACK_IMPORTED_MODULE_28__pages_user_user__["a" /* UserPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_user_user__["a" /* UserPage */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_contribuition_contribuition__["a" /* ContribuitionPage */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_create_post_animal_create_post_animal__["a" /* CreatePostAnimalPage */],
                 __WEBPACK_IMPORTED_MODULE_13__pages_create_post_item_create_post_item__["a" /* CreatePostItemPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_my_posts_my_posts__["a" /* MyPostsPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_edit_user_edit_user__["a" /* EditUserPage */],
-                __WEBPACK_IMPORTED_MODULE_27__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_my_posts_my_posts__["a" /* MyPostsPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_edit_user_edit_user__["a" /* EditUserPage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_tabs_tabs__["a" /* TabsPage */],
                 __WEBPACK_IMPORTED_MODULE_14__pages_detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_detailed_post_medicine_detailed_post_medicine__["a" /* DetailedPostMedicinePage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_detailed_post_product_detailed_post_product__["a" /* DetailedPostProductPage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_contact_contact__["a" /* ContactPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_detailed_post_detailed_post__["a" /* DetailedPostPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_detailed_post_detailed_post__["a" /* DetailedPostPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_birds_birds__["a" /* BirdsPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_cat_cat__["a" /* CatPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_dog_dog__["a" /* DogPage */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_rodent_rodent__["a" /* RodentPage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_others_others__["a" /* OthersPage */]
+                __WEBPACK_IMPORTED_MODULE_16__pages_dog_dog__["a" /* DogPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_rodent_rodent__["a" /* RodentPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_others_others__["a" /* OthersPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_31__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_29__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/adoption/adoption.module#AdoptionPageModule', name: 'AdoptionPage', segment: 'adoption', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adoption-list/adoption-list.module#AdoptionListPageModule', name: 'AdoptionListPage', segment: 'adoption-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/birds/birds.module#BirdsPageModule', name: 'BirdsPage', segment: 'birds', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cat/cat.module#CatPageModule', name: 'CatPage', segment: 'cat', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/adoption/adoption.module#AdoptionPageModule', name: 'AdoptionPage', segment: 'adoption', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contribuition/contribuition.module#ContribuitionPageModule', name: 'ContribuitionPage', segment: 'contribuition', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cat/cat.module#CatPageModule', name: 'CatPage', segment: 'cat', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/create-post-item/create-post-item.module#CreatePostItemPageModule', name: 'CreatePostItemPage', segment: 'create-post-item', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/create-post-animal/create-post-animal.module#CreatePostAnimalPageModule', name: 'CreatePostAnimalPage', segment: 'create-post-animal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/detailed-post-animal/detailed-post-animal.module#DetailedPostAnimalPageModule', name: 'DetailedPostAnimalPage', segment: 'detailed-post-animal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/create-post-item/create-post-item.module#CreatePostItemPageModule', name: 'CreatePostItemPage', segment: 'create-post-item', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/detailed-post-medicine/detailed-post-medicine.module#DetailedPostMedicinePageModule', name: 'DetailedPostMedicinePage', segment: 'detailed-post-medicine', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/detailed-post-product/detailed-post-product.module#DetailedPostProductPageModule', name: 'DetailedPostProductPage', segment: 'detailed-post-product', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/detailed-post/detailed-post.module#DetailedPostPageModule', name: 'DetailedPostPage', segment: 'detailed-post', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/dog/dog.module#DogPageModule', name: 'DogPage', segment: 'dog', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'EditUserPage', segment: 'edit-user', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/medicine/medicine.module#MedicinePageModule', name: 'MedicinePage', segment: 'medicine', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'EditUserPage', segment: 'edit-user', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-posts-animal/my-posts-animal.module#MyPostsAnimalPageModule', name: 'MyPostsAnimalPage', segment: 'my-posts-animal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/dog/dog.module#DogPageModule', name: 'DogPage', segment: 'dog', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/medicine/medicine.module#MedicinePageModule', name: 'MedicinePage', segment: 'medicine', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-posts/my-posts.module#MyPostsPageModule', name: 'MyPostsPage', segment: 'my-posts', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/others/others.module#OthersPageModule', name: 'OthersPage', segment: 'others', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/product/product.module#ProductPageModule', name: 'ProductPage', segment: 'product', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/user/user.module#UserPageModule', name: 'UserPage', segment: 'user', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/rodent/rodent.module#RodentPageModule', name: 'RodentPage', segment: 'rodent', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/user/user.module#UserPageModule', name: 'UserPage', segment: 'user', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/rodent/rodent.module#RodentPageModule', name: 'RodentPage', segment: 'rodent', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -1358,42 +1427,42 @@ var AppModule = /** @class */ (function () {
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_medicine_medicine__["a" /* MedicinePage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_product_product__["a" /* ProductPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_medicine_medicine__["a" /* MedicinePage */],
+                __WEBPACK_IMPORTED_MODULE_22__pages_product_product__["a" /* ProductPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_profile_profile__["a" /* ProfilePage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_adoption_adoption__["a" /* AdoptionPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_adoption_list_adoption_list__["a" /* AdoptionListPage */],
-                __WEBPACK_IMPORTED_MODULE_28__pages_user_user__["a" /* UserPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_user_user__["a" /* UserPage */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_contribuition_contribuition__["a" /* ContribuitionPage */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_create_post_animal_create_post_animal__["a" /* CreatePostAnimalPage */],
                 __WEBPACK_IMPORTED_MODULE_13__pages_create_post_item_create_post_item__["a" /* CreatePostItemPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_my_posts_my_posts__["a" /* MyPostsPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_edit_user_edit_user__["a" /* EditUserPage */],
-                __WEBPACK_IMPORTED_MODULE_27__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_my_posts_my_posts__["a" /* MyPostsPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_edit_user_edit_user__["a" /* EditUserPage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_tabs_tabs__["a" /* TabsPage */],
                 __WEBPACK_IMPORTED_MODULE_14__pages_detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_detailed_post_medicine_detailed_post_medicine__["a" /* DetailedPostMedicinePage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_detailed_post_product_detailed_post_product__["a" /* DetailedPostProductPage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_contact_contact__["a" /* ContactPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_detailed_post_detailed_post__["a" /* DetailedPostPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_detailed_post_detailed_post__["a" /* DetailedPostPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_birds_birds__["a" /* BirdsPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_cat_cat__["a" /* CatPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_dog_dog__["a" /* DogPage */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_rodent_rodent__["a" /* RodentPage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_others_others__["a" /* OthersPage */]
+                __WEBPACK_IMPORTED_MODULE_16__pages_dog_dog__["a" /* DogPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_rodent_rodent__["a" /* RodentPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_others_others__["a" /* OthersPage */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_34__Utils__["a" /* Utils */],
-                __WEBPACK_IMPORTED_MODULE_33__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_32__ionic_native_splash_screen__["a" /* SplashScreen */],
-                __WEBPACK_IMPORTED_MODULE_30__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_32__Utils__["a" /* Utils */],
+                __WEBPACK_IMPORTED_MODULE_31__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_30__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_28__ionic_native_camera__["a" /* Camera */],
                 { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicErrorHandler */] },
-                { provide: __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HTTP_INTERCEPTORS */], useClass: __WEBPACK_IMPORTED_MODULE_29__auth_interceptor__["a" /* AuthInterceptor */], multi: true },
-                __WEBPACK_IMPORTED_MODULE_37__providers_user_user_provider__["a" /* UserProvider */],
-                __WEBPACK_IMPORTED_MODULE_36__providers_item_item__["a" /* ItemProvider */],
-                __WEBPACK_IMPORTED_MODULE_35__providers_animal_animal__["a" /* AnimalProvider */],
-                __WEBPACK_IMPORTED_MODULE_35__providers_animal_animal__["a" /* AnimalProvider */],
-                __WEBPACK_IMPORTED_MODULE_38__providers_profile_profile__["a" /* ProfileProvider */]
+                { provide: __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HTTP_INTERCEPTORS */], useClass: __WEBPACK_IMPORTED_MODULE_27__auth_interceptor__["a" /* AuthInterceptor */], multi: true },
+                __WEBPACK_IMPORTED_MODULE_35__providers_user_user_provider__["a" /* UserProvider */],
+                __WEBPACK_IMPORTED_MODULE_34__providers_item_item__["a" /* ItemProvider */],
+                __WEBPACK_IMPORTED_MODULE_33__providers_animal_animal__["a" /* AnimalProvider */],
+                __WEBPACK_IMPORTED_MODULE_33__providers_animal_animal__["a" /* AnimalProvider */],
+                __WEBPACK_IMPORTED_MODULE_36__providers_profile_profile__["a" /* ProfileProvider */],
+                __WEBPACK_IMPORTED_MODULE_37__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */],
+                __WEBPACK_IMPORTED_MODULE_38__providers_contact_contact__["a" /* ContactProvider */]
             ]
         })
     ], AppModule);
@@ -1404,380 +1473,18 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 27:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreatePostAnimalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_animal_animal__ = __webpack_require__(31);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the CreatePostAnimalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var CreatePostAnimalPage = /** @class */ (function () {
-    function CreatePostAnimalPage(navCtrl, navParams, animalProvider) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.animalProvider = animalProvider;
-    }
-    CreatePostAnimalPage.prototype.ngOnInit = function () {
-        this.meuForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
-            titlePostAnimal: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required),
-            speciesPostAnimal: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required),
-            sizePostAnimal: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required),
-            descriptionPostAnimal: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required)
-        });
-    };
-    CreatePostAnimalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CreatePostAnimalPage');
-    };
-    CreatePostAnimalPage.prototype.goToDetails = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */]);
-    };
-    CreatePostAnimalPage.prototype.postAnimal = function () {
-        var _this = this;
-        this.animalProvider.postAnimal(this.meuForm).then(function () { return _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */]); });
-    };
-    CreatePostAnimalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-create-post-animal',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\create-post-animal\create-post-animal.html"*/'<!--\n\n  Generated template for the CreatePostAnimalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>createPostAnimal</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n\n\n    <form [formGroup]="meuForm" (ngSubmit)="postAnimal(meuForm)">\n\n      <ion-item>\n\n        <ion-label floating>Título</ion-label>\n\n        <ion-input formControlName="titlePostAnimal" type="text"></ion-input>\n\n      </ion-item>\n\n      <br>\n\n\n\n      <ion-item>\n\n        <ion-label>Espécie</ion-label>\n\n        <ion-select formControlName="speciesPostAnimal" [(ngModel)]="species">\n\n          <ion-option value="CACHORRO">Cachorro</ion-option>\n\n          <ion-option value="GATO">Gato</ion-option>\n\n          <ion-option value="ROEDOR">Roedor</ion-option>\n\n          <ion-option value="PASSARO">Pássaro</ion-option>\n\n          <ion-option value="OUTROS">Outros</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n      <br>\n\n\n\n      <ion-item>\n\n          <ion-label>Tamanho do animal</ion-label>\n\n          <ion-select formControlName="sizePostAnimal" [(ngModel)]="size">\n\n            <ion-option value="PEQUENO">Pequeno</ion-option>\n\n            <ion-option value="MEDIO">Médio</ion-option>\n\n            <ion-option value="GRANDE">Grande</ion-option>\n\n          </ion-select>\n\n        </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Descrição</ion-label>\n\n        <ion-input formControlName="descriptionPostAnimal" type="text"></ion-input>\n\n      </ion-item>\n\n\n\n      <br>\n\n      <button ion-button round color="primary" type="submit">Publicar</button>\n\n\n\n    </form>\n\n\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\create-post-animal\create-post-animal.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_animal_animal__["a" /* AnimalProvider */]])
-    ], CreatePostAnimalPage);
-    return CreatePostAnimalPage;
-}());
-
-//# sourceMappingURL=create-post-animal.js.map
-
-/***/ }),
-
-/***/ 31:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnimalProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Utils__ = __webpack_require__(32);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/*
-  Generated class for the AnimalProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var AnimalProvider = /** @class */ (function () {
-    function AnimalProvider(http, utils) {
-        this.http = http;
-        this.utils = utils;
-        this.headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpHeaders */]();
-        this.animal_post = "/secured/post-animal/usur";
-        this.animal_getBirds = "/secured/post-animal/all-bird-custom";
-        this.animal_getCats = "/secured/post-animal/all-cat-custom";
-        this.animal_getDogs = "/secured/post-animal/all-dog-custom";
-        this.animal_getRodent = "/secured/post-animal/all-rodent-custom";
-        this.animal_getOthers = "/secured/post-animal/all-other-custom";
-        console.log('Hello AnimalProvider Provider');
-    }
-    AnimalProvider.prototype.postAnimal = function (animalInfo) {
-        var _this = this;
-        var loading = this.utils.getLoader("Realizando Postagem");
-        loading.present();
-        return new Promise(function (resolve) {
-            _this.http.post(_this.animal_post, animalInfo.value).subscribe(function (success) {
-                resolve(success);
-                loading.dismiss();
-                _this.utils.getToast("Postagem realizada com sucesso");
-            }, function (err) {
-                console.log(err);
-                _this.utils.getToast("Erro ao realizar postagem");
-                loading.dismiss();
-            });
-        });
-    };
-    AnimalProvider.prototype.getAllBirds = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.http.get(_this.animal_getBirds, { headers: _this.headers })
-                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
-        });
-    };
-    AnimalProvider.prototype.getAllCats = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.http.get(_this.animal_getCats, { headers: _this.headers })
-                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
-        });
-    };
-    AnimalProvider.prototype.getAllDogs = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.http.get(_this.animal_getDogs, { headers: _this.headers })
-                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
-        });
-    };
-    AnimalProvider.prototype.getAllRodents = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.http.get(_this.animal_getRodent, { headers: _this.headers })
-                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
-        });
-    };
-    AnimalProvider.prototype.getAllOthers = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.http.get(_this.animal_getOthers, { headers: _this.headers })
-                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
-        });
-    };
-    AnimalProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__Utils__["a" /* Utils */]])
-    ], AnimalProvider);
-    return AnimalProvider;
-}());
-
-//# sourceMappingURL=animal.js.map
-
-/***/ }),
-
-/***/ 315:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(61);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var MyApp = /** @class */ (function () {
-    function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */];
-        platform.ready().then(function () {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            statusBar.styleDefault();
-            splashScreen.hide();
-        });
-    }
-    MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\app\app.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
-    ], MyApp);
-    return MyApp;
-}());
-
-//# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 316:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthInterceptor; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(318);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_mergeMap__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_mergeMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__ = __webpack_require__(321);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Utils__ = __webpack_require__(32);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-
-
-
-
-var AuthInterceptor = /** @class */ (function () {
-    function AuthInterceptor(utils) {
-        this.utils = utils;
-    }
-    AuthInterceptor.prototype.intercept = function (req, next) {
-        var _this = this;
-        var completeReq = req.clone({ url: "" + __WEBPACK_IMPORTED_MODULE_7__Utils__["a" /* Utils */].serverUrl() + req.url });
-        console.log("URL: " + completeReq.url);
-        if (completeReq.headers.has("Skip-Prefix")) {
-            return next.handle(completeReq).do(function (success) { return _this.onSuccess(success); }, function (error) { return _this.onError(error); });
-        }
-        return this.getValidToken().mergeMap(function (token) {
-            return next.handle(completeReq.clone({
-                setHeaders: {
-                    'Authorization': "Bearer " + token
-                }
-            })).do(function (success) { return _this.onSuccess(success); }).catch(function (error) {
-                if (error.status == 301) {
-                    //this.setTokens(error);
-                    return next.handle(completeReq.clone({
-                        setHeaders: {
-                            'Error': error.headers.get("Authorization")
-                        }
-                    }));
-                }
-                if (error.status == 400) {
-                    _this.utils.getErrorsOnToast(error);
-                }
-            });
-        });
-    };
-    AuthInterceptor.prototype.onSuccess = function (response) {
-        return __awaiter(this, void 0, void 0, function () {
-            var body, token;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!(response.status == 200)) return [3 /*break*/, 2];
-                        console.log("success: " + response);
-                        console.log("Token: " + response.body);
-                        body = response.body;
-                        token = body;
-                        return [4 /*yield*/, this.setTokens(token)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                    case 2: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    AuthInterceptor.prototype.onError = function (error) {
-        if (error.status == 400) {
-            this.utils.getErrorsOnToast(error);
-        }
-        if (error.status == 500) {
-            this.utils.getToast('Um errro inesperado aconteceu. Por favor contate o administrador do sistema');
-        }
-    };
-    AuthInterceptor.prototype.setTokens = function (response) {
-        if (response.Authorization != undefined) {
-            console.log(response.Authorization);
-            this.utils.setTokens(response.Authorization);
-        }
-    };
-    AuthInterceptor.prototype.getValidToken = function () {
-        return __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].fromPromise(this.utils.getValidToken());
-    };
-    AuthInterceptor = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_7__Utils__["a" /* Utils */]])
-    ], AuthInterceptor);
-    return AuthInterceptor;
-}());
-
-//# sourceMappingURL=auth.interceptor.js.map
-
-/***/ }),
-
-/***/ 32:
+/***/ 28:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Utils; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_storage__ = __webpack_require__(184);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_jwt__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_jwt__ = __webpack_require__(294);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_jwt__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1987,63 +1694,34 @@ var Utils = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 47:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostAnimalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(48);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the DetailedPostAnimalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var DetailedPostAnimalPage = /** @class */ (function () {
-    function DetailedPostAnimalPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return User; });
+var User = /** @class */ (function () {
+    function User() {
+        this.nameUsur = '';
+        this.emailUsur = '';
+        this.phoneUsur = '';
     }
-    DetailedPostAnimalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DetailedPostAnimalPage');
-    };
-    DetailedPostAnimalPage.prototype.goToContact = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */]);
-    };
-    DetailedPostAnimalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-detailed-post-animal',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post-animal\detailed-post-animal.html"*/'<!--\n\n  Generated template for the DetailedPostAnimalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>detailedPostAnimal</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-list>\n\n\n\n    <ion-item>\n\n      <h1>Título</h1>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card>\n\n        <ion-card-header>\n\n          <img src="assets/imgs/turniphead.png" />\n\n        </ion-card-header>\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label fixed>Descrição</ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card text-wrap>\n\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis scelerisque ornare. In auctor congue porta. Duis nisi\n\n        dolor, condimentum vitae nibh commodo, feugiat maximus justo. Fusce aliquam, quam feugiat tristique vestibulum, nulla\n\n        nisi porta tortor, vel interdum lectus nisi ac enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n\n        Nulla sodales rutrum diam id vulputate. Vestibulum elementum mi eget tortor consectetur, vel sagittis est accumsan.\n\n        Donec viverra purus commodo, consequat tortor venenatis, consectetur leo. Maecenas augue justo, placerat nec vulputate\n\n        a, aliquet eget leo. Suspendisse potenti. Nullam rutrum est at iaculis ultrices. Fusce aliquet purus non libero laoreet\n\n        elementum. Sed accumsan vestibulum lorem sit amet bibendum. Fusce pellentesque, nisl a tristique auctor, erat tortor\n\n        auctor diam, egestas tempus turpis nulla in nibh. Cras vestibulum suscipit aliquam. Aenean eget congue libero, non\n\n        ultricies lorem. Vestibulum egestas finibus lacinia. Maecenas non magna ut metus bibendum sodales. Duis nec ultrices\n\n        metus. Maecenas vel mauris nisl. Proin quis facilisis sem. Aenean vitae mi sed nulla volutpat tristique. Morbi eget\n\n        felis eget elit suscipit bibendum. Mauris sit amet facilisis nibh. Pellentesque justo erat, pellentesque id bibendum\n\n        eget, tempor eu velit. Curabitur rutrum lorem nec ipsum vestibulum dignissim. Mauris venenatis est sagittis elit\n\n        malesuada, vel posuere enim lobortis. Vivamus sit amet blandit nunc. Fusce pellentesque augue vehicula tincidunt\n\n        rhoncus. Praesent ullamcorper molestie nulla ut porta. Nullam finibus metus diam, vitae malesuada turpis eleifend\n\n        vitae.\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button primary (click)= "goToContact()">Entrar em contato</button>\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post-animal\detailed-post-animal.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], DetailedPostAnimalPage);
-    return DetailedPostAnimalPage;
+    return User;
 }());
 
-//# sourceMappingURL=detailed-post-animal.js.map
+//# sourceMappingURL=User.js.map
 
 /***/ }),
 
-/***/ 48:
+/***/ 29:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreatePostAnimalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_animal_animal__ = __webpack_require__(34);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2055,30 +1733,440 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 /**
- * Generated class for the ContactPage page.
+ * Generated class for the CreatePostAnimalPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var ContactPage = /** @class */ (function () {
-    function ContactPage(navCtrl, navParams) {
+var CreatePostAnimalPage = /** @class */ (function () {
+    function CreatePostAnimalPage(navCtrl, navParams, animalProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.animalProvider = animalProvider;
     }
-    ContactPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ContactPage');
+    CreatePostAnimalPage.prototype.ngOnInit = function () {
+        this.meuForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            titlePostAnimal: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required),
+            speciesPostAnimal: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required),
+            sizePostAnimal: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required),
+            descriptionPostAnimal: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* Validators */].required)
+        });
     };
-    ContactPage = __decorate([
+    CreatePostAnimalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CreatePostAnimalPage');
+    };
+    CreatePostAnimalPage.prototype.goToDetails = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */]);
+    };
+    CreatePostAnimalPage.prototype.postAnimal = function () {
+        var _this = this;
+        this.animalProvider.postAnimal(this.meuForm).then(function () { return _this.navCtrl.pop; });
+    };
+    CreatePostAnimalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-contact',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\contact\contact.html"*/'<!--\n\n  Generated template for the ContactPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>contact</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-card>\n\n        Nome: John Doe\n\n        <ion-card-header>\n\n          <img src="assets/imgs/turniphead.png">\n\n        </ion-card-header>\n\n      </ion-card>\n\n      <div>\n\n        Contato: Lorem Ipsum\n\n      </div>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\contact\contact.html"*/,
+            selector: 'page-create-post-animal',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\create-post-animal\create-post-animal.html"*/'<!--\n\n  Generated template for the CreatePostAnimalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>createPostAnimal</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n\n\n    <form [formGroup]="meuForm" (ngSubmit)="postAnimal(meuForm)">\n\n      <ion-item>\n\n        <ion-label floating>Título</ion-label>\n\n        <ion-input formControlName="titlePostAnimal" type="text"></ion-input>\n\n      </ion-item>\n\n      <br>\n\n\n\n      <ion-item>\n\n        <ion-label>Espécie</ion-label>\n\n        <ion-select formControlName="speciesPostAnimal" [(ngModel)]="species">\n\n          <ion-option value="CACHORRO">Cachorro</ion-option>\n\n          <ion-option value="GATO">Gato</ion-option>\n\n          <ion-option value="ROEDOR">Roedor</ion-option>\n\n          <ion-option value="PASSARO">Pássaro</ion-option>\n\n          <ion-option value="OUTROS">Outros</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n      <br>\n\n\n\n      <ion-item>\n\n          <ion-label>Tamanho do animal</ion-label>\n\n          <ion-select formControlName="sizePostAnimal" [(ngModel)]="size">\n\n            <ion-option value="PEQUENO">Pequeno</ion-option>\n\n            <ion-option value="MEDIO">Médio</ion-option>\n\n            <ion-option value="GRANDE">Grande</ion-option>\n\n          </ion-select>\n\n        </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Descrição</ion-label>\n\n        <ion-input formControlName="descriptionPostAnimal" type="text"></ion-input>\n\n      </ion-item>\n\n\n\n      <br>\n\n      <button ion-button round color="primary" type="submit">Publicar</button>\n\n\n\n    </form>\n\n\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\create-post-animal\create-post-animal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], ContactPage);
-    return ContactPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_animal_animal__["a" /* AnimalProvider */]])
+    ], CreatePostAnimalPage);
+    return CreatePostAnimalPage;
 }());
 
-//# sourceMappingURL=contact.js.map
+//# sourceMappingURL=create-post-animal.js.map
+
+/***/ }),
+
+/***/ 300:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostItem; });
+var DetailedPostItem = /** @class */ (function () {
+    function DetailedPostItem() {
+        this.idPostItem = '';
+        this.idUsur = '';
+        this.nameUsur = '';
+        this.titlePostAnimal = '';
+        this.descriptionPostAnimal = '';
+        this.speciesPostAnimal = '';
+        this.typePostAnimal = '';
+    }
+    return DetailedPostItem;
+}());
+
+//# sourceMappingURL=DetailedPostItem.js.map
+
+/***/ }),
+
+/***/ 318:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(62);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MyApp = /** @class */ (function () {
+    function MyApp(platform, statusBar, splashScreen) {
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */];
+        platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            statusBar.styleDefault();
+            splashScreen.hide();
+        });
+    }
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\app\app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 319:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthInterceptor; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_mergeMap__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_mergeMap__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Utils__ = __webpack_require__(28);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+
+
+var AuthInterceptor = /** @class */ (function () {
+    function AuthInterceptor(utils) {
+        this.utils = utils;
+    }
+    AuthInterceptor.prototype.intercept = function (req, next) {
+        var _this = this;
+        var completeReq = req.clone({ url: "" + __WEBPACK_IMPORTED_MODULE_7__Utils__["a" /* Utils */].serverUrl() + req.url });
+        console.log("URL: " + completeReq.url);
+        if (completeReq.headers.has("Skip-Prefix")) {
+            return next.handle(completeReq).do(function (success) { return _this.onSuccess(success); }, function (error) { return _this.onError(error); });
+        }
+        return this.getValidToken().mergeMap(function (token) {
+            return next.handle(completeReq.clone({
+                setHeaders: {
+                    'Authorization': "Bearer " + token
+                }
+            })).do(function (success) { return _this.onSuccess(success); }).catch(function (error) {
+                if (error.status == 301) {
+                    //this.setTokens(error);
+                    return next.handle(completeReq.clone({
+                        setHeaders: {
+                            'Error': error.headers.get("Authorization")
+                        }
+                    }));
+                }
+                if (error.status == 400) {
+                    _this.utils.getErrorsOnToast(error);
+                }
+            });
+        });
+    };
+    AuthInterceptor.prototype.onSuccess = function (response) {
+        return __awaiter(this, void 0, void 0, function () {
+            var body, token;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!(response.status == 200)) return [3 /*break*/, 2];
+                        console.log("success: " + response);
+                        console.log("Token: " + response.body);
+                        body = response.body;
+                        token = body;
+                        return [4 /*yield*/, this.setTokens(token)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                    case 2: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AuthInterceptor.prototype.onError = function (error) {
+        if (error.status == 400) {
+            this.utils.getErrorsOnToast(error);
+        }
+        if (error.status == 500) {
+            this.utils.getToast('Um errro inesperado aconteceu. Por favor contate o administrador do sistema');
+        }
+    };
+    AuthInterceptor.prototype.setTokens = function (response) {
+        if (response.Authorization != undefined) {
+            console.log(response.Authorization);
+            this.utils.setTokens(response.Authorization);
+        }
+    };
+    AuthInterceptor.prototype.getValidToken = function () {
+        return __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].fromPromise(this.utils.getValidToken());
+    };
+    AuthInterceptor = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_7__Utils__["a" /* Utils */]])
+    ], AuthInterceptor);
+    return AuthInterceptor;
+}());
+
+//# sourceMappingURL=auth.interceptor.js.map
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnimalProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Utils__ = __webpack_require__(28);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the AnimalProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var AnimalProvider = /** @class */ (function () {
+    function AnimalProvider(http, utils) {
+        this.http = http;
+        this.utils = utils;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpHeaders */]();
+        this.animal_post = "/secured/post-animal/usur";
+        this.animal_getBirds = "/secured/post-animal/all-bird-custom";
+        this.animal_getCats = "/secured/post-animal/all-cat-custom";
+        this.animal_getDogs = "/secured/post-animal/all-dog-custom";
+        this.animal_getRodent = "/secured/post-animal/all-rodent-custom";
+        this.animal_getOthers = "/secured/post-animal/all-other-custom";
+        console.log('Hello AnimalProvider Provider');
+    }
+    AnimalProvider.prototype.postAnimal = function (animalInfo) {
+        var _this = this;
+        var loading = this.utils.getLoader("Realizando Postagem");
+        loading.present();
+        return new Promise(function (resolve) {
+            _this.http.post(_this.animal_post, animalInfo.value).subscribe(function (success) {
+                resolve(success);
+                loading.dismiss();
+                _this.utils.getToast("Postagem realizada com sucesso");
+            }, function (err) {
+                console.log(err);
+                _this.utils.getToast("Erro ao realizar postagem");
+                loading.dismiss();
+            });
+        });
+    };
+    AnimalProvider.prototype.getAllBirds = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.animal_getBirds, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    AnimalProvider.prototype.getAllCats = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.animal_getCats, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    AnimalProvider.prototype.getAllDogs = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.animal_getDogs, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    AnimalProvider.prototype.getAllRodents = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.animal_getRodent, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    AnimalProvider.prototype.getAllOthers = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.animal_getOthers, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    AnimalProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__Utils__["a" /* Utils */]])
+    ], AnimalProvider);
+    return AnimalProvider;
+}());
+
+//# sourceMappingURL=animal.js.map
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_detailed_post_detailed_post__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__model_DetailedPostItem__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact__ = __webpack_require__(60);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the DetailedPostPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DetailedPostPage = /** @class */ (function () {
+    function DetailedPostPage(navCtrl, navParams, detailedPostProvider) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.detailedPostProvider = detailedPostProvider;
+        this.id = "";
+        this.item = new __WEBPACK_IMPORTED_MODULE_3__model_DetailedPostItem__["a" /* DetailedPostItem */]();
+        this.id = this.navParams.data;
+    }
+    DetailedPostPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DetailedPostPage');
+        this.getDetailedPost(this.id);
+    };
+    DetailedPostPage.prototype.getDetailedPost = function (id) {
+        var _this = this;
+        this.detailedPostProvider.getPostItem(id)
+            .then(function (post) {
+            _this.item = post;
+        });
+    };
+    DetailedPostPage.prototype.goToContacts = function (idUsur, idPostItem) {
+        var _this = this;
+        var meuForm = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormGroup */]({
+            idPostItem: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormControl */](idUsur)
+        });
+        this.detailedPostProvider.postContributionItem(meuForm)
+            .then(function () { return _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__contact_contact__["a" /* ContactPage */], idUsur); });
+    };
+    DetailedPostPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-detailed-post',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post\detailed-post.html"*/'<!--\n  Generated template for the DetailedPostMedicinePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar>\n      <ion-title>detailedPost</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  \n  <ion-content padding>\n  \n    <ion-list>\n  \n      <ion-item>\n          <ion-label>{{item.nameUsur}}</ion-label>\n        </ion-item>\n\n      <ion-item>\n        <h1>Título</h1>\n        <ion-label>{{item.titlePostAnimal}}</ion-label>\n      </ion-item>\n  \n      <ion-item>\n        <ion-card>\n          <ion-card-header>\n            <img src="assets/imgs/turniphead.png" />\n          </ion-card-header>\n        </ion-card>\n      </ion-item>\n  \n      <ion-item>\n        <ion-label fixed>Descrição</ion-label>\n      </ion-item>\n  \n      <ion-item>\n        <ion-card text-wrap>\n          <strong>Espécie </strong>: {{item.speciesPostAnimal}}\n            <br>\n            <br>\n          {{item.descriptionPostAnimal}}\n        </ion-card>\n      </ion-item>\n  \n      <ion-item>\n        <button ion-button primary (click)= "goToContacts(item.idUsur, item.idPostItem)">Entrar em contato</button>\n      </ion-item>\n  \n    </ion-list>\n  </ion-content>\n  '/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\detailed-post\detailed-post.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */]) === "function" && _c || Object])
+    ], DetailedPostPage);
+    return DetailedPostPage;
+    var _a, _b, _c;
+}());
+
+//# sourceMappingURL=detailed-post.js.map
 
 /***/ }),
 
@@ -2086,10 +2174,75 @@ var ContactPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(40);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Utils__ = __webpack_require__(32);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/*
+  Generated class for the ProfileProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var ProfileProvider = /** @class */ (function () {
+    function ProfileProvider(http) {
+        this.http = http;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpHeaders */]();
+        this.profile_getPosts_animal = "/secured/post-animal/all/usur";
+        this.profile_getPosts_itens = "/secured/post-item/all/usur";
+        this.profile_getContributions = "/secured/contribution/all/donator-custom";
+        console.log('Hello ProfileProvider Provider');
+    }
+    ProfileProvider.prototype.getAllPostsAnimal = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.profile_getPosts_animal, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    ProfileProvider.prototype.getAllPostsItem = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.profile_getPosts_itens, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    ProfileProvider.prototype.getAllContributions = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.profile_getContributions, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    ProfileProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["b" /* HttpClient */]])
+    ], ProfileProvider);
+    return ProfileProvider;
+}());
+
+//# sourceMappingURL=profile.js.map
+
+/***/ }),
+
+/***/ 55:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Utils__ = __webpack_require__(28);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2153,13 +2306,15 @@ var ItemProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 59:
+/***/ 60:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__model_User__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_contact_contact__ = __webpack_require__(183);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2171,64 +2326,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/*
-  Generated class for the ProfileProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var ProfileProvider = /** @class */ (function () {
-    function ProfileProvider(http) {
-        this.http = http;
-        this.headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpHeaders */]();
-        this.profile_getPosts_animal = "/secured/post-animal/all/usur";
-        this.profile_getPosts_itens = "/secured/post-item/all/usur";
-        this.profile_getContributions = "/secured/contribution/all/donator-custom";
-        console.log('Hello ProfileProvider Provider');
+
+/**
+ * Generated class for the ContactPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ContactPage = /** @class */ (function () {
+    function ContactPage(navCtrl, navParams, contactProvider) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.contactProvider = contactProvider;
+        this.id = "";
+        this.user = new __WEBPACK_IMPORTED_MODULE_2__model_User__["a" /* User */]();
+        this.id = navParams.data;
     }
-    ProfileProvider.prototype.getAllPostsAnimal = function () {
+    ContactPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ContactPage');
+        this.getUser(this.id);
+    };
+    ContactPage.prototype.getUser = function (id) {
         var _this = this;
-        return new Promise(function (resolve) {
-            _this.http.get(_this.profile_getPosts_animal, { headers: _this.headers })
-                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        this.contactProvider.getUser(id)
+            .then(function (post) {
+            _this.user = post;
         });
     };
-    ProfileProvider.prototype.getAllPostsItem = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.http.get(_this.profile_getPosts_itens, { headers: _this.headers })
-                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
-        });
-    };
-    ProfileProvider.prototype.getAllContributions = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.http.get(_this.profile_getContributions, { headers: _this.headers })
-                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
-        });
-    };
-    ProfileProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["b" /* HttpClient */]])
-    ], ProfileProvider);
-    return ProfileProvider;
+    ContactPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-contact',template:/*ion-inline-start:"F:\Users\linsg\Documents\Projects\src\pages\contact\contact.html"*/'<!--\n\n  Generated template for the ContactPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>contact</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-card>\n\n        Nome: {{user.nameUsur}}\n\n        <ion-card-header>\n\n          <img src="assets/imgs/turniphead.png">\n\n        </ion-card-header>\n\n      </ion-card>\n\n      <div>\n\n        Email: {{user.emailUsur}}\n\n        Telefone: {{user.phoneUsur}}\n\n      </div>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"F:\Users\linsg\Documents\Projects\src\pages\contact\contact.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_contact_contact__["a" /* ContactProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_contact_contact__["a" /* ContactProvider */]) === "function" && _c || Object])
+    ], ContactPage);
+    return ContactPage;
+    var _a, _b, _c;
 }());
 
-//# sourceMappingURL=profile.js.map
+//# sourceMappingURL=contact.js.map
 
 /***/ }),
 
-/***/ 60:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreatePostItemPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_item_item__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__detailed_post_detailed_post__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_item_item__ = __webpack_require__(55);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2238,7 +2387,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -2273,7 +2421,7 @@ var CreatePostItemPage = /** @class */ (function () {
     CreatePostItemPage.prototype.postItem = function () {
         var _this = this;
         this.itemProvider.postItem(this.meuForm)
-            .then(function () { return _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__detailed_post_detailed_post__["a" /* DetailedPostPage */]); });
+            .then(function () { return _this.navCtrl.pop(); });
     };
     CreatePostItemPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2288,17 +2436,17 @@ var CreatePostItemPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 61:
+/***/ 62:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__user_user__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_user_user_provider__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__user_user__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_user_user_provider__ = __webpack_require__(95);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2366,16 +2514,87 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 92:
+/***/ 90:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Utils__ = __webpack_require__(28);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the DetailedPostProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var DetailedPostProvider = /** @class */ (function () {
+    function DetailedPostProvider(http, utils) {
+        this.http = http;
+        this.utils = utils;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpHeaders */]();
+        this.item_getItem = "/secured/post-item/custom/";
+        this.item_getAnimal = "/secured/post-animal/custom/";
+        this.item_postContribution = "/secured/contribution";
+        console.log('Hello DetailedPostProvider Provider');
+    }
+    DetailedPostProvider.prototype.getPostItem = function (id) {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.item_getItem + id, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    DetailedPostProvider.prototype.getPostAnimal = function (id) {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.get(_this.item_getAnimal + id, { headers: _this.headers })
+                .subscribe(function (sucesso) { return resolve(sucesso); }, function (err) { return console.log(err); });
+        });
+    };
+    DetailedPostProvider.prototype.postContributionItem = function (meuForm) {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this.http.post(_this.item_postContribution, meuForm, { headers: _this.headers })
+                .subscribe(function (success) {
+                resolve(success);
+                _this.utils.getToast('Postagem criada com sucesso!');
+            }, function (err) { return console.log(err); });
+        });
+    };
+    DetailedPostProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__Utils__["a" /* Utils */]])
+    ], DetailedPostProvider);
+    return DetailedPostProvider;
+}());
+
+//# sourceMappingURL=detailed-post.js.map
+
+/***/ }),
+
+/***/ 94:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__medicine_medicine__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__product_product__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__adoption_adoption__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__medicine_medicine__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__product_product__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__adoption_adoption__ = __webpack_require__(118);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2409,15 +2628,15 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 93:
+/***/ 95:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Utils__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Utils__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2483,5 +2702,5 @@ var UserProvider = /** @class */ (function () {
 
 /***/ })
 
-},[232]);
+},[233]);
 //# sourceMappingURL=main.js.map

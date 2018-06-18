@@ -1,9 +1,9 @@
 import { Component } from '@angular/core'
 import { IonicPage, NavController, NavParams } from 'ionic-angular'
-import { DetailedPostProductPage } from '../detailed-post-product/detailed-post-product'
 import { CreatePostItemPage } from '../create-post-item/create-post-item'
 import { ItemProvider } from "../../providers/item/item"
 import { Item } from "../../model/Product";
+import { DetailedPostPage } from '../detailed-post/detailed-post';
 
 /**
  * Generated class for the ProductPage page.
@@ -24,13 +24,17 @@ export class ProductPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public itemProvider: ItemProvider) {
   }
 
+  ionViewWillEnter() {
+    this.getAll()
+   }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProductPage')
     this.getAll()
   }
 
-  goToPostProduct(){
-    this.navCtrl.push(DetailedPostProductPage)
+  goToDetailedPost(id: String){
+    this.navCtrl.push(DetailedPostPage, id)
   }
 
   createPost(){
