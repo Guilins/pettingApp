@@ -29,6 +29,10 @@ export class CatPage {
     this.getAll()
   }
 
+  ionViewWillEnter() {
+    this.getAll()
+  }
+
   getAll(){
     this.animalProvider.getAllCats()
       .then((animal : Animal[]) => {

@@ -29,6 +29,10 @@ export class BirdsPage {
     this.getAll()
   }
 
+  ionViewWillEnter() {
+    this.getAll()
+  }
+
   getAll(){
     this.animalProvider.getAllBirds()
       .then((animal : Animal[]) => {

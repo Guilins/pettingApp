@@ -41,7 +41,7 @@ z
   }
 
   postAnimal(){
-    this.animalProvider.postAnimal(this.meuForm).then(() => this.navCtrl.pop)
+    this.animalProvider.postAnimal(this.meuForm).then(() => this.navCtrl.pop())
   }
 
 }

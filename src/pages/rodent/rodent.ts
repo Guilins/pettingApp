@@ -30,6 +30,10 @@ export class RodentPage {
     this.getAll();
   }
 
+  ionViewWillEnter() {
+    this.getAll()
+  }
+
   getAll(){
     this.animalProvider.getAllRodents()
       .then((animal : Animal[]) => {

@@ -20,7 +20,7 @@ import { FormGroup, FormControl } from '@angular/forms'
 export class DetailedPostAnimalPage {
 
   id: String = ""
-  animal: DetailedPostAnimal
+  animal: DetailedPostAnimal = new DetailedPostAnimal()
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public detailedPostProvider: DetailedPostProvider) {
     this.id = navParams.data

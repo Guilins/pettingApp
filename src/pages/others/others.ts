@@ -29,6 +29,10 @@ export class OthersPage {
     this.getAll()
   }
 
+  ionViewWillEnter() {
+    this.getAll()
+  }
+
   getAll(){
     this.animalProvider.getAllOthers()
       .then((animal : Animal[]) => {

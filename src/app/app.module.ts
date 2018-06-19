@@ -20,6 +20,7 @@ import { EditUserPage } from '../pages/edit-user/edit-user'
 import { LoginPage } from '../pages/login/login'
 import { MedicinePage } from '../pages/medicine/medicine'
 import { MyPostsPage } from '../pages/my-posts/my-posts'
+import { MyPostsAnimalPage } from '../pages/my-posts-animal/my-posts-animal'
 import { OthersPage } from '../pages/others/others'
 import { ProductPage } from '../pages/product/product'
 import { ProfilePage } from '../pages/profile/profile'
@@ -56,6 +57,7 @@ import { ContactProvider } from '../providers/contact/contact';
     CreatePostAnimalPage,
     CreatePostItemPage,
     MyPostsPage,   
+    MyPostsAnimalPage,
     EditUserPage,  
     TabsPage,
     DetailedPostAnimalPage,
@@ -88,6 +90,7 @@ import { ContactProvider } from '../providers/contact/contact';
     CreatePostAnimalPage,
     CreatePostItemPage,
     MyPostsPage,
+    MyPostsAnimalPage,
     EditUserPage,
     TabsPage,
     DetailedPostAnimalPage,

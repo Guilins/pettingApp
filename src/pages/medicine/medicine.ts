@@ -28,6 +28,10 @@ export class MedicinePage {
     console.log('ionViewDidLoad MedicinePage')
     this.getAll()
   }
+  
+  ionViewWillEnter() {
+    this.getAll()
+   }
 
   createPost(){
     this.navCtrl.push(CreatePostItemPage)

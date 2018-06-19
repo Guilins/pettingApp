@@ -26,7 +26,7 @@ export class ProductPage {
 
   ionViewWillEnter() {
     this.getAll()
-   }
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProductPage')
