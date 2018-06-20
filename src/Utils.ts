@@ -17,7 +17,7 @@ export class Utils {
   public static serverUrl() {
     // return 'http://192.168.10.90:8080/api';
     // return 'http://localhost:8080/api';
-    return "http://localhost:8080";
+    return "http://18.191.242.229:8080"
   }
 
   public didTutorial(): Promise<boolean> {

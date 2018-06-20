@@ -59,7 +59,7 @@ var AdoptionPage = /** @class */ (function () {
     };
     AdoptionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-adoption',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\adoption\adoption.html"*/'<!--\n\n  Generated template for the AdoptionPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>adoption</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">\n\n  </ion-searchbar>\n\n\n\n  <ion-grid>\n\n    <div class="card-background-page">\n\n      <ion-row >\n\n        <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>\n\n          <ion-card (click)= "goToDog()">\n\n            <img src="assets/imgs/turniphead.png" />\n\n            <div class="card-title">Cachorro</div>\n\n            <div class="card-subtitle">10 para adoção</div>\n\n          </ion-card>\n\n        </ion-col>\n\n\n\n        <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>\n\n          <ion-card (click)= "goToCat()">\n\n            <img src="assets/imgs/turniphead.png" />\n\n            <div class="card-title">Gato</div>\n\n            <div class="card-subtitle"> </div>\n\n          </ion-card>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n        <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>\n\n          <ion-card (click)= "goToRodent()">\n\n            <img src="assets/imgs/turniphead.png" />\n\n            <div class="card-title">Roedores</div>\n\n            <div class="card-subtitle"> </div>\n\n          </ion-card>\n\n        </ion-col>\n\n\n\n        <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>\n\n          <ion-card (click)= "goToBirds()">\n\n            <img src="assets/imgs/turniphead.png" />\n\n            <div class="card-title">Pássaros</div>\n\n            <div class="card-subtitle"> </div>\n\n          </ion-card>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n        <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>\n\n          <ion-card (click)= "goToOthers()">\n\n            <img src="assets/imgs/turniphead.png" />\n\n            <div class="card-title">Outros</div>\n\n            <div class="card-subtitle"> </div>\n\n          </ion-card>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n    </div>\n\n  </ion-grid>\n\n \n\n</ion-content>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\adoption\adoption.html"*/,
+            selector: 'page-adoption',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/adoption/adoption.html"*/'<!--\n  Generated template for the AdoptionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>adoption</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">\n  </ion-searchbar>\n\n  <ion-grid>\n    <div class="card-background-page">\n      <ion-row >\n        <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>\n          <ion-card (click)= "goToDog()">\n            <img src="assets/imgs/turniphead.png" />\n            <div class="card-title">Cachorro</div>\n            <div class="card-subtitle">10 para adoção</div>\n          </ion-card>\n        </ion-col>\n\n        <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>\n          <ion-card (click)= "goToCat()">\n            <img src="assets/imgs/turniphead.png" />\n            <div class="card-title">Gato</div>\n            <div class="card-subtitle"> </div>\n          </ion-card>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>\n          <ion-card (click)= "goToRodent()">\n            <img src="assets/imgs/turniphead.png" />\n            <div class="card-title">Roedores</div>\n            <div class="card-subtitle"> </div>\n          </ion-card>\n        </ion-col>\n\n        <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>\n          <ion-card (click)= "goToBirds()">\n            <img src="assets/imgs/turniphead.png" />\n            <div class="card-title">Pássaros</div>\n            <div class="card-subtitle"> </div>\n          </ion-card>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>\n          <ion-card (click)= "goToOthers()">\n            <img src="assets/imgs/turniphead.png" />\n            <div class="card-title">Outros</div>\n            <div class="card-subtitle"> </div>\n          </ion-card>\n        </ion-col>\n      </ion-row>\n\n    </div>\n  </ion-grid>\n \n</ion-content>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/adoption/adoption.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], AdoptionPage);
@@ -129,12 +129,11 @@ var BirdsPage = /** @class */ (function () {
     };
     BirdsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-birds',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\birds\birds.html"*/'<!--\n\n  Generated template for the BirdsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>birds</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let animal of animals.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/turniphead.png">\n\n        </ion-thumbnail>\n\n          <h2>{{animal.titlePostAnimal}}</h2>\n\n        <p>{{animal.descriptionPostAnimal}} </p>\n\n        <p>{{animal.sizePostAnimal}}</p>\n\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\birds\birds.html"*/,
+            selector: 'page-birds',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/birds/birds.html"*/'<!--\n  Generated template for the BirdsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>birds</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/birds/birds.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
     ], BirdsPage);
     return BirdsPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=birds.js.map
@@ -205,12 +204,11 @@ var RodentPage = /** @class */ (function () {
     };
     RodentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-rodent',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\rodent\rodent.html"*/'<!--\n\n  Generated template for the RodentPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>rodent</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let animal of animals.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/turniphead.png">\n\n        </ion-thumbnail>\n\n          <h2>{{animal.titlePostAnimal}}</h2>\n\n        <p>{{animal.descriptionPostAnimal}} </p>\n\n        <p>{{animal.sizePostAnimal}}</p>\n\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\rodent\rodent.html"*/,
+            selector: 'page-rodent',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/rodent/rodent.html"*/'<!--\n  Generated template for the RodentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>rodent</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/rodent/rodent.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
     ], RodentPage);
     return RodentPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=rodent.js.map
@@ -276,12 +274,11 @@ var OthersPage = /** @class */ (function () {
     };
     OthersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-others',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\others\others.html"*/'<!--\n\n  Generated template for the OthersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>others</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let animal of animals.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/turniphead.png">\n\n        </ion-thumbnail>\n\n          <h2>{{animal.titlePostAnimal}}</h2>\n\n        <p>{{animal.descriptionPostAnimal}} </p>\n\n        <p>{{animal.sizePostAnimal}}</p>\n\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\others\others.html"*/,
+            selector: 'page-others',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/others/others.html"*/'<!--\n  Generated template for the OthersPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>others</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/others/others.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
     ], OthersPage);
     return OthersPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=others.js.map
@@ -347,12 +344,11 @@ var CatPage = /** @class */ (function () {
     };
     CatPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-cat',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\cat\cat.html"*/'<!--\n\n  Generated template for the CatPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>cat</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let animal of animals.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/turniphead.png">\n\n        </ion-thumbnail>\n\n          <h2>{{animal.titlePostAnimal}}</h2>\n\n        <p>{{animal.descriptionPostAnimal}} </p>\n\n        <p>{{animal.sizePostAnimal}}</p>\n\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\cat\cat.html"*/,
+            selector: 'page-cat',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/cat/cat.html"*/'<!--\n  Generated template for the CatPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>cat</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/cat/cat.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
     ], CatPage);
     return CatPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=cat.js.map
@@ -418,12 +414,11 @@ var DogPage = /** @class */ (function () {
     };
     DogPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-dog',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\dog\dog.html"*/'<!--\n\n  Generated template for the DogPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>dog</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let animal of animals.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/turniphead.png">\n\n        </ion-thumbnail>\n\n          <h2>{{animal.titlePostAnimal}}</h2>\n\n        <p>{{animal.descriptionPostAnimal}} </p>\n\n        <p>{{animal.sizePostAnimal}}</p>\n\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\dog\dog.html"*/,
+            selector: 'page-dog',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/dog/dog.html"*/'<!--\n  Generated template for the DogPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>dog</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let animal of animals.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/turniphead.png">\n        </ion-thumbnail>\n          <h2>{{animal.titlePostAnimal}}</h2>\n        <p>{{animal.descriptionPostAnimal}} </p>\n        <p>{{animal.sizePostAnimal}}</p>\n        <button ion-button clear item-end (click)="goToDetailedPost(animal.idPostAnimal)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/dog/dog.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_animal_animal__["a" /* AnimalProvider */]])
     ], DogPage);
     return DogPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=dog.js.map
@@ -478,7 +473,7 @@ var ContribuitionPage = /** @class */ (function () {
     };
     ContribuitionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-contribuition',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\contribuition\contribuition.html"*/'<!--\n\n  Generated template for the ContribuitionPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>contribuition</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let contribution of contributions.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/food.jpg">\n\n        </ion-thumbnail>\n\n          <h2>{{contribution.titlePostItem}}</h2>\n\n        <p>{{contribution.descriptionPostItem}} </p>\n\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\contribuition\contribuition.html"*/,
+            selector: 'page-contribuition',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/contribuition/contribuition.html"*/'<!--\n  Generated template for the ContribuitionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>contribuition</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let contribution of contributions.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/food.jpg">\n        </ion-thumbnail>\n          <h2>{{contribution.titlePostItem}}</h2>\n        <p>{{contribution.descriptionPostItem}} </p>\n        <!--<button ion-button clear item-end (click)="goToPostProduct()">View</button>-->\n      </ion-item>\n    </ion-row>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/contribuition/contribuition.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__["a" /* ProfileProvider */]])
     ], ContribuitionPage);
@@ -523,7 +518,7 @@ var EditUserPage = /** @class */ (function () {
     };
     EditUserPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-edit-user',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\edit-user\edit-user.html"*/'<!--\n\n  Generated template for the EditUserPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>editUser</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n\n\n    <ion-item>\n\n      <ion-label floating>Nome</ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n  \n\n    <ion-item>\n\n      <ion-label floating>Logradouro</ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label floating>Número</ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label floating>Bairro</ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-select [(ngModel)]="estado">\n\n      <ion-option value="nes">NES</ion-option>\n\n      <ion-option value="n64">Nintendo64</ion-option>\n\n      <ion-option value="ps">PlayStation</ion-option>\n\n      <ion-option value="genesis">Sega Genesis</ion-option>\n\n      <ion-option value="saturn">Sega Saturn</ion-option>\n\n      <ion-option value="snes">SNES</ion-option>\n\n    </ion-select>\n\n\n\n    <ion-select [(ngModel)]="cidade">\n\n      <ion-option value="nes">NES</ion-option>\n\n      <ion-option value="n64">Nintendo64</ion-option>\n\n      <ion-option value="ps">PlayStation</ion-option>\n\n      <ion-option value="genesis">Sega Genesis</ion-option>\n\n      <ion-option value="saturn">Sega Saturn</ion-option>\n\n      <ion-option value="snes">SNES</ion-option>\n\n    </ion-select>\n\n\n\n    <ion-item>\n\n      <ion-label floating>Telefone</ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n  \n\n    <ion-item>\n\n      <ion-label floating>Celular</ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label floating>Username</ion-label>\n\n      <ion-input type="text"></ion-input>\n\n    </ion-item>\n\n  \n\n    <ion-item>\n\n      <ion-label floating>Password</ion-label>\n\n      <ion-input type="password"></ion-input>\n\n    </ion-item>\n\n\n\n    <button ion-button color="principal" clear (click)="goToTabs()">Login</button>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\edit-user\edit-user.html"*/,
+            selector: 'page-edit-user',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/edit-user/edit-user.html"*/'<!--\n  Generated template for the EditUserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>editUser</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating>Nome</ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n  \n    <ion-item>\n      <ion-label floating>Logradouro</ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Número</ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Bairro</ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n\n    <ion-select [(ngModel)]="estado">\n      <ion-option value="nes">NES</ion-option>\n      <ion-option value="n64">Nintendo64</ion-option>\n      <ion-option value="ps">PlayStation</ion-option>\n      <ion-option value="genesis">Sega Genesis</ion-option>\n      <ion-option value="saturn">Sega Saturn</ion-option>\n      <ion-option value="snes">SNES</ion-option>\n    </ion-select>\n\n    <ion-select [(ngModel)]="cidade">\n      <ion-option value="nes">NES</ion-option>\n      <ion-option value="n64">Nintendo64</ion-option>\n      <ion-option value="ps">PlayStation</ion-option>\n      <ion-option value="genesis">Sega Genesis</ion-option>\n      <ion-option value="saturn">Sega Saturn</ion-option>\n      <ion-option value="snes">SNES</ion-option>\n    </ion-select>\n\n    <ion-item>\n      <ion-label floating>Telefone</ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n  \n    <ion-item>\n      <ion-label floating>Celular</ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type="text"></ion-input>\n    </ion-item>\n  \n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password"></ion-input>\n    </ion-item>\n\n    <button ion-button color="principal" clear (click)="goToTabs()">Login</button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/edit-user/edit-user.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], EditUserPage);
@@ -593,12 +588,11 @@ var MedicinePage = /** @class */ (function () {
     };
     MedicinePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-medicine',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\medicine\medicine.html"*/'<!--\n\n  Generated template for the MedicinePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>medicine</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let medicine of medicines.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/food.jpg">\n\n        </ion-thumbnail>\n\n          <h2>{{medicine.titlePostItem}}</h2>\n\n        <p>{{medicine.descriptionPostItem}} </p>\n\n        <button ion-button clear item-end (click)="goToDetailedPost(medicine.idPostItem)">View</button>\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\medicine\medicine.html"*/,
+            selector: 'page-medicine',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/medicine/medicine.html"*/'<!--\n  Generated template for the MedicinePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>medicine</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let medicine of medicines.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/food.jpg">\n        </ion-thumbnail>\n          <h2>{{medicine.titlePostItem}}</h2>\n        <p>{{medicine.descriptionPostItem}} </p>\n        <button ion-button clear item-end (click)="goToDetailedPost(medicine.idPostItem)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/medicine/medicine.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_item_item__["a" /* ItemProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_item_item__["a" /* ItemProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_item_item__["a" /* ItemProvider */]])
     ], MedicinePage);
     return MedicinePage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=medicine.js.map
@@ -612,13 +606,13 @@ var MedicinePage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contribuition_contribuition__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__edit_user_edit_user__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__my_posts_my_posts__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Utils__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__my_posts_animal_my_posts_animal__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__my_posts_animal_my_posts_animal__ = __webpack_require__(128);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -673,7 +667,7 @@ var ProfilePage = /** @class */ (function () {
     };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\profile\profile.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>profile</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div class="col-lg-10 col-xs-10 col-sm-10 col-xl-10">\n\n\n\n      <!--<button (click)="goToEdit()" ion-button block outline item-end icon-right>\n\n\n\n        Editar Perfil\n\n      </button>-->\n\n\n\n      <button (click)="goToContribuition()" ion-button block outline item-end icon-right>\n\n        Contribuições\n\n      </button>\n\n\n\n      <button (click)="goToMyPostsAnimal()" ion-button block outline item-end icon-right>\n\n        Meus animais para adoção\n\n      </button>\n\n\n\n      <button (click)="goToMyPosts()" ion-button block outline item-end icon-right>\n\n        Meus ítens postados  \n\n      </button>\n\n\n\n      <button (click)="goToLogin()" ion-button block outline item-end icon-right>\n\n        Sair\n\n      </button>\n\n\n\n      <button ion-button color="principal" clear (click)="goToAbout()">Sobre o app</button>\n\n\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\profile\profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/profile/profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>profile</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <div class="col-lg-10 col-xs-10 col-sm-10 col-xl-10">\n\n      <!--<button (click)="goToEdit()" ion-button block outline item-end icon-right>\n\n        Editar Perfil\n      </button>-->\n\n      <button (click)="goToContribuition()" ion-button block outline item-end icon-right>\n        Contribuições\n      </button>\n\n      <button (click)="goToMyPostsAnimal()" ion-button block outline item-end icon-right>\n        Meus animais para adoção\n      </button>\n\n      <button (click)="goToMyPosts()" ion-button block outline item-end icon-right>\n        Meus ítens postados  \n      </button>\n\n      <button (click)="goToLogin()" ion-button block outline item-end icon-right>\n        Sair\n      </button>\n\n      <button ion-button color="principal" clear (click)="goToAbout()">Sobre o app</button>\n\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/profile/profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_7__Utils__["a" /* Utils */]])
     ], ProfilePage);
@@ -735,7 +729,7 @@ var MyPostsPage = /** @class */ (function () {
     };
     MyPostsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-my-posts',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\my-posts\my-posts.html"*/'<!--\n\n  Generated template for the MyPostsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>myPosts</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <ion-searchbar>\n\n    [(ngModel)]="myInput"\n\n    [showCancelButton]="shouldShowCancel"\n\n    (ionInput)="onInput($event)"\n\n    (ionCancel)="onCancel($event)">\n\n  </ion-searchbar>\n\n  \n\n    <ion-list>\n\n      <ion-row *ngFor="let post of posts.content">\n\n        <ion-item>\n\n          <ion-thumbnail item-start>\n\n            <img src="assets/imgs/food.jpg">\n\n          </ion-thumbnail>\n\n            <h2>{{post.titlePostItem}}</h2>\n\n          <p>{{post.descriptionPostItem}} </p>\n\n          <button ion-button clear item-end (click)="goToDetailedPost(post.idPostItem)">View</button>\n\n        </ion-item>\n\n      </ion-row>\n\n    </ion-list>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\my-posts\my-posts.html"*/,
+            selector: 'page-my-posts',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/my-posts/my-posts.html"*/'<!--\n  Generated template for the MyPostsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>myPosts</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n    <ion-searchbar>\n    [(ngModel)]="myInput"\n    [showCancelButton]="shouldShowCancel"\n    (ionInput)="onInput($event)"\n    (ionCancel)="onCancel($event)">\n  </ion-searchbar>\n  \n    <ion-list>\n      <ion-row *ngFor="let post of posts.content">\n        <ion-item>\n          <ion-thumbnail item-start>\n            <img src="assets/imgs/food.jpg">\n          </ion-thumbnail>\n            <h2>{{post.titlePostItem}}</h2>\n          <p>{{post.descriptionPostItem}} </p>\n          <button ion-button clear item-end (click)="goToDetailedPost(post.idPostItem)">View</button>\n        </ion-item>\n      </ion-row>\n    </ion-list>\n  </ion-content>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/my-posts/my-posts.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__["a" /* ProfileProvider */]])
     ], MyPostsPage);
@@ -747,6 +741,68 @@ var MyPostsPage = /** @class */ (function () {
 /***/ }),
 
 /***/ 128:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyPostsAnimalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the MyPostsAnimalPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var MyPostsAnimalPage = /** @class */ (function () {
+    function MyPostsAnimalPage(navCtrl, navParams, profileProvider) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.profileProvider = profileProvider;
+        this.posts = [];
+    }
+    MyPostsAnimalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MyPostsAnimalPage');
+        this.getAll();
+    };
+    MyPostsAnimalPage.prototype.getAll = function () {
+        var _this = this;
+        this.profileProvider.getAllPostsAnimal()
+            .then(function (posts) {
+            _this.posts = posts;
+        });
+    };
+    MyPostsAnimalPage.prototype.goToDetailedPost = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */], id);
+    };
+    MyPostsAnimalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-my-posts-animal',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/my-posts-animal/my-posts-animal.html"*/'<!--\n  Generated template for the MyPostsAnimalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>my-posts-animal</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n    <ion-searchbar>\n    [(ngModel)]="myInput"\n    [showCancelButton]="shouldShowCancel"\n    (ionInput)="onInput($event)"\n    (ionCancel)="onCancel($event)">\n  </ion-searchbar>\n  \n    <ion-list>\n      <ion-row *ngFor="let post of posts.content">\n        <ion-item>\n          <ion-thumbnail item-start>\n            <img src="assets/imgs/food.jpg">\n          </ion-thumbnail>\n            <h2>{{post.titlePostAnimal}}</h2>\n          <p>{{post.descriptionPostAnimal}} </p>\n          <button ion-button clear item-end (click)="goToDetailedPost(post.idPostAnimal)">View</button>\n        </ion-item>\n      </ion-row>\n    </ion-list>\n  </ion-content>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/my-posts-animal/my-posts-animal.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__["a" /* ProfileProvider */]])
+    ], MyPostsAnimalPage);
+    return MyPostsAnimalPage;
+}());
+
+//# sourceMappingURL=my-posts-animal.js.map
+
+/***/ }),
+
+/***/ 129:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -805,19 +861,18 @@ var ProductPage = /** @class */ (function () {
     };
     ProductPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-product',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\product\product.html"*/'<!--\n\n  Generated template for the ProductPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>product</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar>\n\n  [(ngModel)]="myInput"\n\n  [showCancelButton]="shouldShowCancel"\n\n  (ionInput)="onInput($event)"\n\n  (ionCancel)="onCancel($event)">\n\n</ion-searchbar>\n\n\n\n  <ion-list>\n\n    <ion-row *ngFor="let product of products.content">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="assets/imgs/food.jpg">\n\n        </ion-thumbnail>\n\n          <h2>{{product.titlePostItem}}</h2>\n\n        <p>{{product.descriptionPostItem}} </p>\n\n        <button ion-button clear item-end (click)="goToDetailedPost(product.idPostItem)">View</button>\n\n      </ion-item>\n\n    </ion-row>\n\n  </ion-list>\n\n  <ion-fab bottom right>\n\n    <button ion-fab mini (click)="createPost()" color=danger>\n\n      +\n\n    </button>\n\n  </ion-fab>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\product\product.html"*/,
+            selector: 'page-product',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/product/product.html"*/'<!--\n  Generated template for the ProductPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>product</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar>\n  [(ngModel)]="myInput"\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n\n  <ion-list>\n    <ion-row *ngFor="let product of products.content">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/food.jpg">\n        </ion-thumbnail>\n          <h2>{{product.titlePostItem}}</h2>\n        <p>{{product.descriptionPostItem}} </p>\n        <button ion-button clear item-end (click)="goToDetailedPost(product.idPostItem)">View</button>\n      </ion-item>\n    </ion-row>\n  </ion-list>\n  <ion-fab bottom right>\n    <button ion-fab mini (click)="createPost()" color=danger>\n      +\n    </button>\n  </ion-fab>\n</ion-content>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/product/product.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_item_item__["a" /* ItemProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_item_item__["a" /* ItemProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_item_item__["a" /* ItemProvider */]])
     ], ProductPage);
     return ProductPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=product.js.map
 
 /***/ }),
 
-/***/ 129:
+/***/ 130:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -881,7 +936,7 @@ var UserPage = /** @class */ (function () {
     };
     UserPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-user',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\user\user.html"*/'<!--\n\n  Generated template for the UserPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>user</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <form [formGroup]="meuForm" (ngSubmit)="signUp()" >\n\n\n\n    <ion-list>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Nome</ion-label>\n\n        <ion-input formControlName="nameUsur" type="text"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Logradouro</ion-label>\n\n        <ion-input formControlName="addressUsur" type="text"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>CPF</ion-label>\n\n        <ion-input formControlName="cpfUsur" type="text"></ion-input>\n\n      </ion-item>\n\n\n\n      <br>\n\n      <ion-item>\n\n        <ion-label>Estado</ion-label>\n\n        <ion-select formControlName="stateUsur" [(ngModel)]="estado">\n\n          <ion-option value="AC">AC</ion-option>\n\n          <ion-option value="AL">AL</ion-option>\n\n          <ion-option value="AP">AP</ion-option>\n\n          <ion-option value="AM">AM</ion-option>\n\n          <ion-option value="BA">BA</ion-option>\n\n          <ion-option value="CE">CE</ion-option>\n\n          <ion-option value="DF">DF</ion-option>\n\n          <ion-option value="ES">ES</ion-option>\n\n          <ion-option value="GO">GO</ion-option>\n\n          <ion-option value="MA">MA</ion-option>\n\n          <ion-option value="MT">MT</ion-option>\n\n          <ion-option value="MS">MS</ion-option>\n\n          <ion-option value="MG">MG</ion-option>\n\n          <ion-option value="PA">PA</ion-option>\n\n          <ion-option value="PB">PB</ion-option>\n\n          <ion-option value="PR">PR</ion-option>\n\n          <ion-option value="PE">PE</ion-option>\n\n          <ion-option value="PI">PI</ion-option>\n\n          <ion-option value="RJ">RJ</ion-option>\n\n          <ion-option value="RN">RN</ion-option>\n\n          <ion-option value="RS">RS</ion-option>\n\n          <ion-option value="RO">RO</ion-option>\n\n          <ion-option value="RR">RR</ion-option>\n\n          <ion-option value="SC">SC</ion-option>\n\n          <ion-option value="SP">SP</ion-option>\n\n          <ion-option value="SE">SE</ion-option>\n\n          <ion-option value="TO">TO</ion-option>\n\n\n\n        </ion-select>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Cidade</ion-label>\n\n        <ion-input formControlName="cityUsur" type="text"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Telefone</ion-label>\n\n        <ion-input formControlName="phoneUsur" type="text"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Celular</ion-label>\n\n        <ion-input formControlName="cellphoneUsur" type="text"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Email</ion-label>\n\n        <ion-input formControlName="emailUsur" type="text"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Senha</ion-label>\n\n        <ion-input formControlName="passwordUsur" type="password"></ion-input>\n\n      </ion-item>\n\n\n\n      <br>\n\n      <div float-left>\n\n        <button ion-button color="default" block type="submit">Cadastrar</button>\n\n      </div>\n\n    </ion-list>\n\n\n\n  </form>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\user\user.html"*/,
+            selector: 'page-user',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/user/user.html"*/'<!--\n  Generated template for the UserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>user</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n    <form [formGroup]="meuForm" (ngSubmit)="signUp()" >\n\n    <ion-list>\n\n      <ion-item>\n        <ion-label floating>Nome</ion-label>\n        <ion-input formControlName="nameUsur" type="text"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label floating>Logradouro</ion-label>\n        <ion-input formControlName="addressUsur" type="text"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label floating>CPF</ion-label>\n        <ion-input formControlName="cpfUsur" type="text"></ion-input>\n      </ion-item>\n\n      <br>\n      <ion-item>\n        <ion-label>Estado</ion-label>\n        <ion-select formControlName="stateUsur" [(ngModel)]="estado">\n          <ion-option value="AC">AC</ion-option>\n          <ion-option value="AL">AL</ion-option>\n          <ion-option value="AP">AP</ion-option>\n          <ion-option value="AM">AM</ion-option>\n          <ion-option value="BA">BA</ion-option>\n          <ion-option value="CE">CE</ion-option>\n          <ion-option value="DF">DF</ion-option>\n          <ion-option value="ES">ES</ion-option>\n          <ion-option value="GO">GO</ion-option>\n          <ion-option value="MA">MA</ion-option>\n          <ion-option value="MT">MT</ion-option>\n          <ion-option value="MS">MS</ion-option>\n          <ion-option value="MG">MG</ion-option>\n          <ion-option value="PA">PA</ion-option>\n          <ion-option value="PB">PB</ion-option>\n          <ion-option value="PR">PR</ion-option>\n          <ion-option value="PE">PE</ion-option>\n          <ion-option value="PI">PI</ion-option>\n          <ion-option value="RJ">RJ</ion-option>\n          <ion-option value="RN">RN</ion-option>\n          <ion-option value="RS">RS</ion-option>\n          <ion-option value="RO">RO</ion-option>\n          <ion-option value="RR">RR</ion-option>\n          <ion-option value="SC">SC</ion-option>\n          <ion-option value="SP">SP</ion-option>\n          <ion-option value="SE">SE</ion-option>\n          <ion-option value="TO">TO</ion-option>\n\n        </ion-select>\n      </ion-item>\n\n      <ion-item>\n        <ion-label floating>Cidade</ion-label>\n        <ion-input formControlName="cityUsur" type="text"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label floating>Telefone</ion-label>\n        <ion-input formControlName="phoneUsur" type="text"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label floating>Celular</ion-label>\n        <ion-input formControlName="cellphoneUsur" type="text"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label floating>Email</ion-label>\n        <ion-input formControlName="emailUsur" type="text"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label floating>Senha</ion-label>\n        <ion-input formControlName="passwordUsur" type="password"></ion-input>\n      </ion-item>\n\n      <br>\n      <div float-left>\n        <button ion-button color="default" block type="submit">Cadastrar</button>\n      </div>\n    </ion-list>\n\n  </form>\n</ion-content>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/user/user.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_user_user_provider__["a" /* UserProvider */], __WEBPACK_IMPORTED_MODULE_4__Utils__["a" /* Utils */]])
     ], UserPage);
@@ -892,7 +947,7 @@ var UserPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 139:
+/***/ 140:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -905,7 +960,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 139;
+webpackEmptyAsyncContext.id = 140;
 
 /***/ }),
 
@@ -917,7 +972,7 @@ webpackEmptyAsyncContext.id = 139;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__model_DetailedPostAnimal__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__model_DetailedPostAnimal__ = __webpack_require__(284);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_detailed_post_detailed_post__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -971,68 +1026,67 @@ var DetailedPostAnimalPage = /** @class */ (function () {
     };
     DetailedPostAnimalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-detailed-post-animal',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\detailed-post-animal\detailed-post-animal.html"*/'<!--\n\n  Generated template for the DetailedPostAnimalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>detailedPostAnimal</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <ion-list>\n\n      \n\n    <ion-item>\n\n      <ion-label><strong>{{animal.nameUsur}}</strong></ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <h1>Título</h1>\n\n      <ion-label>{{animal.titlePostAnimal}}</ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card>\n\n        <ion-card-header>\n\n          <img src="assets/imgs/turniphead.png" />\n\n        </ion-card-header>\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label fixed>Descrição</ion-label>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-card text-wrap>\n\n        <strong>Tamanho do animal: </strong>{{animal.sizePostAnimal}}\n\n        <br>\n\n        <br>\n\n        {{animal.descriptionPostAnimal}}\n\n      </ion-card>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <button ion-button primary (click)= "goToContacts(animal.idUsur, animal.idPostAnimal)">Entrar em contato</button>\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\detailed-post-animal\detailed-post-animal.html"*/,
+            selector: 'page-detailed-post-animal',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/detailed-post-animal/detailed-post-animal.html"*/'<!--\n  Generated template for the DetailedPostAnimalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>detailedPostAnimal</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n      \n    <ion-item>\n      <ion-label><strong>{{animal.nameUsur}}</strong></ion-label>\n    </ion-item>\n\n    <ion-item>\n      <h1>Título</h1>\n      <ion-label>{{animal.titlePostAnimal}}</ion-label>\n    </ion-item>\n\n    <ion-item>\n      <ion-card>\n        <ion-card-header>\n          <img src="assets/imgs/turniphead.png" />\n        </ion-card-header>\n      </ion-card>\n    </ion-item>\n\n    <ion-item>\n      <ion-label fixed>Descrição</ion-label>\n    </ion-item>\n\n    <ion-item>\n      <ion-card text-wrap>\n        <strong>Tamanho do animal: </strong>{{animal.sizePostAnimal}}\n        <br>\n        <br>\n        {{animal.descriptionPostAnimal}}\n      </ion-card>\n    </ion-item>\n\n    <ion-item>\n      <button ion-button primary (click)= "goToContacts(animal.idUsur, animal.idPostAnimal)">Entrar em contato</button>\n    </ion-item>\n\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/detailed-post-animal/detailed-post-animal.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */]])
     ], DetailedPostAnimalPage);
     return DetailedPostAnimalPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=detailed-post-animal.js.map
 
 /***/ }),
 
-/***/ 182:
+/***/ 183:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/adoption-list/adoption-list.module": [
-		327,
+		328,
 		20
 	],
 	"../pages/adoption/adoption.module": [
-		328,
+		329,
 		19
 	],
 	"../pages/birds/birds.module": [
-		329,
+		330,
 		18
 	],
 	"../pages/cat/cat.module": [
-		330,
+		331,
 		17
 	],
 	"../pages/contact/contact.module": [
-		331,
+		332,
 		16
 	],
 	"../pages/contribuition/contribuition.module": [
-		332,
+		333,
 		15
 	],
 	"../pages/create-post-animal/create-post-animal.module": [
-		333,
+		334,
 		14
 	],
 	"../pages/create-post-item/create-post-item.module": [
-		334,
+		335,
 		13
 	],
 	"../pages/detailed-post-animal/detailed-post-animal.module": [
-		335,
+		336,
 		12
 	],
 	"../pages/detailed-post/detailed-post.module": [
-		336,
+		337,
 		11
 	],
 	"../pages/dog/dog.module": [
-		337,
+		338,
 		10
 	],
 	"../pages/edit-user/edit-user.module": [
-		338,
+		339,
 		9
 	],
 	"../pages/login/login.module": [
@@ -1040,7 +1094,7 @@ var map = {
 		8
 	],
 	"../pages/medicine/medicine.module": [
-		339,
+		342,
 		7
 	],
 	"../pages/my-posts-animal/my-posts-animal.module": [
@@ -1048,27 +1102,27 @@ var map = {
 		6
 	],
 	"../pages/my-posts/my-posts.module": [
-		342,
+		343,
 		5
 	],
 	"../pages/others/others.module": [
-		343,
+		344,
 		4
 	],
 	"../pages/product/product.module": [
-		344,
+		345,
 		3
 	],
 	"../pages/profile/profile.module": [
-		345,
+		346,
 		2
 	],
 	"../pages/rodent/rodent.module": [
-		346,
+		347,
 		1
 	],
 	"../pages/user/user.module": [
-		347,
+		348,
 		0
 	]
 };
@@ -1083,12 +1137,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 182;
+webpackAsyncContext.id = 183;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 183:
+/***/ 184:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1137,7 +1191,7 @@ var ContactProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 189:
+/***/ 190:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1161,7 +1215,7 @@ var AboutPage = /** @class */ (function () {
     }
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-about',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus lacus, suscipit luctus dui at, consequat accumsan libero. Suspendisse molestie euismod nunc vitae vulputate. Sed imperdiet urna eu auctor vestibulum. Phasellus quis metus eget dui mattis laoreet. Mauris elementum ligula eget volutpat dignissim. Nam semper nisl at ex iaculis, vel scelerisque odio condimentum. Sed facilisis lacinia justo eu suscipit. Nulla et libero nibh. Quisque scelerisque, ante vitae convallis interdum, nibh eros iaculis massa, sed fermentum velit enim eu tortor. Donec et lacus enim. Vestibulum volutpat metus ut urna tempus, ut tempor massa tincidunt. Integer interdum commodo mi sed dapibus. Aenean nulla elit, hendrerit vitae molestie vitae, mattis et sem. Integer finibus, purus ac rutrum facilisis, lectus tortor pellentesque ex, in pulvinar nulla leo eget velit. Fusce dolor dui, tincidunt at sodales ut, suscipit vel nisl. Nunc tempor ornare iaculis.\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\about\about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus lacus, suscipit luctus dui at, consequat accumsan libero. Suspendisse molestie euismod nunc vitae vulputate. Sed imperdiet urna eu auctor vestibulum. Phasellus quis metus eget dui mattis laoreet. Mauris elementum ligula eget volutpat dignissim. Nam semper nisl at ex iaculis, vel scelerisque odio condimentum. Sed facilisis lacinia justo eu suscipit. Nulla et libero nibh. Quisque scelerisque, ante vitae convallis interdum, nibh eros iaculis massa, sed fermentum velit enim eu tortor. Donec et lacus enim. Vestibulum volutpat metus ut urna tempus, ut tempor massa tincidunt. Integer interdum commodo mi sed dapibus. Aenean nulla elit, hendrerit vitae molestie vitae, mattis et sem. Integer finibus, purus ac rutrum facilisis, lectus tortor pellentesque ex, in pulvinar nulla leo eget velit. Fusce dolor dui, tincidunt at sodales ut, suscipit vel nisl. Nunc tempor ornare iaculis.\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/about/about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], AboutPage);
@@ -1172,7 +1226,7 @@ var AboutPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 231:
+/***/ 232:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1216,7 +1270,7 @@ var AdoptionListPage = /** @class */ (function () {
     };
     AdoptionListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-adoption-list',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\adoption-list\adoption-list.html"*/'<!--\n\n  Generated template for the AdoptionListPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>adoptionList</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">\n\n      </ion-searchbar>\n\n    \n\n      <ion-list>\n\n    \n\n        <ion-item>\n\n    \n\n          <ion-thumbnail item-start>\n\n            <img src="assets/imgs/remedio.png">\n\n          </ion-thumbnail>\n\n          <h2>Animal 1</h2>\n\n          <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>\n\n          <button ion-button clear (click)="goToDetailedPost()" item-end >View</button>\n\n        </ion-item>\n\n    \n\n        <ion-item>\n\n          <ion-thumbnail item-start>\n\n            <img src="assets/imgs/remedio2.jpg">\n\n          </ion-thumbnail>\n\n          <h2>Animal 2</h2>\n\n          <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>\n\n          <button ion-button clear item-end (click)="goToDetailedPost()">View</button>\n\n        </ion-item>\n\n    \n\n        <ion-item>\n\n          <ion-thumbnail item-start>\n\n            <img src="assets/imgs/turniphead.png">\n\n          </ion-thumbnail>\n\n          <h2>Animal 3</h2>\n\n          <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>\n\n          <button ion-button clear item-end (click)="goToDetailedPost()">View</button>\n\n        </ion-item>\n\n    \n\n    \n\n        <ion-item>\n\n          <ion-thumbnail item-start>\n\n            <img src="assets/imgs/turniphead.png">\n\n          </ion-thumbnail>\n\n          <h2>Animal 4</h2>\n\n          <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>\n\n          <button ion-button clear item-end (click)="goToDetailedPost()">View</button>\n\n        </ion-item>\n\n    \n\n      </ion-list>\n\n      <ion-fab bottom right>\n\n        <button ion-fab mini (click)="goToPostAnimal()" color=danger>\n\n          +\n\n        </button>\n\n      </ion-fab>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\adoption-list\adoption-list.html"*/,
+            selector: 'page-adoption-list',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/adoption-list/adoption-list.html"*/'<!--\n  Generated template for the AdoptionListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>adoptionList</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">\n      </ion-searchbar>\n    \n      <ion-list>\n    \n        <ion-item>\n    \n          <ion-thumbnail item-start>\n            <img src="assets/imgs/remedio.png">\n          </ion-thumbnail>\n          <h2>Animal 1</h2>\n          <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>\n          <button ion-button clear (click)="goToDetailedPost()" item-end >View</button>\n        </ion-item>\n    \n        <ion-item>\n          <ion-thumbnail item-start>\n            <img src="assets/imgs/remedio2.jpg">\n          </ion-thumbnail>\n          <h2>Animal 2</h2>\n          <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>\n          <button ion-button clear item-end (click)="goToDetailedPost()">View</button>\n        </ion-item>\n    \n        <ion-item>\n          <ion-thumbnail item-start>\n            <img src="assets/imgs/turniphead.png">\n          </ion-thumbnail>\n          <h2>Animal 3</h2>\n          <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>\n          <button ion-button clear item-end (click)="goToDetailedPost()">View</button>\n        </ion-item>\n    \n    \n        <ion-item>\n          <ion-thumbnail item-start>\n            <img src="assets/imgs/turniphead.png">\n          </ion-thumbnail>\n          <h2>Animal 4</h2>\n          <p>Lorem ipsum aliquam tristique ad morbi, eu nibh etiam class. </p>\n          <button ion-button clear item-end (click)="goToDetailedPost()">View</button>\n        </ion-item>\n    \n      </ion-list>\n      <ion-fab bottom right>\n        <button ion-fab mini (click)="goToPostAnimal()" color=danger>\n          +\n        </button>\n      </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/adoption-list/adoption-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], AdoptionListPage);
@@ -1224,68 +1278,6 @@ var AdoptionListPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=adoption-list.js.map
-
-/***/ }),
-
-/***/ 232:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyPostsAnimalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__ = __webpack_require__(17);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the MyPostsAnimalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var MyPostsAnimalPage = /** @class */ (function () {
-    function MyPostsAnimalPage(navCtrl, navParams, profileProvider) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.profileProvider = profileProvider;
-        this.posts = [];
-    }
-    MyPostsAnimalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MyPostsAnimalPage');
-        this.getAll();
-    };
-    MyPostsAnimalPage.prototype.getAll = function () {
-        var _this = this;
-        this.profileProvider.getAllPostsAnimal()
-            .then(function (posts) {
-            _this.posts = posts;
-        });
-    };
-    MyPostsAnimalPage.prototype.goToDetailedPost = function (id) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__detailed_post_animal_detailed_post_animal__["a" /* DetailedPostAnimalPage */], id);
-    };
-    MyPostsAnimalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-my-posts-animal',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\my-posts-animal\my-posts-animal.html"*/'<!--\n\n  Generated template for the MyPostsAnimalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>my-posts-animal</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <ion-searchbar>\n\n    [(ngModel)]="myInput"\n\n    [showCancelButton]="shouldShowCancel"\n\n    (ionInput)="onInput($event)"\n\n    (ionCancel)="onCancel($event)">\n\n  </ion-searchbar>\n\n  \n\n    <ion-list>\n\n      <ion-row *ngFor="let post of posts.content">\n\n        <ion-item>\n\n          <ion-thumbnail item-start>\n\n            <img src="assets/imgs/food.jpg">\n\n          </ion-thumbnail>\n\n            <h2>{{post.titlePostAnimal}}</h2>\n\n          <p>{{post.descriptionPostAnimal}} </p>\n\n          <button ion-button clear item-end (click)="goToDetailedPost(post.idPostAnimal)">View</button>\n\n        </ion-item>\n\n      </ion-row>\n\n    </ion-list>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\my-posts-animal\my-posts-animal.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_profile_profile__["a" /* ProfileProvider */]])
-    ], MyPostsAnimalPage);
-    return MyPostsAnimalPage;
-}());
-
-//# sourceMappingURL=my-posts-animal.js.map
 
 /***/ }),
 
@@ -1312,9 +1304,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(318);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_about_about__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_adoption_list_adoption_list__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_about_about__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_adoption_list_adoption_list__ = __webpack_require__(232);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_adoption_adoption__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_birds_birds__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_cat_cat__ = __webpack_require__(121);
@@ -1329,25 +1321,25 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_login_login__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_medicine_medicine__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_my_posts_my_posts__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_my_posts_animal_my_posts_animal__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_my_posts_animal_my_posts_animal__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_others_others__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_product_product__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_product_product__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_profile_profile__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_rodent_rodent__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_tabs_tabs__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_user_user__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__auth_interceptor__ = __webpack_require__(319);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_camera__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_storage__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ionic_native_splash_screen__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_status_bar__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_user_user__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__auth_interceptor__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_camera__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_storage__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ionic_native_splash_screen__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_status_bar__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__Utils__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__providers_animal_animal__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__providers_item_item__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__providers_user_user_provider__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__providers_profile_profile__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__providers_detailed_post_detailed_post__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__providers_contact_contact__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__providers_contact_contact__ = __webpack_require__(184);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1443,9 +1435,9 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/detailed-post/detailed-post.module#DetailedPostPageModule', name: 'DetailedPostPage', segment: 'detailed-post', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dog/dog.module#DogPageModule', name: 'DogPage', segment: 'dog', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'EditUserPage', segment: 'edit-user', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/medicine/medicine.module#MedicinePageModule', name: 'MedicinePage', segment: 'medicine', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-posts-animal/my-posts-animal.module#MyPostsAnimalPageModule', name: 'MyPostsAnimalPage', segment: 'my-posts-animal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/medicine/medicine.module#MedicinePageModule', name: 'MedicinePage', segment: 'medicine', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-posts/my-posts.module#MyPostsPageModule', name: 'MyPostsPage', segment: 'my-posts', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/others/others.module#OthersPageModule', name: 'OthersPage', segment: 'others', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/product/product.module#ProductPageModule', name: 'ProductPage', segment: 'product', priority: 'low', defaultHistory: [] },
@@ -1511,13 +1503,13 @@ var AppModule = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Utils; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_storage__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_storage__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_jwt__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_jwt__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_jwt__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1580,7 +1572,7 @@ var Utils = /** @class */ (function () {
     Utils.serverUrl = function () {
         // return 'http://192.168.10.90:8080/api';
         // return 'http://localhost:8080/api';
-        return "http://localhost:8080";
+        return "http://18.191.242.229:8080";
     };
     Utils.prototype.didTutorial = function () {
         var _this = this;
@@ -1745,6 +1737,27 @@ var User = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 284:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostAnimal; });
+var DetailedPostAnimal = /** @class */ (function () {
+    function DetailedPostAnimal() {
+        this.idPostItem = '';
+        this.idUsur = '';
+        this.nameUsur = '';
+        this.titlePostItem = '';
+        this.descriptionPostItem = '';
+        this.sizePostItem = '';
+    }
+    return DetailedPostAnimal;
+}());
+
+//# sourceMappingURL=DetailedPostAnimal.js.map
+
+/***/ }),
+
 /***/ 29:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1801,19 +1814,18 @@ var CreatePostAnimalPage = /** @class */ (function () {
     };
     CreatePostAnimalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-create-post-animal',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\create-post-animal\create-post-animal.html"*/'<!--\n\n  Generated template for the CreatePostAnimalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>createPostAnimal</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n\n\n    <form [formGroup]="meuForm" (ngSubmit)="postAnimal(meuForm)">\n\n      <ion-item>\n\n        <ion-label floating>Título</ion-label>\n\n        <ion-input formControlName="titlePostAnimal" type="text"></ion-input>\n\n      </ion-item>\n\n      <br>\n\n\n\n      <ion-item>\n\n        <ion-label>Espécie</ion-label>\n\n        <ion-select formControlName="speciesPostAnimal" [(ngModel)]="species">\n\n          <ion-option value="CACHORRO">Cachorro</ion-option>\n\n          <ion-option value="GATO">Gato</ion-option>\n\n          <ion-option value="ROEDOR">Roedor</ion-option>\n\n          <ion-option value="PASSARO">Pássaro</ion-option>\n\n          <ion-option value="OUTROS">Outros</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n      <br>\n\n\n\n      <ion-item>\n\n          <ion-label>Tamanho do animal</ion-label>\n\n          <ion-select formControlName="sizePostAnimal" [(ngModel)]="size">\n\n            <ion-option value="PEQUENO">Pequeno</ion-option>\n\n            <ion-option value="MEDIO">Médio</ion-option>\n\n            <ion-option value="GRANDE">Grande</ion-option>\n\n          </ion-select>\n\n        </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Descrição</ion-label>\n\n        <ion-input formControlName="descriptionPostAnimal" type="text"></ion-input>\n\n      </ion-item>\n\n\n\n      <br>\n\n      <button ion-button round color="primary" type="submit">Publicar</button>\n\n\n\n    </form>\n\n\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\create-post-animal\create-post-animal.html"*/,
+            selector: 'page-create-post-animal',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/create-post-animal/create-post-animal.html"*/'<!--\n  Generated template for the CreatePostAnimalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>createPostAnimal</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n\n    <form [formGroup]="meuForm" (ngSubmit)="postAnimal(meuForm)">\n      <ion-item>\n        <ion-label floating>Título</ion-label>\n        <ion-input formControlName="titlePostAnimal" type="text"></ion-input>\n      </ion-item>\n      <br>\n\n      <ion-item>\n        <ion-label>Espécie</ion-label>\n        <ion-select formControlName="speciesPostAnimal" [(ngModel)]="species">\n          <ion-option value="CACHORRO">Cachorro</ion-option>\n          <ion-option value="GATO">Gato</ion-option>\n          <ion-option value="ROEDOR">Roedor</ion-option>\n          <ion-option value="PASSARO">Pássaro</ion-option>\n          <ion-option value="OUTROS">Outros</ion-option>\n        </ion-select>\n      </ion-item>\n      <br>\n\n      <ion-item>\n          <ion-label>Tamanho do animal</ion-label>\n          <ion-select formControlName="sizePostAnimal" [(ngModel)]="size">\n            <ion-option value="PEQUENO">Pequeno</ion-option>\n            <ion-option value="MEDIO">Médio</ion-option>\n            <ion-option value="GRANDE">Grande</ion-option>\n          </ion-select>\n        </ion-item>\n\n      <ion-item>\n        <ion-label floating>Descrição</ion-label>\n        <ion-input formControlName="descriptionPostAnimal" type="text"></ion-input>\n      </ion-item>\n\n      <br>\n      <button ion-button round color="primary" type="submit">Publicar</button>\n\n    </form>\n\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/create-post-animal/create-post-animal.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_animal_animal__["a" /* AnimalProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_animal_animal__["a" /* AnimalProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_animal_animal__["a" /* AnimalProvider */]])
     ], CreatePostAnimalPage);
     return CreatePostAnimalPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=create-post-animal.js.map
 
 /***/ }),
 
-/***/ 300:
+/***/ 301:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1835,15 +1847,15 @@ var DetailedPostItem = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 318:
+/***/ 319:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(231);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1870,7 +1882,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -1881,23 +1893,23 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 319:
+/***/ 320:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthInterceptor; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw__ = __webpack_require__(321);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_throw__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_fromPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__ = __webpack_require__(322);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_mergeMap__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_mergeMap__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_mergeMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__ = __webpack_require__(325);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Utils__ = __webpack_require__(28);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2130,27 +2142,6 @@ var AnimalProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 348:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailedPostAnimal; });
-var DetailedPostAnimal = /** @class */ (function () {
-    function DetailedPostAnimal() {
-        this.idPostItem = '';
-        this.idUsur = '';
-        this.nameUsur = '';
-        this.titlePostItem = '';
-        this.descriptionPostItem = '';
-        this.sizePostItem = '';
-    }
-    return DetailedPostAnimal;
-}());
-
-//# sourceMappingURL=DetailedPostAnimal.js.map
-
-/***/ }),
-
 /***/ 38:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2159,7 +2150,7 @@ var DetailedPostAnimal = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_detailed_post_detailed_post__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__model_DetailedPostItem__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__model_DetailedPostItem__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact__ = __webpack_require__(60);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2213,7 +2204,7 @@ var DetailedPostPage = /** @class */ (function () {
     };
     DetailedPostPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-detailed-post',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\detailed-post\detailed-post.html"*/'<!--\n\n  Generated template for the DetailedPostMedicinePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n      <ion-title>detailedPost</ion-title>\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n  \n\n  \n\n  <ion-content padding>\n\n  \n\n    <ion-list>\n\n  \n\n      <ion-item>\n\n          <ion-label>{{item.nameUsur}}</ion-label>\n\n        </ion-item>\n\n\n\n      <ion-item>\n\n        <h1>Título</h1>\n\n        <ion-label>{{item.titlePostAnimal}}</ion-label>\n\n      </ion-item>\n\n  \n\n      <ion-item>\n\n        <ion-card>\n\n          <ion-card-header>\n\n            <img src="assets/imgs/turniphead.png" />\n\n          </ion-card-header>\n\n        </ion-card>\n\n      </ion-item>\n\n  \n\n      <ion-item>\n\n        <ion-label fixed>Descrição</ion-label>\n\n      </ion-item>\n\n  \n\n      <ion-item>\n\n        <ion-card text-wrap>\n\n          <strong>Espécie </strong>: {{item.speciesPostAnimal}}\n\n            <br>\n\n            <br>\n\n          {{item.descriptionPostAnimal}}\n\n        </ion-card>\n\n      </ion-item>\n\n  \n\n      <ion-item>\n\n        <button ion-button primary (click)= "goToContacts(item.idUsur, item.idPostItem)">Entrar em contato</button>\n\n      </ion-item>\n\n  \n\n    </ion-list>\n\n  </ion-content>\n\n  '/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\detailed-post\detailed-post.html"*/,
+            selector: 'page-detailed-post',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/detailed-post/detailed-post.html"*/'<!--\n  Generated template for the DetailedPostMedicinePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar>\n      <ion-title>detailedPost</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  \n  <ion-content padding>\n  \n    <ion-list>\n  \n      <ion-item>\n          <ion-label>{{item.nameUsur}}</ion-label>\n        </ion-item>\n\n      <ion-item>\n        <h1>Título</h1>\n        <ion-label>{{item.titlePostAnimal}}</ion-label>\n      </ion-item>\n  \n      <ion-item>\n        <ion-card>\n          <ion-card-header>\n            <img src="assets/imgs/turniphead.png" />\n          </ion-card-header>\n        </ion-card>\n      </ion-item>\n  \n      <ion-item>\n        <ion-label fixed>Descrição</ion-label>\n      </ion-item>\n  \n      <ion-item>\n        <ion-card text-wrap>\n          <strong>Espécie </strong>: {{item.speciesPostAnimal}}\n            <br>\n            <br>\n          {{item.descriptionPostAnimal}}\n        </ion-card>\n      </ion-item>\n  \n      <ion-item>\n        <button ion-button primary (click)= "goToContacts(item.idUsur, item.idPostItem)">Entrar em contato</button>\n      </ion-item>\n  \n    </ion-list>\n  </ion-content>\n  '/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/detailed-post/detailed-post.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_detailed_post_detailed_post__["a" /* DetailedPostProvider */]])
     ], DetailedPostPage);
@@ -2368,7 +2359,7 @@ var ItemProvider = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__model_User__ = __webpack_require__(283);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_contact_contact__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_contact_contact__ = __webpack_require__(184);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2410,7 +2401,7 @@ var ContactPage = /** @class */ (function () {
     };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-contact',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\contact\contact.html"*/'<!--\n\n  Generated template for the ContactPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>contact</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-card>\n\n        Nome: {{user.nameUsur}}\n\n        <ion-card-header>\n\n          <img src="assets/imgs/turniphead.png">\n\n        </ion-card-header>\n\n      </ion-card>\n\n      <div>\n\n        Email: {{user.emailUsur}}\n\n        Telefone: {{user.phoneUsur}}\n\n      </div>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\contact\contact.html"*/,
+            selector: 'page-contact',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/contact/contact.html"*/'<!--\n  Generated template for the ContactPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>contact</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <ion-card>\n        Nome: {{user.nameUsur}}\n        <ion-card-header>\n          <img src="assets/imgs/turniphead.png">\n        </ion-card-header>\n      </ion-card>\n      <div>\n        Email: {{user.emailUsur}}\n        Telefone: {{user.phoneUsur}}\n      </div>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/contact/contact.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_contact_contact__["a" /* ContactProvider */]])
     ], ContactPage);
@@ -2478,7 +2469,7 @@ var CreatePostItemPage = /** @class */ (function () {
     };
     CreatePostItemPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-create-post-item',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\create-post-item\create-post-item.html"*/'<!--\n\n  Generated template for the CreatePostItemPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>createPostItem</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <form [formGroup]="meuForm" (ngSubmit)="postItem(meuForm)">\n\n    <ion-list>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Título</ion-label>\n\n        <ion-input formControlName="titlePostItem" type="text"></ion-input>\n\n      </ion-item>\n\n      <br>\n\n    \n\n      <ion-item>\n\n        <ion-label>Tipo</ion-label>\n\n        <ion-select formControlName="typePostItem" [(ngModel)]="tipo">\n\n          <ion-option value="PRODUTO">Produto</ion-option>\n\n          <ion-option value="REMEDIO">Remédio</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n\n\n      <br>\n\n\n\n      <ion-item>\n\n        <ion-label>Para qual espécie é esse ítem</ion-label>\n\n        <ion-select formControlName="speciesPostItem" [(ngModel)]="especie">\n\n          <ion-option value="CACHORRO">Cachorro</ion-option>\n\n          <ion-option value="GATO">Gato</ion-option>\n\n          <ion-option value="ROEDOR">Roedor</ion-option>\n\n          <ion-option value="PASSARO">Pássaro</ion-option>\n\n          <ion-option value="OUTROS">Outros</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Descrição</ion-label>\n\n        <ion-input formControlName="descriptionPostItem" type="text"></ion-input>\n\n      </ion-item>\n\n    \n\n      <br>\n\n      <button ion-button round color="primary" type="submit">Publicar</button>\n\n\n\n    </ion-list>\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\create-post-item\create-post-item.html"*/,
+            selector: 'page-create-post-item',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/create-post-item/create-post-item.html"*/'<!--\n  Generated template for the CreatePostItemPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>createPostItem</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form [formGroup]="meuForm" (ngSubmit)="postItem(meuForm)">\n    <ion-list>\n\n      <ion-item>\n        <ion-label floating>Título</ion-label>\n        <ion-input formControlName="titlePostItem" type="text"></ion-input>\n      </ion-item>\n      <br>\n    \n      <ion-item>\n        <ion-label>Tipo</ion-label>\n        <ion-select formControlName="typePostItem" [(ngModel)]="tipo">\n          <ion-option value="PRODUTO">Produto</ion-option>\n          <ion-option value="REMEDIO">Remédio</ion-option>\n        </ion-select>\n      </ion-item>\n\n      <br>\n\n      <ion-item>\n        <ion-label>Para qual espécie é esse ítem</ion-label>\n        <ion-select formControlName="speciesPostItem" [(ngModel)]="especie">\n          <ion-option value="CACHORRO">Cachorro</ion-option>\n          <ion-option value="GATO">Gato</ion-option>\n          <ion-option value="ROEDOR">Roedor</ion-option>\n          <ion-option value="PASSARO">Pássaro</ion-option>\n          <ion-option value="OUTROS">Outros</ion-option>\n        </ion-select>\n      </ion-item>\n\n      <ion-item>\n        <ion-label floating>Descrição</ion-label>\n        <ion-input formControlName="descriptionPostItem" type="text"></ion-input>\n      </ion-item>\n    \n      <br>\n      <button ion-button round color="primary" type="submit">Publicar</button>\n\n    </ion-list>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/create-post-item/create-post-item.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_item_item__["a" /* ItemProvider */]])
     ], CreatePostItemPage);
@@ -2498,7 +2489,7 @@ var CreatePostItemPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__user_user__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__user_user__ = __webpack_require__(130);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_user_user_provider__ = __webpack_require__(95);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2556,7 +2547,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>login</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <form [formGroup]="meuForm" (ngSubmit)="login(meuForm)">\n\n    <ion-list>\n\n        \n\n      <ion-item>\n\n        <ion-label floating>Username</ion-label>\n\n        <ion-input formControlName="username" type="text"></ion-input>\n\n      </ion-item>\n\n    \n\n      <ion-item>\n\n        <ion-label floating>Password</ion-label>\n\n        <ion-input formControlName="password" type="password"></ion-input>\n\n      </ion-item>\n\n\n\n      <br>\n\n      <button ion-button color="principal" block type="submit" [disabled]="meuForm.invalid">Login</button>\n\n      <br>\n\n\n\n      <hr class="hr-text" data-content="ou">\n\n\n\n      \n\n\n\n    </ion-list>\n\n  </form>\n\n  <button ion-button color="principal" clear block (click)="goToUser()">Cadastrar</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <form [formGroup]="meuForm" (ngSubmit)="login(meuForm)">\n    <ion-list>\n        \n      <ion-item>\n        <ion-label floating>Username</ion-label>\n        <ion-input formControlName="username" type="text"></ion-input>\n      </ion-item>\n    \n      <ion-item>\n        <ion-label floating>Password</ion-label>\n        <ion-input formControlName="password" type="password"></ion-input>\n      </ion-item>\n\n      <br>\n      <button ion-button color="principal" block type="submit" [disabled]="meuForm.invalid">Login</button>\n      <br>\n\n      <hr class="hr-text" data-content="ou">\n\n      \n\n    </ion-list>\n  </form>\n  <button ion-button color="principal" clear block (click)="goToUser()">Cadastrar</button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_user_user_provider__["a" /* UserProvider */]])
     ], LoginPage);
@@ -2620,7 +2611,7 @@ var DetailedPostProvider = /** @class */ (function () {
     DetailedPostProvider.prototype.postContributionItem = function (meuForm) {
         var _this = this;
         return new Promise(function (resolve) {
-            _this.http.post(_this.item_postContribution, JSON.stringify(meuForm), { headers: _this.headers })
+            _this.http.post(_this.item_postContribution, meuForm, { headers: _this.headers })
                 .subscribe(function (success) {
                 resolve(success);
                 _this.utils.getToast('Postagem criada com sucesso!');
@@ -2646,7 +2637,7 @@ var DetailedPostProvider = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__medicine_medicine__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__product_product__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__product_product__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__adoption_adoption__ = __webpack_require__(117);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2670,7 +2661,7 @@ var TabsPage = /** @class */ (function () {
         this.tab4Root = __WEBPACK_IMPORTED_MODULE_2__profile_profile__["a" /* ProfilePage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\tabs\tabs.html"*/'<ion-tabs tabsPlacement="top">\n\n  <ion-tab [root]="tab1Root" tabTitle="Remédios" tabIcon="medkit"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Produtos" tabIcon="cube"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Adoções" tabIcon="heart"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Perfil" tabIcon="person"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\Sônia Lins\Documents\TCC\pettingApp\Front-end\src\pages\tabs\tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/tabs/tabs.html"*/'<ion-tabs tabsPlacement="top">\n  <ion-tab [root]="tab1Root" tabTitle="Remédios" tabIcon="medkit"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Produtos" tabIcon="cube"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Adoções" tabIcon="heart"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Perfil" tabIcon="person"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/poggers01/Documents/Ionic/Petting App/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
