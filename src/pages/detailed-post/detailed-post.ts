@@ -21,28 +21,35 @@ export class DetailedPostPage {
 
   id: String = ""
   item: DetailedPostItem = new DetailedPostItem()
+  meuForm: FormGroup
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public detailedPostProvider: DetailedPostProvider) {
     this.id = this.navParams.data
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailedPostPage')
     this.getDetailedPost(this.id)
+    
   }
 
   getDetailedPost(id: String){
     this.detailedPostProvider.getPostItem(id)
       .then((post : DetailedPostItem) => {
         this.item = post
+        this.meuForm = new FormGroup({
+          idPostItem: new FormControl(this.item.idUsur)
+        })
       })
   }
 
-  goToContacts(idUsur: String, idPostItem: String){
-    let meuForm = new FormGroup({
-      idPostItem: new FormControl(idPostItem)
-    })
-    this.detailedPostProvider.postContributionItem(meuForm)
-    .then(() => this.navCtrl.push(ContactPage, idUsur))
+  goToContacts(idUsur: String, idDoPostItem: String){
+    this.postContribution(this.meuForm, idUsur)
+  }
+
+  postContribution(meuForm: FormGroup, idUsur: String){
+    //this.detailedPostProvider.postContributionItem(meuForm)
+    this.navCtrl.push(ContactPage, idUsur)
   }
 }

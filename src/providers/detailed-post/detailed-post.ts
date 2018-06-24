@@ -16,7 +16,7 @@ export class DetailedPostProvider {
   headers: HttpHeaders = new HttpHeaders()
   item_getItem = "/secured/post-item/custom/"
   item_getAnimal = "/secured/post-animal/custom/"
-  item_postContribution = "/secured/contribution"
+  item_postContribution = "/secured/contribution/usur"
 
   constructor(public http: HttpClient, public utils: Utils) {
     console.log('Hello DetailedPostProvider Provider')
@@ -40,7 +40,7 @@ export class DetailedPostProvider {
 
   postContributionItem(meuForm: FormGroup){
     return new Promise(resolve => {
-      this.http.post(this.item_postContribution, JSON.stringify(meuForm), {headers: this.headers})
+      this.http.post(this.item_postContribution, meuForm, {headers: this.headers})
         .subscribe(success => {
           resolve(success)
           this.utils.getToast('Postagem criada com sucesso!')

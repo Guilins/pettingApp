@@ -32,11 +32,11 @@ export class DetailedPostAnimalPage {
   }
 
   goToContacts(idUsur: String, idPostAnimal: String){
-    let meuForm = new FormGroup({
-      idPostAnimal: new FormControl(idPostAnimal)
-    })
-    this.detailedPostProvider.postContributionItem(meuForm)
-    .then(() => this.navCtrl.push(ContactPage, idUsur))
+    //let meuForm = new FormGroup({
+    //  idPostAnimal: new FormControl(idPostAnimal)
+    //})
+    //this.detailedPostProvider.postContributionItem(meuForm)
+    this.navCtrl.push(ContactPage, idUsur)
   }
 
   getDetailedPost(id: String){

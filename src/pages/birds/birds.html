@@ -14,12 +14,9 @@
 
 
 <ion-content padding>
-  <ion-searchbar>
-  [(ngModel)]="myInput"
-  [showCancelButton]="shouldShowCancel"
-  (ionInput)="onInput($event)"
-  (ionCancel)="onCancel($event)">
-</ion-searchbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar #textoProcurado (keyup)="0"></ion-searchbar>
+  </ion-toolbar>
 
   <ion-list>
     <ion-row *ngFor="let animal of animals.content">

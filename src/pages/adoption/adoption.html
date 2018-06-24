@@ -14,23 +14,20 @@
 
 
 <ion-content padding>
-  <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
-  </ion-searchbar>
 
   <ion-grid>
     <div class="card-background-page">
       <ion-row >
         <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>
           <ion-card (click)= "goToDog()">
-            <img src="assets/imgs/turniphead.png" />
+            <img src="assets/imgs/dog.png" />
             <div class="card-title">Cachorro</div>
-            <div class="card-subtitle">10 para adoção</div>
           </ion-card>
         </ion-col>
 
         <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>
           <ion-card (click)= "goToCat()">
-            <img src="assets/imgs/turniphead.png" />
+            <img src="assets/imgs/cat.png" />
             <div class="card-title">Gato</div>
             <div class="card-subtitle"> </div>
           </ion-card>
@@ -40,7 +37,7 @@
       <ion-row>
         <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>
           <ion-card (click)= "goToRodent()">
-            <img src="assets/imgs/turniphead.png" />
+            <img src="assets/imgs/rabbit.png" />
             <div class="card-title">Roedores</div>
             <div class="card-subtitle"> </div>
           </ion-card>
@@ -48,7 +45,7 @@
 
         <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>
           <ion-card (click)= "goToBirds()">
-            <img src="assets/imgs/turniphead.png" />
+            <img src="assets/imgs/bird.png" />
             <div class="card-title">Pássaros</div>
             <div class="card-subtitle"> </div>
           </ion-card>
@@ -58,7 +55,7 @@
       <ion-row>
         <ion-col col-lg-6 col-sm-6 col-xs-6 col-md-6 col-xl-6>
           <ion-card (click)= "goToOthers()">
-            <img src="assets/imgs/turniphead.png" />
+            <img src="assets/imgs/fish.png" />
             <div class="card-title">Outros</div>
             <div class="card-subtitle"> </div>
           </ion-card>

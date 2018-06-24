@@ -47,7 +47,7 @@ export class UserPage implements OnInit {
   signUp(){
     this.userProvider.signUp(this.meuForm)
       .then(() => {
-            this.utils.getToast('Usuário criado com sucesso').then(() => this.navCtrl.push(TabsPage));
+            this.navCtrl.push(TabsPage);
       })
   }
   

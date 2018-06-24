@@ -44,6 +44,10 @@ export class CatPage {
     this.navCtrl.push(CreatePostAnimalPage)
   }
 
+  search(event){
+    console.log(event)
+  }
+
   goToDetailedPost(id: String){
     this.navCtrl.push(DetailedPostAnimalPage, id)
   }
