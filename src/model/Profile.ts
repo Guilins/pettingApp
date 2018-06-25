@@ -1,13 +1,15 @@
 export class Profile {
 
-    public idPostItem: string 
-    public titlePostItem: string
-    public descriptionPostItem: string
+    public idContribution: string
+    public idPost: string 
+    public titlePost: string
+    public descriptionPost: string
     
   
     constructor() {
-      this.idPostItem = ''
-      this.titlePostItem = ''
-      this.descriptionPostItem = ''
+      this.idContribution = ''
+      this.idPost = ''
+      this.titlePost = ''
+      this.descriptionPost = ''
     }
   }
